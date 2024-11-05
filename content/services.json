@@ -1,0 +1,35 @@
+[
+  {
+    "id": "01",
+    "title": "Strategy",
+    "subtitle": "Insights, Positioning, Branding, Measurement"
+  },
+  {
+    "id": "02",
+    "title": "Creative",
+    "subtitle": "Concept, Campaign, Experience, Design"
+  },
+  {
+    "id": "03",
+    "title": "Production",
+    "subtitle": "Commercial, Documentary, Photography, Experiences"
+  },
+  {
+    "id": "04",
+    "title": "Studio & Rental House",
+    "subtitle": "Cinema Equipment, CYC Wall, Studios Space, Box Truck & Transport",
+    "link": {
+      "title": "Visit Vault Rentals",
+      "href": "https://google.com"
+    }
+  },
+  {
+    "id": "05",
+    "title": "Post",
+    "subtitle": "Editing, VFX+CGI, Sound, Color",
+    "link": {
+      "title": "Visit Lockt Editorial",
+      "href": "https://google.com"
+    }
+  }
+]

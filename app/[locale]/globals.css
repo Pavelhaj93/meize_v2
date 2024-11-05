@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.04);
+}
+
+label[for] {
+  @apply cursor-pointer;
+}
+
+svg {
+  @apply max-w-full;
+}
+
+.container {
+  @apply w-full;
+  @apply max-w-[1600px];
+  @apply mx-auto;
+  @apply md:px-10;
+}
+
+.first-container {
+  @apply py-10;
+  @apply md:py-12;
+  @apply lg:py-16;
+  @apply xl:py-20;
+}
+
+.title-big {
+  @apply uppercase;
+  @apply text-center;
+  @apply font-extrabold;
+  @apply tracking-tighter;
+
+  @apply text-3xl;
+  @apply leading-none;
+  @apply sm:text-4xl;
+  @apply sm:leading-none;
+  @apply lg:text-5xl;
+  @apply lg:leading-none;
+  @apply xl:text-6xl;
+  @apply xl:leading-none;
+}
+
+.title-medium {
+  @apply font-extrabold;
+  @apply uppercase;
+  @apply tracking-tighter;
+
+  @apply text-3xl;
+  @apply leading-none;
+  @apply lg:text-4xl;
+  @apply lg:leading-none;
+  @apply xl:text-5xl;
+  @apply xl:leading-none;
+}
+
+.title-shadow {
+  text-shadow: -1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.grecaptcha-badge {
+  @apply opacity-0;
+  @apply pointer-events-none;
+}
