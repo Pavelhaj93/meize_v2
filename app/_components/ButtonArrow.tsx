@@ -1,75 +1,75 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import SvgArrow from "./svg/SvgArrow";
 
 interface ButtonArrowBodyProps {
-	direction: "previous" | "next";
-	label?: string;
+  direction: "previous" | "next";
+  label?: string;
 }
 
 function ButtonArrowBody({ direction, label }: ButtonArrowBodyProps) {
-	if (direction === "previous") {
-		return (
-			<>
-				<span className="sm:hidden">
-					<SvgArrow direction="left" size="small" />
-				</span>
-				<span className="hidden md:block">
-					<SvgArrow direction="left" size="large" />
-				</span>
-				<span className="text-xl">{label}</span>
-			</>
-		);
-	}
+  if (direction === "previous") {
+    return (
+      <>
+        <span className="sm:hidden">
+          <SvgArrow direction="left" size="small" />
+        </span>
+        <span className="hidden md:block">
+          <SvgArrow direction="left" size="large" />
+        </span>
+        <span className="text-xl">{label}</span>
+      </>
+    );
+  }
 
-	return (
-		<>
-			<span className="text-xl">{label}</span>
-			<span className="sm:hidden">
-				<SvgArrow direction="right" size="small" />
-			</span>
-			<span className="hidden md:block">
-				<SvgArrow direction="right" size="large" />
-			</span>
-		</>
-	);
+  return (
+    <>
+      <span className="text-xl">{label}</span>
+      <span className="sm:hidden">
+        <SvgArrow direction="right" size="small" />
+      </span>
+      <span className="hidden md:block">
+        <SvgArrow direction="right" size="large" />
+      </span>
+    </>
+  );
 }
 
 interface ButtonArrowProps {
-	href?: string;
-	direction?: "previous" | "next";
-	className?: string;
+  href?: string;
+  direction?: "previous" | "next";
+  className?: string;
 }
 
 const ButtonArrow = ({
-	href,
-	direction = "next",
-	className = "",
-	...rest
+  href,
+  direction = "next",
+  className = "",
+  ...rest
 }: ButtonArrowProps) => {
-	// const { isMobile } = useViewportWidth();
-	const locale = useLocale();
-	const buttonClasses = `uppercase font-bold inline-flex items-center gap-4 mouse-hover:text-primary mouse-hover:gap-2 transition-all duration-300 rounded-none ${
-		direction === "next"
-			? "mouse-hover:translate-x-2"
-			: "mouse-hover:-translate-x-2"
-	} ${className}`;
+  const t = useTranslations("common");
 
-	if (href) {
-		return (
-			<Link href={href} className={buttonClasses}>
-				<ButtonArrowBody direction={direction} label={locale[direction]} />
-			</Link>
-		);
-	}
+  const buttonClasses = `uppercase font-bold inline-flex items-center gap-4 mouse-hover:text-primary mouse-hover:gap-2 transition-all duration-300 rounded-none ${
+    direction === "next"
+      ? "mouse-hover:translate-x-2"
+      : "mouse-hover:-translate-x-2"
+  } ${className}`;
 
-	return (
-		<button {...rest} className={buttonClasses}>
-			<ButtonArrowBody direction={direction} />
-		</button>
-	);
+  if (href) {
+    return (
+      <Link href={href} className={buttonClasses}>
+        <ButtonArrowBody direction={direction} label={t(`${direction}`)} />
+      </Link>
+    );
+  }
+
+  return (
+    <button {...rest} className={buttonClasses}>
+      <ButtonArrowBody direction={direction} />
+    </button>
+  );
 };
 
 export default ButtonArrow;
