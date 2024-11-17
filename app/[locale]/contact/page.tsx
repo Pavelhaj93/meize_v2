@@ -2,7 +2,7 @@ import Container from "@/app/_components/Container";
 import FormContact from "@/app/_components/FormContact";
 import Nav from "@/app/_components/Nav";
 import PageTitle from "@/app/_components/PageTitle";
-import { contacts } from "@/helpers/contacts";
+import { Contacts, contacts } from "@/helpers/contacts";
 import { useTranslations } from "next-intl";
 
 export default function Contact() {
@@ -25,17 +25,18 @@ export default function Contact() {
             </h2>
           </header>
           <div className="flex-1 flex flex-col items-center lg:items-start gap-2 lg:gap-4 lg:pt-6">
-            {Object.keys(contacts).map((type, key) => {
+            {Object.keys(contacts).map((type) => {
+              const contactType = type as keyof Contacts; // Explicitly cast to keyof Contacts
               return (
-                <div key={`Contacts: ${key}`}>
+                <div key={`Contacts: ${contactType}`}>
                   <div className="inline-flex text-2xl dark:text-white mr-2">
-                    {t(`${type}`)}:
+                    {t(contactType)}:
                   </div>
                   <a
-                    href={contacts[type].href}
+                    href={contacts[contactType].href}
                     className="inline-flex text-2xl text-black dark:text-white hover:text-white/50 transition-colors border-b border-transparent"
                   >
-                    {contacts[type].title}
+                    {contacts[contactType].title}
                   </a>
                 </div>
               );
