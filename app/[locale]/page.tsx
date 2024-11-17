@@ -1,8 +1,9 @@
-import { getFeaturedProjects, getProjectsInReel } from "@/helpers/projects";
-import ReelCarousel from "../_components/ReelCarousel";
-import FeaturedProjects from "../_components/FeaturedProjects";
-import Reel from "../_components/Reel";
+import { getAllProjects } from "@/helpers/projects";
 import { useTranslations } from "next-intl";
+import Reel from "../_components/Reel";
+import ReelCarousel from "../_components/ReelCarousel";
+import Nav from "../_components/Nav";
+import ReelScroll from "../_components/ReelScroll";
 
 const images = [
   "/images/hayden.jpg",
@@ -11,26 +12,26 @@ const images = [
   "/images/hayden4.jpg",
 ];
 
-const reels = getProjectsInReel();
-
 export const metadata = {
   title: "Home",
   description: "Home page",
 };
 
 export default function Home() {
-  const projects = getFeaturedProjects();
-  const t = useTranslations();
-  return (
-    <>
-      <div className="block lg:hidden">
-        <ReelCarousel reels={reels} />
-      </div>
-      <div className="hidden lg:block">
-        <Reel reels={reels} images={images} />
-      </div>
+  const projects = getAllProjects();
 
-      <FeaturedProjects projects={projects} className="py-4" />
-    </>
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Nav theme="dark" />
+      <main>
+        {/* <div className="block lg:hidden">
+          <ReelCarousel reels={projects} />
+        </div> */}
+        <div className="block">
+          {/* <Reel projects={projects} images={images} /> */}
+          <ReelScroll projects={projects} />
+        </div>
+      </main>
+    </div>
   );
 }

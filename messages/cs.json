@@ -89,5 +89,14 @@
   "languages": {
     "en": "English",
     "cs": "Čeština"
+  },
+  "wedding": {
+    "title1": "Svatební videa od Meize",
+    "description1": "V Meize se mimo jiné specializujeme i na svatební videa. Naší misí je zachytit ty nejkrásnější a nejdůležitější okamžiky vašeho svatebního dne tak, jak je prožíváte – autenticky, přirozeně a s maximální precizností.",
+    "description2": "Každá svatba je jedinečná, a proto se na každý film díváme jako na nový příběh. Nejde nám o klišé a velké efekty – chceme, aby naše videa odrážela vás, vaši lásku a atmosféru dne, který si navždy zapamatujete. Zůstáváme v pozadí, abyste se mohli soustředit na to, co je důležité, a přitom zachytíme každou emoci, každý úsměv a všechny ty malinké, ale významné detaily.",
+    "title2": "Proč zvolit Meize pro vaše svatební video?",
+    "description3": "Svatební film pro nás není jen o záběrech, ale o celkovém zážitku, který vám připomene ten nejlepší den vašeho života, a to nejen ve chvíli, kdy si ho pustíte po svatbě, ale i za pár let. Chceme, aby každé vaše video mělo kouzlo, které vydrží věčně.",
+    "description4": "Pokud hledáte někoho, kdo vám vytvoří svatební film, který budete ukazovat ještě i dětem a vnoučatům, ozvěte se nám. Rádi pro vás vytvoříme něco, co vám zůstane na celý život.",
+    "category": "Svatba"
   }
 }

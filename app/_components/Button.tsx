@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   children: React.ReactNode;
   theme?: "primary" | "secondary" | "ghost";
@@ -8,6 +9,7 @@ interface ButtonProps {
   textSize?: "big" | "small" | "tiny";
   className?: string;
   padding?: "none" | "small" | "big" | "custom";
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -21,27 +23,8 @@ export default function Button({
   ...rest
 }: ButtonProps) {
   const buttonClasses = [
-    "inline-flex border w-full items-center justify-center transition-colors duration-300",
+    "inline-flex border rounded-full w-full items-center justify-center transition-colors bg-white text-black hover:bg-black hover:text-white",
   ];
-
-  switch (theme) {
-    case "primary":
-      buttonClasses.push(
-        "bg-primary border-2 border-primary text-white mouse-hover:bg-transparent mouse-hover:text-primary"
-      );
-      break;
-    case "secondary":
-      buttonClasses.push(
-        "bg-black border-black text-white mouse-hover:bg-primary mouse-hover:border-primary"
-      );
-      break;
-    case "ghost":
-    default:
-      buttonClasses.push(
-        "bg-transparent border-black mouse-hover:bg-black mouse-hover:text-white"
-      );
-      break;
-  }
 
   switch (size) {
     case "big":
@@ -64,9 +47,8 @@ export default function Button({
     case "tiny":
       buttonClasses.push("text-sm leading-none");
       break;
-    case "small":
     default:
-      buttonClasses.push("text-base leading-none");
+      buttonClasses.push("text-lg leading-none");
       break;
   }
 
@@ -87,8 +69,9 @@ export default function Button({
   buttonClasses.push(className);
 
   if (href) {
+    const { onClick, ...linkRest } = rest;
     return (
-      <Link href={href} className={buttonClasses.join(" ")} {...rest}>
+      <Link href={href} className={buttonClasses.join(" ")} {...linkRest}>
         {children}
       </Link>
     );

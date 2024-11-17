@@ -1,5 +1,6 @@
 import Container from "@/app/_components/Container";
-import ProjectsGrid from "@/app/_components/ProjectsGrid";
+import MasonryGallery from "@/app/_components/MasonryGallery";
+import PageTitle from "@/app/_components/PageTitle";
 import { getAllProjects } from "@/helpers/projects";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
@@ -11,15 +12,10 @@ export default function ProjectsPage() {
     return getAllProjects();
   }, []);
 
-  console.log("projects", projects);
-
   return (
-    <>
-      <h1 className="text-0">{t("title")}</h1>
-
-      <Container className="first-container">
-        <ProjectsGrid projects={projects} className="pb-4" />
-      </Container>
-    </>
+    <Container className="mt-10 md:mt-14 xl:mt-24 pb-10">
+      <PageTitle title={t("title")} />
+      <MasonryGallery items={projects} />
+    </Container>
   );
 }

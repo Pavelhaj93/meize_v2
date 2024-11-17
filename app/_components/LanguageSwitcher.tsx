@@ -2,12 +2,12 @@ import { routing } from "@/i18n/routing";
 import Link from "next/link";
 
 export default function LanguageSwitcher({ className = "" }) {
-  return (
-    <div
-      className={`relative cursor-pointer transition-all uppercase font-bold 
+	return (
+		<div
+			className={`relative cursor-pointer transition-all uppercase font-bold 
        `}
-    >
-      {/* {locales.map((localeItem, index) => {
+		>
+			{/* {locales.map((localeItem, index) => {
         return (
           <Link
             href={asPath}
@@ -23,6 +23,6 @@ export default function LanguageSwitcher({ className = "" }) {
           </Link>
         );
       })} */}
-    </div>
-  );
+		</div>
+	);
 }

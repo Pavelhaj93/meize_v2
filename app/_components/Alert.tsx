@@ -25,8 +25,8 @@ export default function Alert({
       arrowClasses = "text-red-600";
       break;
     case "success":
-      themeClasses = "bg-primary";
-      arrowClasses = "text-primary";
+      themeClasses = "bg-green-500";
+      arrowClasses = "text-black";
       break;
     default:
       themeClasses = "bg-black";
@@ -41,7 +41,6 @@ export default function Alert({
     case "right":
       arrowClasses += " right-2";
       break;
-    case "center":
     default:
       arrowClasses += " left-1/2 -translate-x-1/2";
       break;

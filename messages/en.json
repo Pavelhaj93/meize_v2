@@ -89,5 +89,14 @@
   "languages": {
     "en": "English",
     "cs": "Čeština"
+  },
+  "wedding": {
+    "title1": "Wedding Videos by Meize",
+    "description1": "At Meize, we also specialize in wedding videos. Our mission is to capture the most beautiful and important moments of your wedding day as you experience them—authentically, naturally, and with maximum precision.",
+    "description2": "Every wedding is unique, and that’s why we approach each film as a new story. We’re not about clichés and big effects—we want our videos to reflect you, your love, and the atmosphere of the day you’ll remember forever. We stay in the background so you can focus on what matters, while capturing every emotion, every smile, and all the little but meaningful details.",
+    "title2": "Why Choose Meize for Your Wedding Video?",
+    "description3": "For us, a wedding film is not just about shots, but an overall experience that will remind you of the best day of your life, not only right after the wedding but even years down the line. We want each video to have a timeless charm.",
+    "description4": "If you’re looking for someone to create a wedding film that you’ll show to your children and grandchildren, reach out to us. We would love to create something that will last you a lifetime.",
+    "category": "Wedding"
   }
 }

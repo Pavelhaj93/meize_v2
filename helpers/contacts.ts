@@ -1,4 +1,19 @@
-export const contacts = {
+export type Contacts = {
+  email: Contact;
+  phone: Contact;
+};
+
+export type Contact = {
+  href: string;
+  title: string;
+};
+
+export type Social = {
+  title: string;
+  href: string;
+};
+
+export const contacts: Contacts = {
   email: {
     href: "mailto:info@meize.cz",
     title: "info@meize.cz",
@@ -9,7 +24,7 @@ export const contacts = {
   },
 };
 
-export const socials = [
+export const socials: Social[] = [
   {
     title: "Instagram",
     href: "https://instagram.com",

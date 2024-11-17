@@ -1,147 +1,112 @@
 [
-  {
-    "id": 7,
-    "title": "Thaddeus",
-    "slug": "thaddeus",
-    "client": "Amos Academy",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 8,
-    "title": "Tekstyl",
-    "slug": "tekstyl",
-    "client": "Klient c.4 Test tri ctyri",
-    "thumbnail": "/images/hayden.jpg",
-    "video": "",
-    "categories": [
-      "events"
-    ],
-    "reelVideo": "d.mp4"
-  },
-  {
-    "id": 9,
-    "title": "Parallel Polis",
-    "slug": "parallel-polis",
-    "client": "Klient c.2 Test Dva",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "commercial",
-      "events"
-    ],
-    "reelVideo": "b.mp4"
-  },
-  {
-    "id": 10,
-    "title": "Jenčík a dcery",
-    "slug": "jencik-a-dcery",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "creative",
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 11,
-    "title": "Lara Mor",
-    "slug": "lara-mor",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "creative"
-    ]
-  },
-  {
-    "id": 12,
-    "title": "Amos Academy",
-    "slug": "amos-academy",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 13,
-    "title": "Queens",
-    "slug": "queens",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 14,
-    "title": "Flexible Spot",
-    "slug": "flexible-spot",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 14,
-    "title": "Ministerstvo práce a sociálních věcí",
-    "slug": "ministerstvo-pace-a-socialnich-veci",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 15,
-    "title": "Unibrick",
-    "slug": "unibrick",
-    "client": "Unibrick Klient",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 16,
-    "title": "Evropa 2",
-    "slug": "evropa-2",
-    "client": "Evropa2 Klient",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  },
-  {
-    "id": 17,
-    "title": "Svatby",
-    "slug": "svatby",
-    "client": "Klient c.7",
-    "thumbnail": "/images/hayden2.jpg",
-    "video": "",
-    "categories": [
-      "production",
-      "postproduction"
-    ]
-  }
+	{
+		"id": 7,
+		"title": "Thaddeus",
+		"slug": "thaddeus",
+		"client": "Amos Academy",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 8,
+		"title": "Tekstyl",
+		"slug": "tekstyl",
+		"client": "Klient c.4 Test tri ctyri",
+		"thumbnail": "/images/hayden.jpg",
+		"video": "",
+		"categories": ["events"],
+		"reelVideo": "d.mp4"
+	},
+	{
+		"id": 9,
+		"title": "Parallel Polis",
+		"slug": "parallel-polis",
+		"client": "Klient c.2 Test Dva",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["commercial", "events"],
+		"reelVideo": "b.mp4"
+	},
+	{
+		"id": 10,
+		"title": "Jenčík a dcery",
+		"slug": "jencik-a-dcery",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["creative", "production", "postproduction"]
+	},
+	{
+		"id": 11,
+		"title": "Lara Mor",
+		"slug": "lara-mor",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["creative"]
+	},
+	{
+		"id": 12,
+		"title": "Amos Academy",
+		"slug": "amos-academy",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 13,
+		"title": "Queens",
+		"slug": "queens",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 14,
+		"title": "Flexible Spot",
+		"slug": "flexible-spot",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 14,
+		"title": "Ministerstvo práce a sociálních věcí",
+		"slug": "ministerstvo-pace-a-socialnich-veci",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 15,
+		"title": "Unibrick",
+		"slug": "unibrick",
+		"client": "Unibrick Klient",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 16,
+		"title": "Evropa 2",
+		"slug": "evropa-2",
+		"client": "Evropa2 Klient",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	},
+	{
+		"id": 17,
+		"title": "Svatby",
+		"slug": "svatby",
+		"client": "Klient c.7",
+		"thumbnail": "/images/hayden2.jpg",
+		"video": "",
+		"categories": ["production", "postproduction"]
+	}
 ]

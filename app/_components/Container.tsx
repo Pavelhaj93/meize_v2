@@ -1,6 +1,6 @@
 let themeClasses;
 
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface ContainerProps {
   className?: string;
@@ -16,7 +16,9 @@ export default function Container({
 }: ContainerProps) {
   return (
     <div
-      className={`container ${!mobileFull ? "px-4" : ""} ${className}`}
+      className={`w-full max-w-[1600px] mx-auto md:px-10 ${
+        !mobileFull ? "px-4" : ""
+      } ${className}`}
       {...rest}
     >
       {children}
