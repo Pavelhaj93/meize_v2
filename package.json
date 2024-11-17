@@ -1,41 +1,41 @@
 {
-  "name": "meize_v2",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "biome:check": "biome check . --error-on-warnings",
-    "biome:fix": "biome check . --write --unsafe"
-  },
-  "dependencies": {
-    "@radix-ui/react-icons": "^1.3.1",
-    "@u-wave/react-vimeo": "^0.9.11",
-    "@vimeo/player": "^2.24.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "hamburger-react": "^2.5.1",
-    "negotiator": "^1.0.0",
-    "next": "14.2.5",
-    "next-intl": "^3.24.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-google-recaptcha": "^3.1.0",
-    "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@svgr/webpack": "^8.1.0",
-    "@types/negotiator": "^0.6.3",
-    "@types/node": "^20",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@types/react-google-recaptcha": "^2.1.9",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+	"name": "meize_v2",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"biome:check": "biome check . --error-on-warnings",
+		"biome:fix": "biome check . --write --unsafe"
+	},
+	"dependencies": {
+		"@radix-ui/react-icons": "^1.3.1",
+		"@u-wave/react-vimeo": "^0.9.11",
+		"@vimeo/player": "^2.24.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.1",
+		"hamburger-react": "^2.5.1",
+		"negotiator": "^1.0.0",
+		"next": "14.2.5",
+		"next-intl": "^3.24.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-google-recaptcha": "^3.1.0",
+		"tailwind-merge": "^2.5.4",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@svgr/webpack": "^8.1.0",
+		"@types/negotiator": "^0.6.3",
+		"@types/node": "^20",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"@types/react-google-recaptcha": "^2.1.9",
+		"postcss": "^8",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	}
 }

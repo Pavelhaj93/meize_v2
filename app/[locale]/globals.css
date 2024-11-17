@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 html {
-  @apply antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.04);
+	@apply antialiased;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.04);
 }
 
 svg {
-  @apply max-w-full;
+	@apply max-w-full;
 }
 
 .hamburger-react > div {
-  @apply !h-0.5;
+	@apply !h-0.5;
 }

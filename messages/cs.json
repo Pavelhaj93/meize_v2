@@ -1,102 +1,102 @@
 {
-  "og": {
-    "name": "Meize",
-    "title": "MEIZE - Kreativní produkční studio",
-    "description": ""
-  },
-  "common": {
-    "en": "EN",
-    "cs": "CZ",
-    "language": "Jazyk",
-    "ctaButton": "Ozvěte se nám",
-    "yourEmail": "Váš e-mail",
-    "subscribe": "Odebírat",
-    "seeAllWork": "Podívat se na vše",
-    "previous": "Předchozí",
-    "next": "Další",
-    "name": "Jméno",
-    "email": "Email",
-    "message": "Zpráva",
-    "submit": "Odeslat",
-    "submitting": "Odesílám...",
-    "project": "Projekt"
-  },
-  "alerts": {
-    "commonError": "Nastala chyba, zkuste to znova, prosím.",
-    "newsletterSuccess": "Děkujeme za přihlášení k odběru!",
-    "nameError": "Zadejte jméno, prosím.",
-    "emailError": "Zadejte e-mail, prosím.",
-    "messageError": "Zadejte zprávu, prosím.",
-    "contactSuccess": "Děkujeme za vaši zprávu."
-  },
-  "pages": {
-    "about": "O Nás",
-    "projects": "Projekty",
-    "contact": "Kontakt"
-  },
-  "about": {
-    "title": "O nás",
-    "headline": "<b>MEIZE. kreativní produkce</b>, která přijímá <b>výzvy</b> a realizuje vaše <b>vize</b>.",
-    "intro": "Jsme otevřeni všem vašim nápadům. Naše portfolio zahrnuje širokou škálu projektů; od reklamy přes dokumentární filmy až po módní přehlídky či videoklipy. Ke klientům přistupujeme individuálně a vždy plníme jejich přání. Těšíme se, až budeme ztvárňovat i vaši myšlenku.",
-    "subheadline": "Služby",
-    "subintro": "Široká nabídka služeb produkce Meize dává klientům možnost realizovat jejich nápady na jednom místě. Každý projekt je odlišný, my se ovšem vždy přizpůsobujeme jeho potřebám. Naše kombinace technických dovedností, kreativity, pružnosti a pozornosti k detailu vytváří obsah, který rezonuje s vaším publikem.",
-    "partners": "Vybraní partneři",
-    "feedback": "Zpětné vazby"
-  },
-  "projects": {
-    "title": "Projekty"
-  },
-  "contact": {
-    "title": "Kontakt",
-    "headline": "Kontaktujte nás",
-    "general": "Kontakty",
-    "email": "email",
-    "phone": "tel.",
-    "follow": "Sledujte nás",
-    "message": "Pošlete nám zprávu",
-    "form": {}
-  },
-  "testimonials": [
-    {
-      "body": "“Díky bohu za MEIZE. Přišli jsme za nimi s krátkými termíny, napjatými rozpočty, scénáři s miminky a psy všude kolem a oni nikdy nemrkli okem. Navíc práce vždy dopadla lépe, než jsme si kdy představovali. Lidé v MEIZE jsou milí a práce, kterou dělají, je krásná. Je to skvělé kombo.”",
-      "name": "Catherine Kennedy",
-      "company": "The Martin Agency"
-    },
-    {
-      "body": "“Existují filmové štáby, které tuto práci dělají, a pak jsou štáby jako tým v MEIZE, kteří skutečně jdou nad rámec toho, aby uvedli projekt do života a odlišili jej. Nespokojí se s dost dobrým. A ke všemu jsou to jen dobří lidé.”",
-      "name": "Chasen Marshall",
-      "company": "Oakley"
-    },
-    {
-      "body": "“Skvělý příběh si zaslouží skvělého vypravěče a podle našich zkušeností je kreativní tým v MEIZE Studios přesně takový. MEIZE vám dává na dosah ty nejvášnivější a nejhnanější talenty, které zajdou do jakékoli délky, aby vaše vize proměnila ve skutečnost.”",
-      "name": "Josh Saunders",
-      "company": "Red Bull"
-    },
-    {
-      "body": "“V The North Face často potřebujeme vysoce kvalitní, kreativní úpravy s rychlým obratem a dostupnou cenou. Hledáme produkční společnosti, které dokážou nejen splnit tuto potřebu, ale jsou flexibilní, vnímavé a profesionální. MEIZE bylo vše výše uvedené a překonalo naše očekávání během tvůrčího procesu.”",
-      "name": "Blair Witte",
-      "company": "The North Face"
-    }
-  ],
-  "categories": {
-    "all": "Vše",
-    "creative": "Kreativní",
-    "commercial": "Komerční",
-    "events": "Události",
-    "production": "Produkce",
-    "postproduction": "Postprodukce"
-  },
-  "languages": {
-    "en": "English",
-    "cs": "Čeština"
-  },
-  "wedding": {
-    "title1": "Svatební videa od Meize",
-    "description1": "V Meize se mimo jiné specializujeme i na svatební videa. Naší misí je zachytit ty nejkrásnější a nejdůležitější okamžiky vašeho svatebního dne tak, jak je prožíváte – autenticky, přirozeně a s maximální precizností.",
-    "description2": "Každá svatba je jedinečná, a proto se na každý film díváme jako na nový příběh. Nejde nám o klišé a velké efekty – chceme, aby naše videa odrážela vás, vaši lásku a atmosféru dne, který si navždy zapamatujete. Zůstáváme v pozadí, abyste se mohli soustředit na to, co je důležité, a přitom zachytíme každou emoci, každý úsměv a všechny ty malinké, ale významné detaily.",
-    "title2": "Proč zvolit Meize pro vaše svatební video?",
-    "description3": "Svatební film pro nás není jen o záběrech, ale o celkovém zážitku, který vám připomene ten nejlepší den vašeho života, a to nejen ve chvíli, kdy si ho pustíte po svatbě, ale i za pár let. Chceme, aby každé vaše video mělo kouzlo, které vydrží věčně.",
-    "description4": "Pokud hledáte někoho, kdo vám vytvoří svatební film, který budete ukazovat ještě i dětem a vnoučatům, ozvěte se nám. Rádi pro vás vytvoříme něco, co vám zůstane na celý život.",
-    "category": "Svatba"
-  }
+	"og": {
+		"name": "Meize",
+		"title": "MEIZE - Kreativní produkční studio",
+		"description": ""
+	},
+	"common": {
+		"en": "EN",
+		"cs": "CZ",
+		"language": "Jazyk",
+		"ctaButton": "Ozvěte se nám",
+		"yourEmail": "Váš e-mail",
+		"subscribe": "Odebírat",
+		"seeAllWork": "Podívat se na vše",
+		"previous": "Předchozí",
+		"next": "Další",
+		"name": "Jméno",
+		"email": "Email",
+		"message": "Zpráva",
+		"submit": "Odeslat",
+		"submitting": "Odesílám...",
+		"project": "Projekt"
+	},
+	"alerts": {
+		"commonError": "Nastala chyba, zkuste to znova, prosím.",
+		"newsletterSuccess": "Děkujeme za přihlášení k odběru!",
+		"nameError": "Zadejte jméno, prosím.",
+		"emailError": "Zadejte e-mail, prosím.",
+		"messageError": "Zadejte zprávu, prosím.",
+		"contactSuccess": "Děkujeme za vaši zprávu."
+	},
+	"pages": {
+		"about": "O Nás",
+		"projects": "Projekty",
+		"contact": "Kontakt"
+	},
+	"about": {
+		"title": "O nás",
+		"headline": "<b>MEIZE. kreativní produkce</b>, která přijímá <b>výzvy</b> a realizuje vaše <b>vize</b>.",
+		"intro": "Jsme otevřeni všem vašim nápadům. Naše portfolio zahrnuje širokou škálu projektů; od reklamy přes dokumentární filmy až po módní přehlídky či videoklipy. Ke klientům přistupujeme individuálně a vždy plníme jejich přání. Těšíme se, až budeme ztvárňovat i vaši myšlenku.",
+		"subheadline": "Služby",
+		"subintro": "Široká nabídka služeb produkce Meize dává klientům možnost realizovat jejich nápady na jednom místě. Každý projekt je odlišný, my se ovšem vždy přizpůsobujeme jeho potřebám. Naše kombinace technických dovedností, kreativity, pružnosti a pozornosti k detailu vytváří obsah, který rezonuje s vaším publikem.",
+		"partners": "Vybraní partneři",
+		"feedback": "Zpětné vazby"
+	},
+	"projects": {
+		"title": "Projekty"
+	},
+	"contact": {
+		"title": "Kontakt",
+		"headline": "Kontaktujte nás",
+		"general": "Kontakty",
+		"email": "email",
+		"phone": "tel.",
+		"follow": "Sledujte nás",
+		"message": "Pošlete nám zprávu",
+		"form": {}
+	},
+	"testimonials": [
+		{
+			"body": "“Díky bohu za MEIZE. Přišli jsme za nimi s krátkými termíny, napjatými rozpočty, scénáři s miminky a psy všude kolem a oni nikdy nemrkli okem. Navíc práce vždy dopadla lépe, než jsme si kdy představovali. Lidé v MEIZE jsou milí a práce, kterou dělají, je krásná. Je to skvělé kombo.”",
+			"name": "Catherine Kennedy",
+			"company": "The Martin Agency"
+		},
+		{
+			"body": "“Existují filmové štáby, které tuto práci dělají, a pak jsou štáby jako tým v MEIZE, kteří skutečně jdou nad rámec toho, aby uvedli projekt do života a odlišili jej. Nespokojí se s dost dobrým. A ke všemu jsou to jen dobří lidé.”",
+			"name": "Chasen Marshall",
+			"company": "Oakley"
+		},
+		{
+			"body": "“Skvělý příběh si zaslouží skvělého vypravěče a podle našich zkušeností je kreativní tým v MEIZE Studios přesně takový. MEIZE vám dává na dosah ty nejvášnivější a nejhnanější talenty, které zajdou do jakékoli délky, aby vaše vize proměnila ve skutečnost.”",
+			"name": "Josh Saunders",
+			"company": "Red Bull"
+		},
+		{
+			"body": "“V The North Face často potřebujeme vysoce kvalitní, kreativní úpravy s rychlým obratem a dostupnou cenou. Hledáme produkční společnosti, které dokážou nejen splnit tuto potřebu, ale jsou flexibilní, vnímavé a profesionální. MEIZE bylo vše výše uvedené a překonalo naše očekávání během tvůrčího procesu.”",
+			"name": "Blair Witte",
+			"company": "The North Face"
+		}
+	],
+	"categories": {
+		"all": "Vše",
+		"creative": "Kreativní",
+		"commercial": "Komerční",
+		"events": "Události",
+		"production": "Produkce",
+		"postproduction": "Postprodukce"
+	},
+	"languages": {
+		"en": "English",
+		"cs": "Čeština"
+	},
+	"wedding": {
+		"title1": "Svatební videa od Meize",
+		"description1": "V Meize se mimo jiné specializujeme i na svatební videa. Naší misí je zachytit ty nejkrásnější a nejdůležitější okamžiky vašeho svatebního dne tak, jak je prožíváte – autenticky, přirozeně a s maximální precizností.",
+		"description2": "Každá svatba je jedinečná, a proto se na každý film díváme jako na nový příběh. Nejde nám o klišé a velké efekty – chceme, aby naše videa odrážela vás, vaši lásku a atmosféru dne, který si navždy zapamatujete. Zůstáváme v pozadí, abyste se mohli soustředit na to, co je důležité, a přitom zachytíme každou emoci, každý úsměv a všechny ty malinké, ale významné detaily.",
+		"title2": "Proč zvolit Meize pro vaše svatební video?",
+		"description3": "Svatební film pro nás není jen o záběrech, ale o celkovém zážitku, který vám připomene ten nejlepší den vašeho života, a to nejen ve chvíli, kdy si ho pustíte po svatbě, ale i za pár let. Chceme, aby každé vaše video mělo kouzlo, které vydrží věčně.",
+		"description4": "Pokud hledáte někoho, kdo vám vytvoří svatební film, který budete ukazovat ještě i dětem a vnoučatům, ozvěte se nám. Rádi pro vás vytvoříme něco, co vám zůstane na celý život.",
+		"category": "Svatba"
+	}
 }

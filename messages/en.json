@@ -1,102 +1,102 @@
 {
-  "og": {
-    "name": "Meize",
-    "title": "MEIZE - Creative Production Studio",
-    "description": ""
-  },
-  "common": {
-    "en": "EN",
-    "cs": "CS",
-    "language": "Language",
-    "ctaButton": "Get In Touch",
-    "yourEmail": "Your e-mail",
-    "subscribe": "Subscribe",
-    "seeAllWork": "See All Work",
-    "previous": "Previous",
-    "next": "Next",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "submit": "Send",
-    "submitting": "Sending...",
-    "project": "Project"
-  },
-  "alerts": {
-    "commonError": "Something went wrong, please try again.",
-    "newsletterSuccess": "Thank you for subscribing!",
-    "nameError": "Please enter your name.",
-    "emailError": "Please enter a valid e-mail address.",
-    "messageError": "Please enter a message.",
-    "contactSuccess": "Thank you for your message."
-  },
-  "pages": {
-    "about": "About",
-    "projects": "Projects",
-    "contact": "Contact"
-  },
-  "about": {
-    "title": "About Us",
-    "headline": "<b>MEIZE.</b> a <b>creative production</b> that embraces <b>challenges</b> and brings your <b>visions</b> to life.",
-    "intro": "We are open to all your ideas. Our portfolio includes a wide range of projects, from commercials to documentary films, fashion shows, and music videos. We approach clients individually and always fulfill their wishes. We look forward to portraying your idea as well.",
-    "subheadline": "Services",
-    "subintro": "The wide range of services offered at Meize production gives clients the opportunity to bring their ideas to life in one place. Every project is unique, and we always adapt to its needs. Our combination of technical skills, creativity, flexibility, and attention to detail creates content that resonates with your audience.",
-    "partners": "Selected Partners",
-    "feedback": "Feedbacks"
-  },
-  "projects": {
-    "title": "Projects"
-  },
-  "contact": {
-    "title": "Contact",
-    "headline": "Get In Touch",
-    "general": "Contacts",
-    "email": "email",
-    "phone": "phone",
-    "follow": "Follow Us",
-    "message": "Message Us",
-    "form": {}
-  },
-  "testimonials": [
-    {
-      "body": "“Thank goodness for Stept. We’ve come to them with short deadlines, tight budgets, scripts with babies and dogs all over the place and they’ve never batted an eye. Plus, the work has always turned out better than we ever imagined. The people at Stept are lovely and the work they do is lovely. It’s a great combo.”",
-      "name": "Catherine Kennedy",
-      "company": "The Martin Agency"
-    },
-    {
-      "body": "“There are film crews who do the job, and then there are crews like the team at Stept who actually go above and beyond to bring a project to life and set it apart. They don’t settle for good enough. And on top of all that, they’re just good people to be around.”",
-      "name": "Chasen Marshall",
-      "company": "Oakley"
-    },
-    {
-      "body": "“A great story deserves a great storyteller, and in our experience the creative collective at Stept Studios has been just that. Stept puts the most passionate and driven talent at your fingertips, and they will go to any length to make your vision a reality.”",
-      "name": "Josh Saunders",
-      "company": "Red Bull"
-    },
-    {
-      "body": "“At The North Face we often need high quality, creative edits with a fast turn around time and an affordable price tag. We look for production companies who can not only fulfill that need, but are flexible, responsive and professional. Stept has been all of the above, and have exceeded our expectations throughout the creative process.”",
-      "name": "Blair Witte",
-      "company": "The North Face"
-    }
-  ],
-  "categories": {
-    "all": "All",
-    "creative": "Creative",
-    "commercial": "Commercial",
-    "events": "Events",
-    "production": "Production",
-    "postproduction": "Postproduction"
-  },
-  "languages": {
-    "en": "English",
-    "cs": "Čeština"
-  },
-  "wedding": {
-    "title1": "Wedding Videos by Meize",
-    "description1": "At Meize, we also specialize in wedding videos. Our mission is to capture the most beautiful and important moments of your wedding day as you experience them—authentically, naturally, and with maximum precision.",
-    "description2": "Every wedding is unique, and that’s why we approach each film as a new story. We’re not about clichés and big effects—we want our videos to reflect you, your love, and the atmosphere of the day you’ll remember forever. We stay in the background so you can focus on what matters, while capturing every emotion, every smile, and all the little but meaningful details.",
-    "title2": "Why Choose Meize for Your Wedding Video?",
-    "description3": "For us, a wedding film is not just about shots, but an overall experience that will remind you of the best day of your life, not only right after the wedding but even years down the line. We want each video to have a timeless charm.",
-    "description4": "If you’re looking for someone to create a wedding film that you’ll show to your children and grandchildren, reach out to us. We would love to create something that will last you a lifetime.",
-    "category": "Wedding"
-  }
+	"og": {
+		"name": "Meize",
+		"title": "MEIZE - Creative Production Studio",
+		"description": ""
+	},
+	"common": {
+		"en": "EN",
+		"cs": "CS",
+		"language": "Language",
+		"ctaButton": "Get In Touch",
+		"yourEmail": "Your e-mail",
+		"subscribe": "Subscribe",
+		"seeAllWork": "See All Work",
+		"previous": "Previous",
+		"next": "Next",
+		"name": "Name",
+		"email": "Email",
+		"message": "Message",
+		"submit": "Send",
+		"submitting": "Sending...",
+		"project": "Project"
+	},
+	"alerts": {
+		"commonError": "Something went wrong, please try again.",
+		"newsletterSuccess": "Thank you for subscribing!",
+		"nameError": "Please enter your name.",
+		"emailError": "Please enter a valid e-mail address.",
+		"messageError": "Please enter a message.",
+		"contactSuccess": "Thank you for your message."
+	},
+	"pages": {
+		"about": "About",
+		"projects": "Projects",
+		"contact": "Contact"
+	},
+	"about": {
+		"title": "About Us",
+		"headline": "<b>MEIZE.</b> a <b>creative production</b> that embraces <b>challenges</b> and brings your <b>visions</b> to life.",
+		"intro": "We are open to all your ideas. Our portfolio includes a wide range of projects, from commercials to documentary films, fashion shows, and music videos. We approach clients individually and always fulfill their wishes. We look forward to portraying your idea as well.",
+		"subheadline": "Services",
+		"subintro": "The wide range of services offered at Meize production gives clients the opportunity to bring their ideas to life in one place. Every project is unique, and we always adapt to its needs. Our combination of technical skills, creativity, flexibility, and attention to detail creates content that resonates with your audience.",
+		"partners": "Selected Partners",
+		"feedback": "Feedbacks"
+	},
+	"projects": {
+		"title": "Projects"
+	},
+	"contact": {
+		"title": "Contact",
+		"headline": "Get In Touch",
+		"general": "Contacts",
+		"email": "email",
+		"phone": "phone",
+		"follow": "Follow Us",
+		"message": "Message Us",
+		"form": {}
+	},
+	"testimonials": [
+		{
+			"body": "“Thank goodness for Stept. We’ve come to them with short deadlines, tight budgets, scripts with babies and dogs all over the place and they’ve never batted an eye. Plus, the work has always turned out better than we ever imagined. The people at Stept are lovely and the work they do is lovely. It’s a great combo.”",
+			"name": "Catherine Kennedy",
+			"company": "The Martin Agency"
+		},
+		{
+			"body": "“There are film crews who do the job, and then there are crews like the team at Stept who actually go above and beyond to bring a project to life and set it apart. They don’t settle for good enough. And on top of all that, they’re just good people to be around.”",
+			"name": "Chasen Marshall",
+			"company": "Oakley"
+		},
+		{
+			"body": "“A great story deserves a great storyteller, and in our experience the creative collective at Stept Studios has been just that. Stept puts the most passionate and driven talent at your fingertips, and they will go to any length to make your vision a reality.”",
+			"name": "Josh Saunders",
+			"company": "Red Bull"
+		},
+		{
+			"body": "“At The North Face we often need high quality, creative edits with a fast turn around time and an affordable price tag. We look for production companies who can not only fulfill that need, but are flexible, responsive and professional. Stept has been all of the above, and have exceeded our expectations throughout the creative process.”",
+			"name": "Blair Witte",
+			"company": "The North Face"
+		}
+	],
+	"categories": {
+		"all": "All",
+		"creative": "Creative",
+		"commercial": "Commercial",
+		"events": "Events",
+		"production": "Production",
+		"postproduction": "Postproduction"
+	},
+	"languages": {
+		"en": "English",
+		"cs": "Čeština"
+	},
+	"wedding": {
+		"title1": "Wedding Videos by Meize",
+		"description1": "At Meize, we also specialize in wedding videos. Our mission is to capture the most beautiful and important moments of your wedding day as you experience them—authentically, naturally, and with maximum precision.",
+		"description2": "Every wedding is unique, and that’s why we approach each film as a new story. We’re not about clichés and big effects—we want our videos to reflect you, your love, and the atmosphere of the day you’ll remember forever. We stay in the background so you can focus on what matters, while capturing every emotion, every smile, and all the little but meaningful details.",
+		"title2": "Why Choose Meize for Your Wedding Video?",
+		"description3": "For us, a wedding film is not just about shots, but an overall experience that will remind you of the best day of your life, not only right after the wedding but even years down the line. We want each video to have a timeless charm.",
+		"description4": "If you’re looking for someone to create a wedding film that you’ll show to your children and grandchildren, reach out to us. We would love to create something that will last you a lifetime.",
+		"category": "Wedding"
+	}
 }
