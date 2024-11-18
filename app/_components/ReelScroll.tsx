@@ -90,7 +90,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       <Link
         href={`/projects/${projects[activeIndex].slug}`}
         className={
-          "hover:text-white/50 absolute bottom-4 left-4 p-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
+          "hover:text-white/50 absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
         }
       >
         <span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
@@ -99,7 +99,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       </Link>
 
       {/* Vertical Line Indicator */}
-      <div className="absolute right-10 bottom-5 gap-4 flex flex-col items-center text-white">
+      <div className="absolute right-10 bottom-24 gap-4 flex flex-col items-center text-white">
         {/* Current active index */}
         {activeIndex + 1 !== 6 && (
           <span className="text-2xl md:text-3xl font-medium">
