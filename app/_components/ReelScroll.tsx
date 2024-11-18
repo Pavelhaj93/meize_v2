@@ -78,7 +78,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
           key={index}
           width={1080}
           height={1920}
-          src={project.thumbnail}
+          src={project.thumbnailNext}
           className={`absolute top-0 left-0 w-full h-full overflow-hidden object-cover pointer-events-none transition-opacity duration-500 ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
@@ -99,7 +99,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       </Link>
 
       {/* Vertical Line Indicator */}
-      <div className="absolute right-10 bottom-24 gap-4 flex flex-col items-center text-white">
+      <div className="absolute right-4 bottom-24 gap-4 flex flex-col items-center text-white">
         {/* Current active index */}
         {activeIndex + 1 !== 6 && (
           <span className="text-2xl md:text-3xl font-medium">
