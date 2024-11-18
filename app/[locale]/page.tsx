@@ -21,7 +21,7 @@ export default function Home() {
   const projects = getAllProjects();
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-y-hidden">
       <Nav theme="dark" />
       <main className="max-h-screen">
         <div className="block lg:hidden">
