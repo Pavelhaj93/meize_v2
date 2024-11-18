@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <main className="bg-black dark min-h-screen">
       <Nav theme="dark" />
-      <Container className="mt-20 xl:mt-40">
+      <Container first>
         <header>
           <PageTitle title={t("headline")} />
         </header>

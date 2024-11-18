@@ -3,15 +3,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { routing } from "@/i18n/routing";
-import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
-import { notFound, usePathname, useRouter } from "next/navigation";
-import Footer from "../_components/Footer";
-import Nav from "../_components/Nav";
-import { useEffect } from "react";
-import { headers } from "next/headers";
+import { notFound } from "next/navigation";
 
 export interface RootLayoutProps {
   children: React.ReactNode;
@@ -40,13 +35,9 @@ export default async function RootLocaleLayout({
 
   const messages = await getMessages();
 
-  const pathname = headers().get("x-pathname");
-
-  const isHome = pathname === "/cs" || pathname === "/en";
-
   return (
-    <html lang={locale} className={isHome ? "overflow-hidden h-screen" : ""}>
-      <body className={`${poppins.className} relative`}>
+    <html lang={locale}>
+      <body className={`${poppins.className} relative overflow-y-hidden`}>
         <NextIntlClientProvider messages={messages}>
           <div className="flex flex-col">
             {children}

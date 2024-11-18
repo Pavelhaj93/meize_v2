@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <Container className="mt-10 md:mt-24 xl:mt-40 pb-10">
+    <Container first>
       <PageTitle title={t("title")} />
       <MasonryGallery items={projects} />
     </Container>

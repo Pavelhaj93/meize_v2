@@ -54,7 +54,7 @@ export default async function ProjectDetail({
 
   return (
     <article>
-      <Container className="mt-10 md:mt-14 xl:mt-40">
+      <Container first>
         <header>
           <PageTitle title={project.title} />
         </header>
