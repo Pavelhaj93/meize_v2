@@ -1,3 +1,5 @@
+// Main page.tsx
+
 import { getAllProjects } from "@/helpers/projects";
 import { useTranslations } from "next-intl";
 import Nav from "../_components/Nav";

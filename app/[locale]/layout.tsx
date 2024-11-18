@@ -1,3 +1,5 @@
+// Main layout.tsx
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { routing } from "@/i18n/routing";
