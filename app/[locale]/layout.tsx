@@ -38,9 +38,9 @@ export default async function RootLocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${poppins.className} relative`}>
+      <body className={`${poppins.className} relative overflow-y-hidden`}>
         <NextIntlClientProvider messages={messages}>
-          <div className="min-h-screen flex flex-col">
+          <div className="flex flex-col">
             {children}
             {/* <Footer /> TODO: add footer with link to my page */}
           </div>
