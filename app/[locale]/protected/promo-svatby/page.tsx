@@ -1,6 +1,5 @@
 import Container from "@/app/_components/Container";
 import WeddingVideoSection from "@/app/_components/WeddingVideoSection";
-import Vimeo from "@u-wave/react-vimeo";
 import { useTranslations } from "next-intl";
 
 export default function WeddingVideos() {

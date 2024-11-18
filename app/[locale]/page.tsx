@@ -6,32 +6,32 @@ import ReelCarousel from "../_components/ReelCarousel";
 import ReelScroll from "../_components/ReelScroll";
 
 const images = [
-	"/images/hayden.jpg",
-	"/images/hayden2.jpg",
-	"/images/hayden3.jpg",
-	"/images/hayden4.jpg",
+  "/images/hayden.jpg",
+  "/images/hayden2.jpg",
+  "/images/hayden3.jpg",
+  "/images/hayden4.jpg",
 ];
 
 export const metadata = {
-	title: "Home",
-	description: "Home page",
+  title: "Home",
+  description: "Home page",
 };
 
 export default function Home() {
-	const projects = getAllProjects();
+  const projects = getAllProjects();
 
-	return (
-		<div className="flex flex-col min-h-screen">
-			<Nav theme="dark" />
-			<main>
-				{/* <div className="block lg:hidden">
-          <ReelCarousel reels={projects} />
-        </div> */}
-				<div className="block">
-					{/* <Reel projects={projects} images={images} /> */}
-					<ReelScroll projects={projects} />
-				</div>
-			</main>
-		</div>
-	);
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Nav theme="dark" />
+      <main>
+        <div className="block lg:hidden">
+          {/* <ReelCarousel reels={projects} /> */}
+          <ReelScroll projects={projects} />
+        </div>
+        <div className="lg:block hidden">
+          <Reel projects={projects} images={images} />
+        </div>
+      </main>
+    </div>
+  );
 }

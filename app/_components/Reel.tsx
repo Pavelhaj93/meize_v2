@@ -2,72 +2,90 @@
 
 import type { Project } from "@/helpers/projects";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Container from "./Container";
 
 let videoInterval: NodeJS.Timeout;
 
 interface ReelProps {
-	reels: Project[];
-	images: string[];
-	className?: string;
+  projects: Project[];
+  images: string[];
+  className?: string;
 }
 
-export default function Reel({ reels, className = "", ...rest }: ReelProps) {
-	const [activeIndex, setActiveIndex] = useState(0);
+export default function Reel({ projects, className = "", ...rest }: ReelProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-	const handleMouseEnter = (index: number) => {
-		clearInterval(videoInterval);
-		setActiveIndex(index);
-	};
+  const handleMouseEnter = (index: number) => {
+    clearInterval(videoInterval);
+    setActiveIndex(index);
 
-	const handleMouseLeave = () => resetInterval();
+    const video = videoRefs.current[index];
+    if (video) {
+      video.play();
+    }
+  };
 
-	const handleIndexChange = useCallback(() => {
-		setActiveIndex((activeIndex + 1) % reels.length);
-	}, [activeIndex, reels.length]);
+  const handleMouseLeave = (index: number) => {
+    resetInterval();
 
-	const resetInterval = useCallback(() => {
-		clearInterval(videoInterval);
-		videoInterval = setInterval(handleIndexChange, 6000);
-	}, [handleIndexChange]);
+    const video = videoRefs.current[index];
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  };
 
-	useEffect(() => {
-		resetInterval();
-		return () => clearInterval(videoInterval);
-	}, [resetInterval]);
+  const handleIndexChange = useCallback(() => {
+    setActiveIndex((activeIndex + 1) % projects.length);
+  }, [activeIndex, projects.length]);
 
-	return (
-		<section className={`relative w-full h-screen ${className}`} {...rest}>
-			<video
-				src={reels[activeIndex].videos.short}
-				className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-				poster={reels[activeIndex].thumbnail}
-				loop={true}
-				playsInline={true}
-				muted={true}
-				autoPlay={true}
-			/>
+  const resetInterval = useCallback(() => {
+    clearInterval(videoInterval);
+    videoInterval = setInterval(handleIndexChange, 6000);
+  }, [handleIndexChange]);
 
-			<Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
-				{reels.map(({ title, slug }, key) => {
-					return (
-						<Link
-							key={key}
-							href={`/projects/${slug}`}
-							className={`${
-								activeIndex === key ? "text-white/50" : "text-white"
-							} hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
-							onMouseEnter={() => handleMouseEnter(key)}
-							onMouseLeave={handleMouseLeave}
-						>
-							<span className="text-7xl font-medium leading-[4rem] tracking-tighter">
-								{title}
-							</span>
-						</Link>
-					);
-				})}
-			</Container>
-		</section>
-	);
+  useEffect(() => {
+    resetInterval();
+    return () => clearInterval(videoInterval);
+  }, [resetInterval]);
+
+  return (
+    <section className={`relative w-full h-screen ${className}`} {...rest}>
+      {projects.map(({ videos, thumbnail }, index) => (
+        <video
+          key={index}
+          ref={(el) => {
+            videoRefs.current[index] = el;
+          }}
+          src={videos.short}
+          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none ${
+            activeIndex === index ? "visible" : "invisible"
+          }`}
+          poster={thumbnail}
+          loop={true}
+          playsInline={true}
+          muted={true}
+        />
+      ))}
+      <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
+        {projects.map(({ title, slug }, index) => (
+          <Link
+            key={index}
+            href={`/projects/${slug}`}
+            className={`${
+              activeIndex === index ? "text-white/50" : "text-white"
+            } hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+          >
+            <span className="text-7xl font-medium tracking-tighter">
+              {title}
+            </span>
+          </Link>
+        ))}
+      </Container>
+    </section>
+  );
 }

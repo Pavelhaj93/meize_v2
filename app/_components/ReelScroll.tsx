@@ -1,6 +1,7 @@
 "use client";
 
 import type { Project } from "@/helpers/projects";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -71,16 +72,19 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       className={`relative w-full h-screen overflow-hidden ${className}`}
       {...rest}
     >
-      {/* Active video */}
-      <video
-        src={projects[activeIndex]?.videos.short}
-        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-        poster={projects[activeIndex]?.thumbnail}
-        loop
-        playsInline
-        muted
-        autoPlay
-      />
+      {/* Render all images */}
+      {projects.map((project, index) => (
+        <Image
+          key={index}
+          width={1080}
+          height={1920}
+          src={project.thumbnail}
+          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500 ${
+            index === activeIndex ? "opacity-100" : "opacity-0"
+          }`}
+          alt={project.title}
+        />
+      ))}
 
       {/* Video titles or navigation */}
       <Link
@@ -88,8 +92,6 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
         className={
           "hover:text-white/50 absolute bottom-4 left-4 p-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
         }
-        onMouseEnter={() => {}}
-        onMouseLeave={() => {}}
       >
         <span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
           {projects[activeIndex].title}
@@ -100,7 +102,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       <div className="absolute right-10 bottom-5 gap-4 flex flex-col items-center text-white">
         {/* Current active index */}
         {activeIndex + 1 !== 6 && (
-          <span className="text-3xl md:text-4xl font-medium">
+          <span className="text-2xl md:text-3xl font-medium">
             {activeIndex + 1}
           </span>
         )}
@@ -112,7 +114,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
         />
 
         {/* Total number of projects */}
-        <span className="text-3xl md:text-4xl font-medium">
+        <span className="text-2xl md:text-3xl font-medium">
           {projects.length}
         </span>
       </div>
