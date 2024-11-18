@@ -21,9 +21,9 @@ export default function Home() {
   const projects = getAllProjects();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <Nav theme="dark" />
-      <main>
+      <main className="max-h-screen">
         <div className="block lg:hidden">
           {/* <ReelCarousel reels={projects} /> */}
           <ReelScroll projects={projects} />
