@@ -52,7 +52,10 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   }, [resetInterval]);
 
   return (
-    <section className={`relative w-full h-screen ${className}`} {...rest}>
+    <section
+      className={`relative w-full h-screen overflow-hidden ${className}`}
+      {...rest}
+    >
       {projects.map(({ videos, thumbnail }, index) => (
         <video
           key={index}
