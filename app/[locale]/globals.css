@@ -14,3 +14,8 @@ svg {
 .hamburger-react > div {
   @apply !h-0.5;
 }
+
+.no-scroll {
+  @apply overflow-hidden;
+  @apply h-screen;
+}
