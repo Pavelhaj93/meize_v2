@@ -79,7 +79,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
           width={1080}
           height={1920}
           src={project.thumbnail}
-          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500 ${
+          className={`absolute top-0 left-0 w-full h-full overflow-hidden object-cover pointer-events-none transition-opacity duration-500 ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
           alt={project.title}
