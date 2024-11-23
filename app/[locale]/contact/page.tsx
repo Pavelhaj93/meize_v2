@@ -1,6 +1,6 @@
 import Container from "@/app/_components/Container";
 import FormContact from "@/app/_components/FormContact";
-import Nav from "@/app/_components/Nav";
+import Nav from "@/app/_components/Navbar";
 import PageTitle from "@/app/_components/PageTitle";
 import { type Contacts, contacts } from "@/helpers/contacts";
 import { useTranslations } from "next-intl";

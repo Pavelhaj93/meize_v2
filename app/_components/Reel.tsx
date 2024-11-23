@@ -16,19 +16,23 @@ interface ReelProps {
 export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [blurIndex, setBlurIndex] = useState<number | null>(null);
 
   const handleMouseEnter = (index: number) => {
     clearInterval(videoInterval);
     setActiveIndex(index);
+    setBlurIndex(index); // Set the blur index on mouse enter
 
     const video = videoRefs.current[index];
     if (video) {
       video.play();
+      setTimeout(() => setBlurIndex(null), 300);
     }
   };
 
   const handleMouseLeave = (index: number) => {
     resetInterval();
+    setBlurIndex(null); // Remove the blur index on mouse leave
 
     const video = videoRefs.current[index];
     if (video) {
@@ -65,7 +69,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
           src={videos.short}
           className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none ${
             activeIndex === index ? "visible" : "invisible"
-          }`}
+          } ${blurIndex === index ? "blur-sm" : ""}`} // Apply blur-sm class
           poster={thumbnail}
           loop={true}
           playsInline={true}
