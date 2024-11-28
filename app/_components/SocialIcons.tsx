@@ -32,11 +32,8 @@ const SocialIcons = () => (
     {icons.map((icon) => {
       const Icon = icon.icon;
       return (
-        <Link href={icon.href}>
-          <Icon
-            key={icon.id}
-            className="dark:text-white dark:hover:text-gray-500 text-black hover:text-black/50 transition-colors"
-          />
+        <Link href={icon.href} key={icon.id}>
+          <Icon className="dark:text-white dark:hover:text-gray-500 text-black hover:text-black/50 transition-colors" />
         </Link>
       );
     })}

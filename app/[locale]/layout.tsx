@@ -37,7 +37,7 @@ export default async function RootLocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${poppins.className} relative`}>
+      <body className={`${poppins.className} relative no-scroll`}>
         <NextIntlClientProvider messages={messages}>
           <div className="flex flex-col">
             {children}
