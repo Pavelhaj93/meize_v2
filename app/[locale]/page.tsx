@@ -4,7 +4,6 @@ import { getAllProjects } from "@/helpers/projects";
 import Nav from "../_components/Navbar";
 import Reel from "../_components/Reel";
 import ReelScroll from "../_components/ReelScroll";
-import NoScroll from "../_components/NoScroll";
 
 const images = [
   "/images/hayden.jpg",
@@ -24,10 +23,8 @@ export default function Home() {
   return (
     <div className="flex flex-col overflow-y-hidden max-h-screen">
       <Nav theme="dark" />
-      {/* <NoScroll /> */}
       <main className="">
         <div className="block lg:hidden">
-          {/* <ReelCarousel reels={projects} /> */}
           <ReelScroll projects={projects} />
         </div>
         <div className="lg:block hidden">
