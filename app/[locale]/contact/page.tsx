@@ -30,7 +30,7 @@ export default function Contact() {
               {t("general")}
             </h2>
           </header>
-          <div className="flex-1 flex flex-col items-center lg:items-start gap-2 lg:gap-4 lg:pt-6">
+          <div className="flex-1 flex flex-col items-center lg:items-start gap-6 lg:gap-4 lg:pt-6 mt-5">
             {Object.keys(contacts).map((type) => {
               const contactType = type as keyof Contacts; // Explicitly cast to keyof Contacts
               return (
@@ -51,7 +51,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mx-auto">
+        <section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mt-10 lg:mt-0 mx-auto mb-10">
           <header className="flex-1">
             <h3 className="font-medium tracking-tighter text-3xl lg:text-4xl xl:text-5xl dark:text-white">
               {t("message")}
