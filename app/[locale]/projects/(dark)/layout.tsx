@@ -8,7 +8,7 @@ export default function ProjectsLayout({
 }) {
   return (
     <div className="bg-black dark">
-      <Nav />
+      <Nav theme="dark" />
       <NoScroll />
       <main>{children}</main>
     </div>

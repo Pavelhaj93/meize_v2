@@ -3,6 +3,7 @@ import FormContact from "@/app/_components/FormContact";
 import Nav from "@/app/_components/Navbar";
 import NoScroll from "@/app/_components/NoScroll";
 import PageTitle from "@/app/_components/PageTitle";
+import SocialIcons from "@/app/_components/NavbarSocialIcons";
 import { type Contacts, contacts } from "@/helpers/contacts";
 import { useTranslations } from "next-intl";
 

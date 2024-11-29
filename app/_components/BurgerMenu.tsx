@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import Link from "next/link";
 import { useLocale, useTranslations } from "use-intl";
 import { usePathname } from "next/navigation";
+import { socialIcons } from "@/helpers/socialIcons";
 
 const allLinks = [...links.left, ...links.right];
 
@@ -45,7 +46,7 @@ export default function BurgerMenu({
       } overflow-hidden`}
       {...rest}
     >
-      <section className="flex bg-black flex-col justify-between relative px-8 py-40 lg:px-12 h-full">
+      <section className="flex bg-black flex-col justify-between relative px-8 pt-40 pb-40 lg:pb-20 lg:px-12 h-full">
         <div className="flex flex-col gap-8">
           {allLinks.map(({ id, href, title }, key) => {
             return (
@@ -65,23 +66,38 @@ export default function BurgerMenu({
             );
           })}
         </div>
-        <div
-          className={
-            "mt-10 flex items-center justify-center md:justify-start gap-10"
-          }
-        >
-          <Link
-            href={getLocalizedPath(pathname, locale === "en" ? "cs" : "en")}
-            locale={false}
-            key={`NavLang: ${locale}`}
-            onClick={() => {
-              handleClickLink();
-            }}
+        <div className="flex flex-col gap-8">
+          <div
+            className={
+              "mt-10 flex items-center text-2xl justify-center md:justify-start gap-10"
+            }
           >
-            <span className="text-white hover:text-gray-500 transition-colors">
-              {locale === "en" ? "CZ" : "EN"}
-            </span>
-          </Link>
+            <Link
+              href={getLocalizedPath(pathname, locale === "en" ? "cs" : "en")}
+              locale={false}
+              key={`NavLang: ${locale}`}
+              onClick={() => {
+                handleClickLink();
+              }}
+            >
+              <span className="text-white hover:text-gray-500 transition-colors">
+                {locale === "en" ? "CZ" : "EN"}
+              </span>
+            </Link>
+          </div>
+          <div className="flex gap-4 justify-center md:justify-start">
+            {socialIcons.map((icon) => {
+              const Icon = icon.icon;
+              return (
+                <Link href={icon.href} key={icon.id}>
+                  <Icon
+                    className="dark:text-white dark:hover:text-gray-500 text-black hover:text-black/50 transition-colors size-8"
+                    size="custom"
+                  />
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
     </nav>

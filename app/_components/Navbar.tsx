@@ -5,7 +5,8 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import LogoLink from "./LogoLink";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "./NavbarSocialIcons";
+import NavbarSocialIcons from "./NavbarSocialIcons";
 
 const Navbar = ({ theme = "black", className = "" }) => {
   const t = useTranslations();
@@ -39,9 +40,7 @@ const Navbar = ({ theme = "black", className = "" }) => {
             color={theme === "dark" || burgerActive ? "white" : "black"}
           />
           <LogoLink />
-          <div className="w-12 sm:w-auto">
-            <SocialIcons />
-          </div>
+          <div className="w-12 sm:w-auto" />
         </div>
       </nav>
       <BurgerMenu active={burgerActive} setBurgerActive={setBurgerActive} />

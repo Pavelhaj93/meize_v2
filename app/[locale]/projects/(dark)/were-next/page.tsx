@@ -52,12 +52,12 @@ export default async function WereNextPage() {
 
       <Container>
         {project.videos.vimeoId && (
-          <div className="w-full aspect-video mx-auto my-10">
+          <div className="relative w-full aspect-square max-h-[90vh] my-10">
             <iframe
-              className="w-full h-full"
               src={`https://player.vimeo.com/video/${project.videos.vimeoId}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               title={project.title}
+              className="absolute w-full h-full top-0 left-0"
             />
           </div>
         )}

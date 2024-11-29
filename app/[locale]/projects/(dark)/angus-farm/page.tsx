@@ -32,34 +32,40 @@ export default async function AngusFarmPage() {
 
       <Container>
         {project.videos.vimeoId1 && (
-          <iframe
-            src={`https://player.vimeo.com/video/${project.videos.vimeoId1}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            title="ANGUSFARM"
-            className="w-full h-[56.25vw] md:h-[56.25vw] lg:h-[56.25vw] xl:h-[40.25vw]"
-          />
+          <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
+            <iframe
+              src={`https://player.vimeo.com/video/${project.videos.vimeoId1}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title="ANGUSFARM"
+              className="absolute w-full h-full top-0 left-0"
+            />
+          </div>
         )}
 
         <GifGrid gifs={project.gifs ?? []} bottom={0} top={2} />
 
         {project.videos.vimeoId2 && (
-          <iframe
-            src={`https://player.vimeo.com/video/${project.videos.vimeoId2}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            title="ANGUSFARM"
-            className="w-full h-[56.25vw] md:h-[56.25vw] lg:h-[56.25vw] xl:h-[40.25vw]"
-          />
+          <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
+            <iframe
+              src={`https://player.vimeo.com/video/${project.videos.vimeoId2}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title="ANGUSFARM"
+              className="absolute w-full h-full top-0 left-0"
+            />
+          </div>
         )}
 
         <GifGrid gifs={project.gifs ?? []} bottom={2} top={4} revert />
 
         {project.videos.vimeoId3 && (
-          <iframe
-            src={`https://player.vimeo.com/video/${project.videos.vimeoId3}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            title="ANGUSFARM"
-            className="w-full h-[56.25vw] md:h-[56.25vw] lg:h-[56.25vw] xl:h-[40.25vw]"
-          />
+          <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
+            <iframe
+              src={`https://player.vimeo.com/video/${project.videos.vimeoId3}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title="ANGUSFARM"
+              className="absolute w-full h-full top-0 left-0"
+            />
+          </div>
         )}
 
         <div className="pt-20 gap-12 flex flex-col">
