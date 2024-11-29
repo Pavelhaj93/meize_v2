@@ -27,7 +27,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       setIsScrolling(true);
 
       // Allow scrolling again after a short delay
-      setTimeout(() => setIsScrolling(false), 1000);
+      setTimeout(() => setIsScrolling(false), 500);
     }
   };
 
@@ -75,7 +75,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       {/* Render all images */}
       {projects.map((project, index) => (
         <Image
-          key={index}
+          key={project.id}
           width={1080}
           height={1920}
           src={project.thumbnailNext}
