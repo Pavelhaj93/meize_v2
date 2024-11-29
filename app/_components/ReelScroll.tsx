@@ -16,6 +16,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   const [touchStart, setTouchStart] = useState<number | null>(null);
 
   useEffect(() => {
+    document.body.classList.add("no-scroll");
     return () => document.body.classList.remove("no-scroll");
   }, []);
 
