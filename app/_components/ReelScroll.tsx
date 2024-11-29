@@ -15,6 +15,10 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   const [isScrolling, setIsScrolling] = useState(false); // Prevent rapid-fire scrolls
   const [touchStart, setTouchStart] = useState<number | null>(null);
 
+  useEffect(() => {
+    return () => document.body.classList.remove("no-scroll");
+  }, []);
+
   const changeIndex = (direction: number) => {
     let newIndex = activeIndex + direction;
 

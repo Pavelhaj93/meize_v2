@@ -1,5 +1,4 @@
 import Nav from "@/app/_components/Navbar";
-import NoScroll from "@/app/_components/NoScroll";
 
 export default function ProjectsLayout({
   children,
@@ -9,7 +8,6 @@ export default function ProjectsLayout({
   return (
     <div className="bg-black dark">
       <Nav theme="dark" />
-      <NoScroll />
       <main>{children}</main>
     </div>
   );

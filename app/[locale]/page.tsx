@@ -4,6 +4,7 @@ import { getAllProjects } from "@/helpers/projects";
 import Nav from "../_components/Navbar";
 import Reel from "../_components/Reel";
 import ReelScroll from "../_components/ReelScroll";
+import { useEffect } from "react";
 
 const images = [
   "/images/hayden.jpg",
@@ -21,7 +22,7 @@ export default function Home() {
   const projects = getAllProjects();
 
   return (
-    <div className="flex flex-col overflow-y-hidden max-h-screen">
+    <div className="flex flex-col">
       <Nav theme="dark" />
       <main className="">
         <div className="block lg:hidden">

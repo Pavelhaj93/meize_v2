@@ -1,5 +1,4 @@
 import Container from "@/app/_components/Container";
-import NoScroll from "@/app/_components/NoScroll";
 import WeddingVideoSection from "@/app/_components/WeddingVideoSection";
 import { useTranslations } from "next-intl";
 
@@ -19,7 +18,6 @@ export default function WeddingVideos() {
           {t("description2")}
         </p>
       </Container>
-      <NoScroll />
 
       <Container className="bg-white text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 lg:mb-8">

@@ -5,8 +5,8 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import LogoLink from "./LogoLink";
-import SocialIcons from "./NavbarSocialIcons";
-import NavbarSocialIcons from "./NavbarSocialIcons";
+import SocialIcons from "./SocialIcons";
+import NavbarSocialIcons from "./SocialIcons";
 
 const Navbar = ({ theme = "black", className = "" }) => {
   const t = useTranslations();

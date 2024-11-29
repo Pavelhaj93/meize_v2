@@ -2,7 +2,7 @@ import { socialIcons } from "@/helpers/socialIcons";
 import Link from "next/link";
 
 const SocialIcons = () => (
-  <div className="gap-4 sm:flex hidden">
+  <div className="gap-4 flex">
     {socialIcons.map((icon) => {
       const Icon = icon.icon;
       return (
