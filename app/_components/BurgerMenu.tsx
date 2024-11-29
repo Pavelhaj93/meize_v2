@@ -91,7 +91,7 @@ export default function BurgerMenu({
               return (
                 <Link href={icon.href} key={icon.id}>
                   <Icon
-                    className="dark:text-white dark:hover:text-gray-500 text-black hover:text-black/50 transition-colors size-8"
+                    className="text-white hover:text-gray-500 transition-colors size-8"
                     size="custom"
                   />
                 </Link>

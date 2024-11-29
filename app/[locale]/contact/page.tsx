@@ -49,6 +49,7 @@ export default function Contact() {
                 </div>
               );
             })}
+            <SocialIcons />
           </div>
         </section>
 
