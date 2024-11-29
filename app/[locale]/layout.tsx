@@ -29,7 +29,7 @@ export default async function RootLocaleLayout({
 }: Readonly<RootLayoutProps>) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as "cs" | "en")) {
     notFound();
   }
 

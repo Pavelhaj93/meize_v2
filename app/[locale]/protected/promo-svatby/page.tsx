@@ -7,7 +7,7 @@ export default function WeddingVideos() {
   const t = useTranslations("wedding");
 
   return (
-    <>
+    <main>
       <Container className="text-center relative py-4 md:py-8 lg:py-20 px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-2 md:mb-4 lg:mb-8">
           {t("title1")}
@@ -34,6 +34,6 @@ export default function WeddingVideos() {
       </Container>
 
       <WeddingVideoSection />
-    </>
+    </main>
   );
 }

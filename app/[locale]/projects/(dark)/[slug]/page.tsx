@@ -5,7 +5,6 @@ import ScreenGrabs from "@/app/_components/ScreenGrabs";
 import { getProjectById, getProjectBySlug } from "@/helpers/projects";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({
@@ -36,7 +35,7 @@ export default async function ProjectDetail({
   generateMetadata({ params });
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as "cs" | "en")) {
     notFound();
   }
 
@@ -62,12 +61,14 @@ export default async function ProjectDetail({
 
       <Container>
         {project.videos.vimeoId && (
-          <iframe
-            src={`https://player.vimeo.com/video/${project.videos.vimeoId}?badge=0&amp;autopause=0&amp;player_id=0&amp;controls=0&amp;app_id=58479`}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            title={project.title}
-            className="w-full h-[56.25vw] md:h-[56.25vw] lg:h-[56.25vw] xl:h-[56.25vw]"
-          />
+          <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
+            <iframe
+              src={`https://player.vimeo.com/video/${project.videos.vimeoId}?badge=0&amp;autopause=0&amp;player_id=0&amp;controls=0&amp;app_id=58479`}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title={project.title}
+              className="absolute top-0 left-0 w-full h-full"
+            />
+          </div>
         )}
 
         <div className="md:pt-20 gap-12 flex flex-col">

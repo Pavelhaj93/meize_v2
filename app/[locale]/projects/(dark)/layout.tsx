@@ -7,10 +7,10 @@ export default function ProjectsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="">
+    <div className="bg-black dark">
+      <Nav />
       <NoScroll />
-      <Nav theme="black" />
-      <main className="">{children}</main>
+      <main>{children}</main>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { getScrolledFromTop } from "@/helpers/scroll";
 import Hamburger from "hamburger-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -17,13 +16,11 @@ const Navbar = ({ theme = "black", className = "" }) => {
     theme === "black" || scrolled
   );
 
-  // const handleScroll = () => setScrolled(getScrolledFromTop() > 50);
-
   const handleBurgerClick = () => setBurgerActive(!burgerActive);
 
   useEffect(() => {
     setShowNavBackground(theme === "black" || scrolled);
-  }, [burgerActive, scrolled, theme]);
+  }, [scrolled, theme]);
 
   return (
     <header className={theme === "dark" ? "dark" : ""}>

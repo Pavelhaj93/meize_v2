@@ -60,16 +60,16 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       className={`relative w-full h-screen overflow-hidden ${className}`}
       {...rest}
     >
-      {projects.map(({ videos, thumbnail }, index) => (
+      {projects.map(({ id, videos, thumbnail }, index) => (
         <video
-          key={index}
+          key={id}
           ref={(el) => {
             videoRefs.current[index] = el;
           }}
           src={videos.short}
-          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none ${
+          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none [transition-property:filter] duration-700 ${
             activeIndex === index ? "visible" : "invisible"
-          } ${blurIndex === index ? "blur-sm" : ""}`} // Apply blur-sm class
+          } ${blurIndex === index ? "blur-3xl" : ""}`} // Apply blur-sm class
           poster={thumbnail}
           loop={true}
           playsInline={true}
@@ -77,9 +77,9 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
         />
       ))}
       <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
-        {projects.map(({ title, slug }, index) => (
+        {projects.map(({ id, title, slug }, index) => (
           <Link
-            key={index}
+            key={id}
             href={`/projects/${slug}`}
             className={`${
               activeIndex === index ? "text-white/50" : "text-white"
@@ -87,7 +87,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
-            <span className="text-7xl font-medium tracking-tighter">
+            <span className="text-5xl 2xl:text-6xl font-medium tracking-tighter">
               {title}
             </span>
           </Link>

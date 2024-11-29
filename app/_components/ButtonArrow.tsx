@@ -51,7 +51,7 @@ const ButtonArrow = ({
 }: ButtonArrowProps) => {
   const t = useTranslations("common");
 
-  const buttonClasses = `uppercase font-bold inline-flex items-center gap-4 mouse-hover:text-primary mouse-hover:gap-2 transition-all duration-300 rounded-none ${
+  const buttonClasses = `uppercase font-bold inline-flex text-white items-center gap-4 hover:text-gray-500 mouse-hover:gap-2 transition-all duration-300 rounded-none ${
     direction === "next"
       ? "mouse-hover:translate-x-2"
       : "mouse-hover:-translate-x-2"

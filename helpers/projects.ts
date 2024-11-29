@@ -242,7 +242,6 @@ export const getAllProjects = () => {
 
 export const getFeaturedProjects = () => {
   return projects.slice(0, 3);
-  return getProjectByIds([4, 6, 16, 3, 17, 2]);
 };
 
 export const getProjectsByCategory = (category: string): Project[] => {
@@ -269,12 +268,12 @@ export const getProjectsInReel = () => {
 
 export const getAllCategories = () => {
   const categories: string[] = [];
-  projects.forEach((project) => {
-    project.categories.forEach((category) => {
+  for (const project of projects) {
+    for (const category of project.categories) {
       if (!categories.includes(category)) {
         categories.push(category);
       }
-    });
-  });
+    }
+  }
   return categories;
 };

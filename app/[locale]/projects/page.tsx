@@ -1,5 +1,6 @@
 import Container from "@/app/_components/Container";
 import MasonryGallery from "@/app/_components/MasonryGallery";
+import Navbar from "@/app/_components/Navbar";
 import PageTitle from "@/app/_components/PageTitle";
 import { getAllProjects } from "@/helpers/projects";
 import { useTranslations } from "next-intl";
@@ -13,9 +14,14 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <Container first>
-      <PageTitle title={t("title")} />
-      <MasonryGallery items={projects} />
-    </Container>
+    <div className="">
+      <Navbar />
+      <main>
+        <Container first>
+          <PageTitle title={t("title")} />
+          <MasonryGallery items={projects} />
+        </Container>
+      </main>
+    </div>
   );
 }
