@@ -4,7 +4,6 @@ import { getAllProjects } from "@/helpers/projects";
 import Nav from "../_components/Navbar";
 import Reel from "../_components/Reel";
 import ReelScroll from "../_components/ReelScroll";
-import { useEffect } from "react";
 
 const images = [
   "/images/hayden.jpg",

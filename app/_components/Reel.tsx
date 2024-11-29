@@ -4,6 +4,7 @@ import type { Project } from "@/helpers/projects";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Container from "./Container";
+import { useLocale } from "next-intl";
 
 let videoInterval: NodeJS.Timeout;
 
@@ -17,6 +18,8 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [blurIndex, setBlurIndex] = useState<number | null>(null);
+
+  const locale = useLocale();
 
   const handleMouseEnter = (index: number) => {
     clearInterval(videoInterval);
@@ -80,7 +83,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
         {projects.map(({ id, title, slug }, index) => (
           <Link
             key={id}
-            href={`/projects/${slug}`}
+            href={`/${locale}/projects/${slug}`}
             className={`${
               activeIndex === index ? "text-white/50" : "text-white"
             } hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
