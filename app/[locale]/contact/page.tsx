@@ -17,13 +17,8 @@ export default function Contact() {
   return (
     <main className="bg-black dark min-h-screen">
       <Nav theme="dark" />
-      <Container first>
-        <header>
-          <PageTitle title={t("headline")} />
-        </header>
-      </Container>
 
-      <Container className="md:pt-20 flex flex-col xl:gap-28 gap-5">
+      <Container first className="md:pt-20 flex flex-col xl:gap-28 gap-5">
         <section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mx-auto">
           <header className="flex-1">
             <h2 className="font-medium tracking-tighter text-3xl lg:text-4xl xl:text-5xl dark:text-white">

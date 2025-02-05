@@ -65,7 +65,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
           ref={(el) => {
             videoRefs.current[index] = el;
           }}
-          src={videos.short}
+          src={videos?.short}
           className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none [transition-property:filter] duration-700 ${
             activeIndex === index ? "visible" : "invisible"
           }`}
@@ -76,21 +76,36 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
         />
       ))}
       <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
-        {projects.map(({ id, title, slug }, index) => (
-          <Link
-            key={id}
-            href={`/${locale}/projects/${slug}`}
-            className={`${
-              activeIndex === index ? "text-white/50" : "text-white"
-            } hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
-          >
-            <span className="text-5xl 2xl:text-6xl font-medium tracking-tighter">
-              {title}
-            </span>
-          </Link>
-        ))}
+        {projects.map(({ id, title, slug }, index) =>
+          activeIndex === 0 && index === 0 ? (
+            <div
+              key={id}
+              className={`${
+                activeIndex === index ? "text-white/50" : "text-white"
+              } inline-flex flex-col items-start text-left transition-colors duration-500`}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
+              <span className="text-5xl 2xl:text-6xl font-medium tracking-tighter">
+                {title}
+              </span>
+            </div>
+          ) : (
+            <Link
+              key={id}
+              href={`/${locale}/projects/${slug}`}
+              className={`${
+                activeIndex === index ? "text-white/50" : "text-white"
+              } hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
+              <span className="text-5xl 2xl:text-6xl font-medium tracking-tighter">
+                {title}
+              </span>
+            </Link>
+          )
+        )}
       </Container>
     </section>
   );

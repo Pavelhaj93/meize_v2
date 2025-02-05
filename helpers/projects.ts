@@ -3,6 +3,11 @@ import imageAnnaVonLipa from "../public/data/anna-von-lipa/thumbnail.jpg";
 import imageSawsane from "../public/data/sawsane/thumbnail.jpg";
 import imageTrezor from "../public/data/trezor/thumbnail.jpg";
 import imageWereNext from "../public/data/were-next/thumbnail.jpg";
+import reelThumbnail from "../public/images/REEL_25_thumbnail.png";
+import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.png";
+import imageGt4 from "../public/data/gt4/screens/gt4_1.png";
+import imageMud from "../public/data/mud/mud_thumbnail.png";
+import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.png";
 
 import imageAnnaVonLipaScreen01 from "../public/data/anna-von-lipa/screens/01.jpg";
 import imageAnnaVonLipaScreen02 from "../public/data/anna-von-lipa/screens/02.jpg";
@@ -68,23 +73,85 @@ import gif1 from "../public/data/were-next/gifs/gif1.gif";
 import gif2 from "../public/data/were-next/gifs/gif2.gif";
 import gif3 from "../public/data/were-next/gifs/gif3.gif";
 
+import dakarScreen1 from "../public/data/dakar-2025/screens/dkr1.png";
+import dakarScreen2 from "../public/data/dakar-2025/screens/dkr2.png";
+import dakarScreen3 from "../public/data/dakar-2025/screens/dkr3.png";
+import dakarScreen4 from "../public/data/dakar-2025/screens/dkr4.png";
+import dakarScreen5 from "../public/data/dakar-2025/screens/dkr5.png";
+import dakarScreen6 from "../public/data/dakar-2025/screens/dkr6.png";
+import dakarScreen7 from "../public/data/dakar-2025/screens/dkr7.png";
+import dakarScreen8 from "../public/data/dakar-2025/screens/dkr8.png";
+import dakarScreen9 from "../public/data/dakar-2025/screens/dkr9.png";
+import dakarScreen10 from "../public/data/dakar-2025/screens/dkr10.png";
+import dakarScreen11 from "../public/data/dakar-2025/screens/dkr11.png";
+import dakarScreen12 from "../public/data/dakar-2025/screens/dkr12.png";
+import dakarScreen13 from "../public/data/dakar-2025/screens/dkr13.png";
+import dakarScreen14 from "../public/data/dakar-2025/screens/dkr14.png";
+import dakarScreen15 from "../public/data/dakar-2025/screens/dkr15.png";
+
+import gt4Screen1 from "../public/data/gt4/screens/gt4_1.png";
+import gt4Screen2 from "../public/data/gt4/screens/gt4_2.png";
+import gt4Screen3 from "../public/data/gt4/screens/gt4_3.png";
+import gt4Screen4 from "../public/data/gt4/screens/gt4_4.png";
+import gt4Screen5 from "../public/data/gt4/screens/gt4_5.png";
+import gt4Screen6 from "../public/data/gt4/screens/gt4_6.png";
+import gt4Screen7 from "../public/data/gt4/screens/gt4_7.png";
+import gt4Screen8 from "../public/data/gt4/screens/gt4_8.png";
+import gt4Screen9 from "../public/data/gt4/screens/gt4_9.png";
+
+import imageMudScreen1 from "../public/data/mud/screens/mud1.png";
+import imageMudScreen2 from "../public/data/mud/screens/mud2.png";
+import imageMudScreen3 from "../public/data/mud/screens/mud3.png";
+import imageMudScreen4 from "../public/data/mud/screens/mud4.png";
+import imageMudScreen5 from "../public/data/mud/screens/mud5.png";
+import imageMudScreen6 from "../public/data/mud/screens/mud6.png";
+import imageMudScreen7 from "../public/data/mud/screens/mud7.png";
+import imageMudScreen8 from "../public/data/mud/screens/mud8.png";
+import imageMudScreen9 from "../public/data/mud/mud_thumbnail.png";
+
+import imageTacticalScreen1 from "../public/data/buggyra-tactical/screens/tactical1.png";
+import imageTacticalScreen2 from "../public/data/buggyra-tactical/screens/tactical2.png";
+import imageTacticalScreen3 from "../public/data/buggyra-tactical/screens/tactical3.png";
+import imageTacticalScreen4 from "../public/data/buggyra-tactical/screens/tactical4.png";
+import imageTacticalScreen5 from "../public/data/buggyra-tactical/screens/tactical5.png";
+import imageTacticalScreen6 from "../public/data/buggyra-tactical/screens/tactical6.png";
+import imageTacticalScreen7 from "../public/data/buggyra-tactical/screens/tactical7.png";
+import imageTacticalScreen8 from "../public/data/buggyra-tactical/screens/tactical8.png";
+import imageTacticalScreen9 from "../public/data/buggyra-tactical/screens/tactical9.png";
+
+type Category = {
+  id: number;
+  name: string;
+};
+
 export type Project = {
   id: number;
   title: string;
   slug: string;
-  thumbnail: string;
-  thumbnailNext: StaticImageData;
-  videos: {
-    short: string;
-    full: string | null;
+  thumbnail?: string;
+  thumbnailNext?: StaticImageData;
+  videos?: {
+    short?: string;
+    full?: string | null;
     vimeoId?: string;
     vimeoId1?: string;
     vimeoId2?: string;
     vimeoId3?: string;
   };
-  categories: string[];
-  screens: string[] | StaticImageData[];
+  categories?: Category[];
+  screens?: string[] | StaticImageData[];
   gifs?: StaticImageData[];
+};
+
+const mainReel: Project = {
+  id: 0,
+  title: "Reel_25",
+  slug: "reel-25",
+  videos: {
+    short: "/videos/REEL_25_compressed.mp4",
+  },
+  thumbnail: "/images/REEL_25_thumbnail.png",
+  thumbnailNext: reelThumbnail,
 };
 
 const projects: Project[] = [
@@ -99,7 +166,12 @@ const projects: Project[] = [
       full: "/data/anna-von-lipa/anna-von-lipa_full.mp4",
       vimeoId: "891018959",
     },
-    categories: ["creative"],
+    categories: [
+      {
+        id: 1,
+        name: "creative",
+      },
+    ],
     screens: [
       imageAnnaVonLipaScreen01,
       imageAnnaVonLipaScreen02,
@@ -122,7 +194,10 @@ const projects: Project[] = [
       short: "/data/sawsane/sawsane_short.mp4",
       full: null,
     },
-    categories: ["creative", "commercial"],
+    categories: [
+      { id: 1, name: "creative" },
+      { id: 2, name: "commercial" },
+    ],
     screens: [
       imageSawsaneScreen01,
       imageSawsaneScreen02,
@@ -146,7 +221,10 @@ const projects: Project[] = [
       full: "/data/trezor/trezor_full.mp4",
       vimeoId: "892186319",
     },
-    categories: ["production", "postproduction"],
+    categories: [
+      { id: 3, name: "production" },
+      { id: 4, name: "postproduction" },
+    ],
     screens: [imageTrezorScreen01, imageTrezorScreen02, imageTrezorScreen03],
   },
   {
@@ -162,7 +240,10 @@ const projects: Project[] = [
       vimeoId2: "887333055",
       vimeoId3: "891028950",
     },
-    categories: ["creative", "commercial"],
+    categories: [
+      { id: 1, name: "creative" },
+      { id: 2, name: "commercial" },
+    ],
     screens: [
       imageAngusFarmScreen01,
       imageAngusFarmScreen02,
@@ -187,7 +268,7 @@ const projects: Project[] = [
       full: "/data/klaus-timber/klaus-timber_full.mp4",
       vimeoId: "892875702",
     },
-    categories: ["commercial"],
+    categories: [{ id: 1, name: "commercial" }],
     screens: [
       imageKlausTimberScreen01,
       imageKlausTimberScreen02,
@@ -211,7 +292,10 @@ const projects: Project[] = [
       full: "/data/were-next/were-next_full.mp4",
       vimeoId: "892197628",
     },
-    categories: ["production", "postproduction"],
+    categories: [
+      { id: 1, name: "production" },
+      { id: 2, name: "postproduction" },
+    ],
     screens: [
       imageWereNextScreen01,
       imageWereNextScreen02,
@@ -225,6 +309,88 @@ const projects: Project[] = [
     ],
     gifs: [gif1, gif2, gif3],
   },
+  {
+    id: 7,
+    title: "Dakar 2025",
+    slug: "dakar-2025",
+    thumbnail: "/data/dakar-2025/screens/dkr9.png",
+    thumbnailNext: imageDakar2025,
+    categories: [{ id: 1, name: "coming soon" }],
+    screens: [
+      dakarScreen1,
+      dakarScreen2,
+      dakarScreen3,
+      dakarScreen4,
+      dakarScreen5,
+      dakarScreen6,
+      dakarScreen7,
+      dakarScreen8,
+      dakarScreen9,
+      dakarScreen10,
+      dakarScreen11,
+      dakarScreen12,
+      dakarScreen13,
+      dakarScreen14,
+      dakarScreen15,
+    ],
+  },
+  {
+    id: 8,
+    title: "GT4",
+    slug: "gt4",
+    thumbnail: "/data/gt4/screens/gt4_1.png",
+    thumbnailNext: imageGt4,
+    categories: [{ id: 1, name: "coming soon" }],
+    screens: [
+      gt4Screen1,
+      gt4Screen2,
+      gt4Screen3,
+      gt4Screen4,
+      gt4Screen5,
+      gt4Screen6,
+      gt4Screen7,
+      gt4Screen8,
+      gt4Screen9,
+    ],
+  },
+  {
+    id: 9,
+    title: "Muzeum Umění a designu Benešov",
+    slug: "muzeum-umeni-a-designu-benesov",
+    thumbnail: "/data/mud/mud_thumbnail.png",
+    thumbnailNext: imageMud,
+    categories: [{ id: 1, name: "coming soon" }],
+    screens: [
+      imageMudScreen1,
+      imageMudScreen2,
+      imageMudScreen3,
+      imageMudScreen4,
+      imageMudScreen5,
+      imageMudScreen6,
+      imageMudScreen7,
+      imageMudScreen8,
+      imageMudScreen9,
+    ],
+  },
+  {
+    id: 10,
+    title: "Buggyra Tactical",
+    slug: "buggyra-tactical",
+    thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
+    thumbnailNext: imageTactical,
+    categories: [{ id: 1, name: "coming soon" }],
+    screens: [
+      imageTacticalScreen1,
+      imageTacticalScreen2,
+      imageTacticalScreen3,
+      imageTacticalScreen4,
+      imageTacticalScreen5,
+      imageTacticalScreen6,
+      imageTacticalScreen7,
+      imageTacticalScreen8,
+      imageTacticalScreen9,
+    ],
+  },
 ];
 
 export const getAllProjectsForDynamicRoutes = () => {
@@ -236,6 +402,10 @@ export const getAllProjectsForDynamicRoutes = () => {
   );
 };
 
+export const getAllReels = () => {
+  return [mainReel, ...projects.slice(0, 6)];
+};
+
 export const getAllProjects = () => {
   return projects;
 };
@@ -244,11 +414,11 @@ export const getFeaturedProjects = () => {
   return projects.slice(0, 3);
 };
 
-export const getProjectsByCategory = (category: string): Project[] => {
-  return projects
-    .filter((project) => project.categories.includes(category))
-    .reverse();
-};
+// export const getProjectsByCategory = (category: Category): Project[] => {
+//   return projects
+//     .filter((project) => project.categories?.includes(category))
+//     .reverse();
+// };
 
 export const getProjectById = (id: number): Project | undefined => {
   return projects.find((project) => project.id === id);
@@ -266,14 +436,16 @@ export const getProjectsInReel = () => {
   return getProjectByIds([1, 3, 4]);
 };
 
-export const getAllCategories = () => {
-  const categories: string[] = [];
-  for (const project of projects) {
-    for (const category of project.categories) {
-      if (!categories.includes(category)) {
-        categories.push(category);
-      }
-    }
-  }
-  return categories;
-};
+// export const getAllCategories = () => {
+//   const categories: string[] = [];
+//   for (const project of projects) {
+//     if (project.categories) {
+//       for (const category of project.categories) {
+//         if (!categories.includes(category.name)) {
+//           categories.push(category.name);
+//         }
+//       }
+//     }
+//   }
+//   return categories;
+// };

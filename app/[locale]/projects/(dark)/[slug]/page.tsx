@@ -60,7 +60,7 @@ export default async function ProjectDetail({
       </Container>
 
       <Container>
-        {project.videos.vimeoId && (
+        {project?.videos?.vimeoId && (
           <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
             <iframe
               src={`https://player.vimeo.com/video/${project.videos.vimeoId}?badge=0&amp;autopause=0&amp;player_id=0&amp;controls=0&amp;app_id=58479`}
@@ -72,7 +72,7 @@ export default async function ProjectDetail({
         )}
 
         <div className="md:pt-20 gap-12 flex flex-col">
-          <ScreenGrabs images={project.screens} />
+          <ScreenGrabs images={project?.screens ?? []} />
           <ProjectButtons prevProject={prevProject} nextProject={nextProject} />
         </div>
       </Container>

@@ -83,7 +83,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
           key={project.id}
           width={1080}
           height={1920}
-          src={project.thumbnailNext}
+          src={project.thumbnailNext ?? ""}
           className={`absolute top-0 left-0 w-full h-full overflow-hidden object-cover pointer-events-none transition-opacity duration-500 ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
@@ -92,21 +92,33 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       ))}
 
       {/* Video titles or navigation */}
-      <Link
-        href={`/projects/${projects[activeIndex].slug}`}
-        className={
-          "hover:text-white/50 absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
-        }
-      >
-        <span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
-          {projects[activeIndex].title}
-        </span>
-      </Link>
+      {activeIndex === 0 ? (
+        <div
+          className={
+            "absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
+          }
+        >
+          <span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
+            {projects[activeIndex].title}
+          </span>
+        </div>
+      ) : (
+        <Link
+          href={`/projects/${projects[activeIndex].slug}`}
+          className={
+            "hover:text-white/50 absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
+          }
+        >
+          <span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
+            {projects[activeIndex].title}
+          </span>
+        </Link>
+      )}
 
       {/* Vertical Line Indicator */}
       <div className="absolute right-4 bottom-24 gap-4 flex flex-col items-center text-white">
         {/* Current active index */}
-        {activeIndex + 1 !== 6 && (
+        {activeIndex + 1 !== projects.length && (
           <span className="text-2xl md:text-3xl font-medium">
             {activeIndex + 1}
           </span>

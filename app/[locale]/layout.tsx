@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
+import Footer from "../_components/Footer";
 
 export interface RootLayoutProps {
   children: React.ReactNode;
@@ -43,6 +44,7 @@ export default async function RootLocaleLayout({
             {children}
             {/* <Footer /> TODO: add footer with link to my page */}
           </div>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -55,7 +55,7 @@ export default function ReelCarousel({
             key={`Image: ${reel.id}`}
           >
             <video
-              src={reel.videos.short}
+              src={reel.videos?.short}
               className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
               loop={true}
               playsInline={true}

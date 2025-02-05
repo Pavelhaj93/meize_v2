@@ -1,6 +1,6 @@
 // Main page.tsx
 
-import { getAllProjects } from "@/helpers/projects";
+import { getAllReels } from "@/helpers/projects";
 import Nav from "../_components/Navbar";
 import Reel from "../_components/Reel";
 import ReelScroll from "../_components/ReelScroll";
@@ -18,17 +18,17 @@ export const metadata = {
 };
 
 export default function Home() {
-  const projects = getAllProjects();
+  const reels = getAllReels();
 
   return (
     <div className="flex flex-col">
       <Nav theme="dark" />
       <main className="">
         <div className="block lg:hidden">
-          <ReelScroll projects={projects} />
+          <ReelScroll projects={reels} />
         </div>
         <div className="lg:block hidden">
-          <Reel projects={projects} images={images} />
+          <Reel projects={reels} images={images} />
         </div>
       </main>
     </div>

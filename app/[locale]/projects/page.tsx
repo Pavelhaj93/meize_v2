@@ -1,7 +1,6 @@
 import Container from "@/app/_components/Container";
 import MasonryGallery from "@/app/_components/MasonryGallery";
 import Navbar from "@/app/_components/Navbar";
-import PageTitle from "@/app/_components/PageTitle";
 import { getAllProjects } from "@/helpers/projects";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
@@ -16,9 +15,8 @@ export default function ProjectsPage() {
   return (
     <div className="">
       <Navbar />
-      <main>
+      <main className="max-md:pt-14">
         <Container first>
-          <PageTitle title={t("title")} />
           <MasonryGallery items={projects} />
         </Container>
       </main>
