@@ -1,14 +1,14 @@
 import Nav from "@/app/_components/Navbar";
 
 export default function ProjectsLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <div className="bg-black dark">
-      <Nav theme="dark" />
-      <main>{children}</main>
-    </div>
-  );
+	return (
+		<div className="bg-black dark">
+			<Nav theme="dark" />
+			<main>{children}</main>
+		</div>
+	);
 }

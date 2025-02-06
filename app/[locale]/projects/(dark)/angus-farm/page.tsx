@@ -31,7 +31,7 @@ export default async function AngusFarmPage() {
       </Container>
 
       <Container>
-        {project.videos.vimeoId1 && (
+        {project?.videos?.vimeoId1 && (
           <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
             <iframe
               src={`https://player.vimeo.com/video/${project.videos.vimeoId1}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
@@ -44,7 +44,7 @@ export default async function AngusFarmPage() {
 
         <GifGrid gifs={project.gifs ?? []} bottom={0} top={2} />
 
-        {project.videos.vimeoId2 && (
+        {project.videos?.vimeoId2 && (
           <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
             <iframe
               src={`https://player.vimeo.com/video/${project.videos.vimeoId2}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
@@ -57,7 +57,7 @@ export default async function AngusFarmPage() {
 
         <GifGrid gifs={project.gifs ?? []} bottom={2} top={4} revert />
 
-        {project.videos.vimeoId3 && (
+        {project.videos?.vimeoId3 && (
           <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
             <iframe
               src={`https://player.vimeo.com/video/${project.videos.vimeoId3}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
@@ -69,7 +69,7 @@ export default async function AngusFarmPage() {
         )}
 
         <div className="pt-20 gap-12 flex flex-col">
-          <ScreenGrabs images={project.screens} />
+          <ScreenGrabs images={project?.screens ?? []} />
           <ProjectButtons prevProject={prevProject} nextProject={nextProject} />
         </div>
       </Container>

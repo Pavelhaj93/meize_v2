@@ -1,13 +1,13 @@
 import imageAngusFarm from "../public/data/angus-farm/thumbnail.jpg";
 import imageAnnaVonLipa from "../public/data/anna-von-lipa/thumbnail.jpg";
+import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.png";
+import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.png";
+import imageGt4 from "../public/data/gt4/screens/gt4_1.png";
+import imageMud from "../public/data/mud/mud_thumbnail.png";
 import imageSawsane from "../public/data/sawsane/thumbnail.jpg";
 import imageTrezor from "../public/data/trezor/thumbnail.jpg";
 import imageWereNext from "../public/data/were-next/thumbnail.jpg";
 import reelThumbnail from "../public/images/REEL_25_thumbnail.png";
-import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.png";
-import imageGt4 from "../public/data/gt4/screens/gt4_1.png";
-import imageMud from "../public/data/mud/mud_thumbnail.png";
-import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.png";
 
 import imageAnnaVonLipaScreen01 from "../public/data/anna-von-lipa/screens/01.jpg";
 import imageAnnaVonLipaScreen02 from "../public/data/anna-von-lipa/screens/02.jpg";
@@ -99,6 +99,7 @@ import gt4Screen7 from "../public/data/gt4/screens/gt4_7.png";
 import gt4Screen8 from "../public/data/gt4/screens/gt4_8.png";
 import gt4Screen9 from "../public/data/gt4/screens/gt4_9.png";
 
+import imageMudScreen9 from "../public/data/mud/mud_thumbnail.png";
 import imageMudScreen1 from "../public/data/mud/screens/mud1.png";
 import imageMudScreen2 from "../public/data/mud/screens/mud2.png";
 import imageMudScreen3 from "../public/data/mud/screens/mud3.png";
@@ -107,7 +108,6 @@ import imageMudScreen5 from "../public/data/mud/screens/mud5.png";
 import imageMudScreen6 from "../public/data/mud/screens/mud6.png";
 import imageMudScreen7 from "../public/data/mud/screens/mud7.png";
 import imageMudScreen8 from "../public/data/mud/screens/mud8.png";
-import imageMudScreen9 from "../public/data/mud/mud_thumbnail.png";
 
 import imageTacticalScreen1 from "../public/data/buggyra-tactical/screens/tactical1.png";
 import imageTacticalScreen2 from "../public/data/buggyra-tactical/screens/tactical2.png";
@@ -120,298 +120,298 @@ import imageTacticalScreen8 from "../public/data/buggyra-tactical/screens/tactic
 import imageTacticalScreen9 from "../public/data/buggyra-tactical/screens/tactical9.png";
 
 type Category = {
-  id: number;
-  name: string;
+	id: number;
+	name: string;
 };
 
 export type Project = {
-  id: number;
-  title: string;
-  slug: string;
-  thumbnail?: string;
-  thumbnailNext?: StaticImageData;
-  videos?: {
-    short?: string;
-    full?: string | null;
-    vimeoId?: string;
-    vimeoId1?: string;
-    vimeoId2?: string;
-    vimeoId3?: string;
-  };
-  categories?: Category[];
-  screens?: string[] | StaticImageData[];
-  gifs?: StaticImageData[];
+	id: number;
+	title: string;
+	slug: string;
+	thumbnail?: string;
+	thumbnailNext?: StaticImageData;
+	videos?: {
+		short?: string;
+		full?: string | null;
+		vimeoId?: string;
+		vimeoId1?: string;
+		vimeoId2?: string;
+		vimeoId3?: string;
+	};
+	categories?: Category[];
+	screens?: string[] | StaticImageData[];
+	gifs?: StaticImageData[];
 };
 
 const mainReel: Project = {
-  id: 0,
-  title: "Reel_25",
-  slug: "reel-25",
-  videos: {
-    short: "/videos/REEL_25_compressed.mp4",
-  },
-  thumbnail: "/images/REEL_25_thumbnail.png",
-  thumbnailNext: reelThumbnail,
+	id: 0,
+	title: "Reel_25",
+	slug: "reel-25",
+	videos: {
+		short: "/videos/REEL_25_compressed.mp4",
+	},
+	thumbnail: "/images/REEL_25_thumbnail.png",
+	thumbnailNext: reelThumbnail,
 };
 
 const projects: Project[] = [
-  {
-    id: 1,
-    title: "Anna von Lipa",
-    slug: "anna-von-lipa",
-    thumbnail: "/data/anna-von-lipa/thumbnail.jpg",
-    thumbnailNext: imageAnnaVonLipa,
-    videos: {
-      short: "/data/anna-von-lipa/anna-von-lipa_short.mp4",
-      full: "/data/anna-von-lipa/anna-von-lipa_full.mp4",
-      vimeoId: "891018959",
-    },
-    categories: [
-      {
-        id: 1,
-        name: "creative",
-      },
-    ],
-    screens: [
-      imageAnnaVonLipaScreen01,
-      imageAnnaVonLipaScreen02,
-      imageAnnaVonLipaScreen03,
-      imageAnnaVonLipaScreen04,
-      imageAnnaVonLipaScreen05,
-      imageAnnaVonLipaScreen06,
-      imageAnnaVonLipaScreen07,
-      imageAnnaVonLipaScreen08,
-      imageAnnaVonLipaScreen09,
-    ],
-  },
-  {
-    id: 2,
-    title: "Sawsane",
-    slug: "sawsane",
-    thumbnail: "/data/sawsane/thumbnail.jpg",
-    thumbnailNext: imageSawsane,
-    videos: {
-      short: "/data/sawsane/sawsane_short.mp4",
-      full: null,
-    },
-    categories: [
-      { id: 1, name: "creative" },
-      { id: 2, name: "commercial" },
-    ],
-    screens: [
-      imageSawsaneScreen01,
-      imageSawsaneScreen02,
-      imageSawsaneScreen03,
-      imageSawsaneScreen04,
-      imageSawsaneScreen05,
-      imageSawsaneScreen06,
-      imageSawsaneScreen07,
-      imageSawsaneScreen08,
-      imageSawsaneScreen09,
-    ],
-  },
-  {
-    id: 3,
-    title: "Trezor",
-    slug: "trezor",
-    thumbnail: "/data/trezor/thumbnail.jpg",
-    thumbnailNext: imageTrezor,
-    videos: {
-      short: "/data/trezor/trezor_short.mp4",
-      full: "/data/trezor/trezor_full.mp4",
-      vimeoId: "892186319",
-    },
-    categories: [
-      { id: 3, name: "production" },
-      { id: 4, name: "postproduction" },
-    ],
-    screens: [imageTrezorScreen01, imageTrezorScreen02, imageTrezorScreen03],
-  },
-  {
-    id: 4,
-    title: "Angus Farm",
-    slug: "angus-farm",
-    thumbnail: "/data/angus-farm/thumbnail.jpg",
-    thumbnailNext: imageAngusFarm,
-    videos: {
-      short: "/data/angus-farm/angus-farm_short.mp4",
-      full: "/data/angus-farm/angus-farm_full.mp4",
-      vimeoId1: "891063117",
-      vimeoId2: "887333055",
-      vimeoId3: "891028950",
-    },
-    categories: [
-      { id: 1, name: "creative" },
-      { id: 2, name: "commercial" },
-    ],
-    screens: [
-      imageAngusFarmScreen01,
-      imageAngusFarmScreen02,
-      imageAngusFarmScreen03,
-      imageAngusFarmScreen04,
-      imageAngusFarmScreen05,
-      imageAngusFarmScreen06,
-      imageAngusFarmScreen07,
-      imageAngusFarmScreen08,
-      imageAngusFarmScreen09,
-    ],
-    gifs: [gif1AF, gif2AF, gif3AF, gif4AF],
-  },
-  {
-    id: 5,
-    title: "Klaus Timber",
-    slug: "klaus-timber",
-    thumbnail: "/data/klaus-timber/screens/05.jpg",
-    thumbnailNext: imageKlausTimberScreen05,
-    videos: {
-      short: "/data/klaus-timber/klaus-timber_short.mp4",
-      full: "/data/klaus-timber/klaus-timber_full.mp4",
-      vimeoId: "892875702",
-    },
-    categories: [{ id: 1, name: "commercial" }],
-    screens: [
-      imageKlausTimberScreen01,
-      imageKlausTimberScreen02,
-      imageKlausTimberScreen03,
-      imageKlausTimberScreen04,
-      imageKlausTimberScreen05,
-      imageKlausTimberScreen06,
-      imageKlausTimberScreen07,
-      imageKlausTimberScreen08,
-      imageKlausTimberScreen09,
-    ],
-  },
-  {
-    id: 6,
-    title: "We're Next",
-    slug: "were-next",
-    thumbnail: "/data/were-next/thumbnail.jpg",
-    thumbnailNext: imageWereNext,
-    videos: {
-      short: "/data/were-next/were-next_short.mp4",
-      full: "/data/were-next/were-next_full.mp4",
-      vimeoId: "892197628",
-    },
-    categories: [
-      { id: 1, name: "production" },
-      { id: 2, name: "postproduction" },
-    ],
-    screens: [
-      imageWereNextScreen01,
-      imageWereNextScreen02,
-      imageWereNextScreen03,
-      imageWereNextScreen04,
-      imageWereNextScreen05,
-      imageWereNextScreen06,
-      imageWereNextScreen07,
-      imageWereNextScreen08,
-      imageWereNextScreen09,
-    ],
-    gifs: [gif1, gif2, gif3],
-  },
-  {
-    id: 7,
-    title: "Dakar 2025",
-    slug: "dakar-2025",
-    thumbnail: "/data/dakar-2025/screens/dkr9.png",
-    thumbnailNext: imageDakar2025,
-    categories: [{ id: 1, name: "coming soon" }],
-    screens: [
-      dakarScreen1,
-      dakarScreen2,
-      dakarScreen3,
-      dakarScreen4,
-      dakarScreen5,
-      dakarScreen6,
-      dakarScreen7,
-      dakarScreen8,
-      dakarScreen9,
-      dakarScreen10,
-      dakarScreen11,
-      dakarScreen12,
-      dakarScreen13,
-      dakarScreen14,
-      dakarScreen15,
-    ],
-  },
-  {
-    id: 8,
-    title: "GT4",
-    slug: "gt4",
-    thumbnail: "/data/gt4/screens/gt4_1.png",
-    thumbnailNext: imageGt4,
-    categories: [{ id: 1, name: "coming soon" }],
-    screens: [
-      gt4Screen1,
-      gt4Screen2,
-      gt4Screen3,
-      gt4Screen4,
-      gt4Screen5,
-      gt4Screen6,
-      gt4Screen7,
-      gt4Screen8,
-      gt4Screen9,
-    ],
-  },
-  {
-    id: 9,
-    title: "Muzeum Umění a designu Benešov",
-    slug: "muzeum-umeni-a-designu-benesov",
-    thumbnail: "/data/mud/mud_thumbnail.png",
-    thumbnailNext: imageMud,
-    categories: [{ id: 1, name: "coming soon" }],
-    screens: [
-      imageMudScreen1,
-      imageMudScreen2,
-      imageMudScreen3,
-      imageMudScreen4,
-      imageMudScreen5,
-      imageMudScreen6,
-      imageMudScreen7,
-      imageMudScreen8,
-      imageMudScreen9,
-    ],
-  },
-  {
-    id: 10,
-    title: "Buggyra Tactical",
-    slug: "buggyra-tactical",
-    thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
-    thumbnailNext: imageTactical,
-    categories: [{ id: 1, name: "coming soon" }],
-    screens: [
-      imageTacticalScreen1,
-      imageTacticalScreen2,
-      imageTacticalScreen3,
-      imageTacticalScreen4,
-      imageTacticalScreen5,
-      imageTacticalScreen6,
-      imageTacticalScreen7,
-      imageTacticalScreen8,
-      imageTacticalScreen9,
-    ],
-  },
+	{
+		id: 1,
+		title: "Anna von Lipa",
+		slug: "anna-von-lipa",
+		thumbnail: "/data/anna-von-lipa/thumbnail.jpg",
+		thumbnailNext: imageAnnaVonLipa,
+		videos: {
+			short: "/data/anna-von-lipa/anna-von-lipa_short.mp4",
+			full: "/data/anna-von-lipa/anna-von-lipa_full.mp4",
+			vimeoId: "891018959",
+		},
+		categories: [
+			{
+				id: 1,
+				name: "creative",
+			},
+		],
+		screens: [
+			imageAnnaVonLipaScreen01,
+			imageAnnaVonLipaScreen02,
+			imageAnnaVonLipaScreen03,
+			imageAnnaVonLipaScreen04,
+			imageAnnaVonLipaScreen05,
+			imageAnnaVonLipaScreen06,
+			imageAnnaVonLipaScreen07,
+			imageAnnaVonLipaScreen08,
+			imageAnnaVonLipaScreen09,
+		],
+	},
+	{
+		id: 2,
+		title: "Sawsane",
+		slug: "sawsane",
+		thumbnail: "/data/sawsane/thumbnail.jpg",
+		thumbnailNext: imageSawsane,
+		videos: {
+			short: "/data/sawsane/sawsane_short.mp4",
+			full: null,
+		},
+		categories: [
+			{ id: 1, name: "creative" },
+			{ id: 2, name: "commercial" },
+		],
+		screens: [
+			imageSawsaneScreen01,
+			imageSawsaneScreen02,
+			imageSawsaneScreen03,
+			imageSawsaneScreen04,
+			imageSawsaneScreen05,
+			imageSawsaneScreen06,
+			imageSawsaneScreen07,
+			imageSawsaneScreen08,
+			imageSawsaneScreen09,
+		],
+	},
+	{
+		id: 3,
+		title: "Trezor",
+		slug: "trezor",
+		thumbnail: "/data/trezor/thumbnail.jpg",
+		thumbnailNext: imageTrezor,
+		videos: {
+			short: "/data/trezor/trezor_short.mp4",
+			full: "/data/trezor/trezor_full.mp4",
+			vimeoId: "892186319",
+		},
+		categories: [
+			{ id: 3, name: "production" },
+			{ id: 4, name: "postproduction" },
+		],
+		screens: [imageTrezorScreen01, imageTrezorScreen02, imageTrezorScreen03],
+	},
+	{
+		id: 4,
+		title: "Angus Farm",
+		slug: "angus-farm",
+		thumbnail: "/data/angus-farm/thumbnail.jpg",
+		thumbnailNext: imageAngusFarm,
+		videos: {
+			short: "/data/angus-farm/angus-farm_short.mp4",
+			full: "/data/angus-farm/angus-farm_full.mp4",
+			vimeoId1: "891063117",
+			vimeoId2: "887333055",
+			vimeoId3: "891028950",
+		},
+		categories: [
+			{ id: 1, name: "creative" },
+			{ id: 2, name: "commercial" },
+		],
+		screens: [
+			imageAngusFarmScreen01,
+			imageAngusFarmScreen02,
+			imageAngusFarmScreen03,
+			imageAngusFarmScreen04,
+			imageAngusFarmScreen05,
+			imageAngusFarmScreen06,
+			imageAngusFarmScreen07,
+			imageAngusFarmScreen08,
+			imageAngusFarmScreen09,
+		],
+		gifs: [gif1AF, gif2AF, gif3AF, gif4AF],
+	},
+	{
+		id: 5,
+		title: "Klaus Timber",
+		slug: "klaus-timber",
+		thumbnail: "/data/klaus-timber/screens/05.jpg",
+		thumbnailNext: imageKlausTimberScreen05,
+		videos: {
+			short: "/data/klaus-timber/klaus-timber_short.mp4",
+			full: "/data/klaus-timber/klaus-timber_full.mp4",
+			vimeoId: "892875702",
+		},
+		categories: [{ id: 1, name: "commercial" }],
+		screens: [
+			imageKlausTimberScreen01,
+			imageKlausTimberScreen02,
+			imageKlausTimberScreen03,
+			imageKlausTimberScreen04,
+			imageKlausTimberScreen05,
+			imageKlausTimberScreen06,
+			imageKlausTimberScreen07,
+			imageKlausTimberScreen08,
+			imageKlausTimberScreen09,
+		],
+	},
+	{
+		id: 6,
+		title: "We're Next",
+		slug: "were-next",
+		thumbnail: "/data/were-next/thumbnail.jpg",
+		thumbnailNext: imageWereNext,
+		videos: {
+			short: "/data/were-next/were-next_short.mp4",
+			full: "/data/were-next/were-next_full.mp4",
+			vimeoId: "892197628",
+		},
+		categories: [
+			{ id: 1, name: "production" },
+			{ id: 2, name: "postproduction" },
+		],
+		screens: [
+			imageWereNextScreen01,
+			imageWereNextScreen02,
+			imageWereNextScreen03,
+			imageWereNextScreen04,
+			imageWereNextScreen05,
+			imageWereNextScreen06,
+			imageWereNextScreen07,
+			imageWereNextScreen08,
+			imageWereNextScreen09,
+		],
+		gifs: [gif1, gif2, gif3],
+	},
+	{
+		id: 7,
+		title: "Dakar 2025",
+		slug: "dakar-2025",
+		thumbnail: "/data/dakar-2025/screens/dkr9.png",
+		thumbnailNext: imageDakar2025,
+		categories: [{ id: 1, name: "coming soon" }],
+		screens: [
+			dakarScreen1,
+			dakarScreen2,
+			dakarScreen3,
+			dakarScreen4,
+			dakarScreen5,
+			dakarScreen6,
+			dakarScreen7,
+			dakarScreen8,
+			dakarScreen9,
+			dakarScreen10,
+			dakarScreen11,
+			dakarScreen12,
+			dakarScreen13,
+			dakarScreen14,
+			dakarScreen15,
+		],
+	},
+	{
+		id: 8,
+		title: "GT4",
+		slug: "gt4",
+		thumbnail: "/data/gt4/screens/gt4_1.png",
+		thumbnailNext: imageGt4,
+		categories: [{ id: 1, name: "coming soon" }],
+		screens: [
+			gt4Screen1,
+			gt4Screen2,
+			gt4Screen3,
+			gt4Screen4,
+			gt4Screen5,
+			gt4Screen6,
+			gt4Screen7,
+			gt4Screen8,
+			gt4Screen9,
+		],
+	},
+	{
+		id: 9,
+		title: "Muzeum Umění a designu Benešov",
+		slug: "muzeum-umeni-a-designu-benesov",
+		thumbnail: "/data/mud/mud_thumbnail.png",
+		thumbnailNext: imageMud,
+		categories: [{ id: 1, name: "coming soon" }],
+		screens: [
+			imageMudScreen1,
+			imageMudScreen2,
+			imageMudScreen3,
+			imageMudScreen4,
+			imageMudScreen5,
+			imageMudScreen6,
+			imageMudScreen7,
+			imageMudScreen8,
+			imageMudScreen9,
+		],
+	},
+	{
+		id: 10,
+		title: "Buggyra Tactical",
+		slug: "buggyra-tactical",
+		thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
+		thumbnailNext: imageTactical,
+		categories: [{ id: 1, name: "coming soon" }],
+		screens: [
+			imageTacticalScreen1,
+			imageTacticalScreen2,
+			imageTacticalScreen3,
+			imageTacticalScreen4,
+			imageTacticalScreen5,
+			imageTacticalScreen6,
+			imageTacticalScreen7,
+			imageTacticalScreen8,
+			imageTacticalScreen9,
+		],
+	},
 ];
 
 export const getAllProjectsForDynamicRoutes = () => {
-  return projects.filter(
-    (project) =>
-      project.slug !== "angus-farm" &&
-      project.slug !== "were-next" &&
-      project.slug !== "sawsane"
-  );
+	return projects.filter(
+		(project) =>
+			project.slug !== "angus-farm" &&
+			project.slug !== "were-next" &&
+			project.slug !== "sawsane",
+	);
 };
 
 export const getAllReels = () => {
-  return [mainReel, ...projects.slice(0, 6)];
+	return [mainReel, ...projects.slice(0, 6)];
 };
 
 export const getAllProjects = () => {
-  return projects;
+	return projects;
 };
 
 export const getFeaturedProjects = () => {
-  return projects.slice(0, 3);
+	return projects.slice(0, 3);
 };
 
 // export const getProjectsByCategory = (category: Category): Project[] => {
@@ -421,19 +421,19 @@ export const getFeaturedProjects = () => {
 // };
 
 export const getProjectById = (id: number): Project | undefined => {
-  return projects.find((project) => project.id === id);
+	return projects.find((project) => project.id === id);
 };
 
 export const getProjectByIds = (ids: number[]): Project[] => {
-  return ids.map((id) => getProjectById(id) as Project);
+	return ids.map((id) => getProjectById(id) as Project);
 };
 
 export const getProjectBySlug = (slug: string): Project | undefined => {
-  return projects.find((project) => project.slug === slug);
+	return projects.find((project) => project.slug === slug);
 };
 
 export const getProjectsInReel = () => {
-  return getProjectByIds([1, 3, 4]);
+	return getProjectByIds([1, 3, 4]);
 };
 
 // export const getAllCategories = () => {
