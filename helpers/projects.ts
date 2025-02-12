@@ -161,7 +161,10 @@ const projects: Project[] = [
     slug: "buggyra-tactical",
     thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
     thumbnailNext: imageTactical,
-    categories: [{ id: 1, name: "coming soon" }],
+    categories: [
+      { id: 1, name: "production" },
+      { id: 2, name: "postproduction" },
+    ],
     screens: [
       imageTacticalScreen1,
       imageTacticalScreen2,
@@ -180,7 +183,10 @@ const projects: Project[] = [
     slug: "muzeum-umeni-a-designu-benesov",
     thumbnail: "/data/mud/mud_thumbnail.png",
     thumbnailNext: imageMud,
-    categories: [{ id: 1, name: "coming soon" }],
+    categories: [
+      { id: 1, name: "production" },
+      { id: 2, name: "postproduction" },
+    ],
     screens: [
       imageMudScreen1,
       imageMudScreen2,
@@ -199,7 +205,7 @@ const projects: Project[] = [
     slug: "gt4",
     thumbnail: "/data/gt4/screens/gt4_1.png",
     thumbnailNext: imageGt4,
-    categories: [{ id: 1, name: "coming soon" }],
+    categories: [{ id: 1, name: "production" }],
     screens: [
       gt4Screen1,
       gt4Screen2,
@@ -218,7 +224,7 @@ const projects: Project[] = [
     slug: "dakar-2025",
     thumbnail: "/data/dakar-2025/screens/dkr9.png",
     thumbnailNext: imageDakar2025,
-    categories: [{ id: 1, name: "coming soon" }],
+    categories: [{ id: 1, name: "production" }],
     screens: [
       dakarScreen1,
       dakarScreen2,
