@@ -8,19 +8,24 @@ import LogoLink from "./LogoLink";
 import SocialIcons from "./SocialIcons";
 import NavbarSocialIcons from "./SocialIcons";
 
-const Navbar = ({ theme = "black", className = "" }) => {
+interface NavbarProps {
+  theme?: "dark";
+  className?: string;
+}
+
+const Navbar = ({ theme, className = "" }: NavbarProps) => {
   const t = useTranslations();
 
   const [scrolled, setScrolled] = useState(false);
   const [burgerActive, setBurgerActive] = useState(false);
   const [showNavBackground, setShowNavBackground] = useState(
-    theme === "black" || scrolled
+    theme === "dark" || scrolled
   );
 
   const handleBurgerClick = () => setBurgerActive(!burgerActive);
 
   useEffect(() => {
-    setShowNavBackground(theme === "black" || scrolled);
+    setShowNavBackground(theme === "dark" || scrolled);
   }, [scrolled, theme]);
 
   return (

@@ -403,16 +403,16 @@ export const getAllProjectsForDynamicRoutes = () => {
 };
 
 export const getAllReels = () => {
-  return [mainReel, ...projects.slice(0, 6)];
+  return [mainReel, ...projects.slice(4, 10)];
 };
 
 export const getAllProjects = () => {
   return projects;
 };
 
-export const getFeaturedProjects = () => {
-  return projects.slice(0, 3);
-};
+// export const getFeaturedProjects = () => {
+//   return projects.slice(4, 6);
+// };
 
 // export const getProjectsByCategory = (category: Category): Project[] => {
 //   return projects
