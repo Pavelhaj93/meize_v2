@@ -133,6 +133,7 @@ export type Project = {
   videos?: {
     short?: string;
     full?: string | null;
+    youtube?: { id: number; url: string }[];
     vimeoId?: string;
     vimeoId1?: string;
     vimeoId2?: string;
@@ -145,7 +146,7 @@ export type Project = {
 
 const mainReel: Project = {
   id: 0,
-  title: "Reel_25",
+  title: "",
   slug: "reel-25",
   videos: {
     short: "/videos/REEL_25_compressed.mp4",
@@ -157,94 +158,6 @@ const mainReel: Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Buggyra Tactical",
-    slug: "buggyra-tactical",
-    thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
-    thumbnailNext: imageTactical,
-    categories: [
-      { id: 1, name: "production" },
-      { id: 2, name: "postproduction" },
-    ],
-    screens: [
-      imageTacticalScreen1,
-      imageTacticalScreen2,
-      imageTacticalScreen3,
-      imageTacticalScreen4,
-      imageTacticalScreen5,
-      imageTacticalScreen6,
-      imageTacticalScreen7,
-      imageTacticalScreen8,
-      imageTacticalScreen9,
-    ],
-  },
-  {
-    id: 2,
-    title: "Muzeum Umění a designu Benešov",
-    slug: "muzeum-umeni-a-designu-benesov",
-    thumbnail: "/data/mud/mud_thumbnail.png",
-    thumbnailNext: imageMud,
-    categories: [
-      { id: 1, name: "production" },
-      { id: 2, name: "postproduction" },
-    ],
-    screens: [
-      imageMudScreen1,
-      imageMudScreen2,
-      imageMudScreen3,
-      imageMudScreen4,
-      imageMudScreen5,
-      imageMudScreen6,
-      imageMudScreen7,
-      imageMudScreen8,
-      imageMudScreen9,
-    ],
-  },
-  {
-    id: 3,
-    title: "GT4",
-    slug: "gt4",
-    thumbnail: "/data/gt4/screens/gt4_1.png",
-    thumbnailNext: imageGt4,
-    categories: [{ id: 1, name: "production" }],
-    screens: [
-      gt4Screen1,
-      gt4Screen2,
-      gt4Screen3,
-      gt4Screen4,
-      gt4Screen5,
-      gt4Screen6,
-      gt4Screen7,
-      gt4Screen8,
-      gt4Screen9,
-    ],
-  },
-  {
-    id: 4,
-    title: "Dakar 2025",
-    slug: "dakar-2025",
-    thumbnail: "/data/dakar-2025/screens/dkr9.png",
-    thumbnailNext: imageDakar2025,
-    categories: [{ id: 1, name: "production" }],
-    screens: [
-      dakarScreen1,
-      dakarScreen2,
-      dakarScreen3,
-      dakarScreen4,
-      dakarScreen5,
-      dakarScreen6,
-      dakarScreen7,
-      dakarScreen8,
-      dakarScreen9,
-      dakarScreen10,
-      dakarScreen11,
-      dakarScreen12,
-      dakarScreen13,
-      dakarScreen14,
-      dakarScreen15,
-    ],
-  },
-  {
-    id: 5,
     title: "Anna von Lipa",
     slug: "anna-von-lipa",
     thumbnail: "/data/anna-von-lipa/thumbnail.jpg",
@@ -273,7 +186,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 2,
     title: "Sawsane",
     slug: "sawsane",
     thumbnail: "/data/sawsane/thumbnail.jpg",
@@ -299,7 +212,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 3,
     title: "Trezor",
     slug: "trezor",
     thumbnail: "/data/trezor/thumbnail.jpg",
@@ -316,7 +229,7 @@ const projects: Project[] = [
     screens: [imageTrezorScreen01, imageTrezorScreen02, imageTrezorScreen03],
   },
   {
-    id: 8,
+    id: 4,
     title: "Angus Farm",
     slug: "angus-farm",
     thumbnail: "/data/angus-farm/thumbnail.jpg",
@@ -346,7 +259,7 @@ const projects: Project[] = [
     gifs: [gif1AF, gif2AF, gif3AF, gif4AF],
   },
   {
-    id: 9,
+    id: 5,
     title: "Klaus Timber",
     slug: "klaus-timber",
     thumbnail: "/data/klaus-timber/screens/05.jpg",
@@ -370,7 +283,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 10,
+    id: 6,
     title: "We're Next",
     slug: "were-next",
     thumbnail: "/data/were-next/thumbnail.jpg",
@@ -397,6 +310,130 @@ const projects: Project[] = [
     ],
     gifs: [gif1, gif2, gif3],
   },
+  {
+    id: 7,
+    title: "Dakar 2025",
+    slug: "dakar-2025",
+    thumbnail: "/data/dakar-2025/screens/dkr9.png",
+    thumbnailNext: imageDakar2025,
+    videos: {
+      short: "/data/dakar-2025/DKR_10s_WEB.mp4",
+      full: "/data/dakar-2025/DKR_10s_WEB.mp4",
+      youtube: [
+        {
+          id: 1,
+          url: "https://www.youtube.com/embed/7_ZEdjNVrZA?si=3M0PjbRHbVpj8ko_",
+        },
+      ],
+    },
+    categories: [{ id: 1, name: "production" }],
+    screens: [
+      dakarScreen1,
+      dakarScreen2,
+      dakarScreen3,
+      dakarScreen4,
+      dakarScreen5,
+      dakarScreen6,
+      dakarScreen7,
+      dakarScreen8,
+      dakarScreen9,
+      dakarScreen10,
+      dakarScreen11,
+      dakarScreen12,
+      dakarScreen13,
+      dakarScreen14,
+      dakarScreen15,
+    ],
+  },
+  {
+    id: 8,
+    title: "GT4",
+    slug: "gt4",
+    thumbnail: "/data/gt4/screens/gt4_1.png",
+    thumbnailNext: imageGt4,
+    videos: {
+      short: "/data/gt4/GT4_10s_WEB.mp4",
+      full: "/data/gt4/GT4_10s_WEB.mp4",
+      youtube: [
+        {
+          id: 1,
+          url: "https://www.youtube.com/embed/_0Wg0lZ4RtA?si=aUdtiAtxVFpShX-9",
+        },
+        {
+          id: 2,
+          url: "https://www.youtube.com/embed/znwiLaRyOzI?si=oZisH9mJmChOZB76",
+        },
+        {
+          id: 3,
+          url: "https://www.youtube.com/embed/py3V8ptsXK4?si=4hE4A0_KBHtNaPZi",
+        },
+      ],
+    },
+    categories: [{ id: 1, name: "production" }],
+    screens: [
+      gt4Screen1,
+      gt4Screen2,
+      gt4Screen3,
+      gt4Screen4,
+      gt4Screen5,
+      gt4Screen6,
+      gt4Screen7,
+      gt4Screen8,
+      gt4Screen9,
+    ],
+  },
+  {
+    id: 9,
+    title: "Muzeum Umění a designu Benešov",
+    slug: "muzeum-umeni-a-designu-benesov",
+    thumbnail: "/data/mud/mud_thumbnail.png",
+    thumbnailNext: imageMud,
+    videos: {
+      short: "/data/mud/MUD_10s_WEB.mp4",
+      full: "/data/mud/MUD_10s_WEB.mp4",
+    },
+    categories: [
+      { id: 1, name: "production" },
+      { id: 2, name: "postproduction" },
+    ],
+    screens: [
+      imageMudScreen1,
+      imageMudScreen2,
+      imageMudScreen3,
+      imageMudScreen4,
+      imageMudScreen5,
+      imageMudScreen6,
+      imageMudScreen7,
+      imageMudScreen8,
+      imageMudScreen9,
+    ],
+  },
+  {
+    id: 10,
+    title: "Buggyra Tactical",
+    slug: "buggyra-tactical",
+    thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
+    thumbnailNext: imageTactical,
+    videos: {
+      short: "/data/buggyra-tactical/Tactical_10s_WEB.mp4",
+      full: "/data/buggyra-tactical/Tactical_10s_WEB.mp4",
+    },
+    categories: [
+      { id: 1, name: "production" },
+      { id: 2, name: "postproduction" },
+    ],
+    screens: [
+      imageTacticalScreen1,
+      imageTacticalScreen2,
+      imageTacticalScreen3,
+      imageTacticalScreen4,
+      imageTacticalScreen5,
+      imageTacticalScreen6,
+      imageTacticalScreen7,
+      imageTacticalScreen8,
+      imageTacticalScreen9,
+    ],
+  },
 ];
 
 export const getAllProjectsForDynamicRoutes = () => {
@@ -409,11 +446,11 @@ export const getAllProjectsForDynamicRoutes = () => {
 };
 
 export const getAllReels = () => {
-  return [mainReel, ...projects.slice(4, 10)];
+  return [mainReel, ...projects.reverse().slice(0, 6)];
 };
 
 export const getAllProjects = () => {
-  return projects;
+  return projects.reverse();
 };
 
 // export const getFeaturedProjects = () => {
