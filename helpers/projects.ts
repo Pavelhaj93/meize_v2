@@ -1,8 +1,8 @@
 import imageAngusFarm from "../public/data/angus-farm/thumbnail.jpg";
 import imageAnnaVonLipa from "../public/data/anna-von-lipa/thumbnail.jpg";
-import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.png";
-import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.png";
-import imageGt4 from "../public/data/gt4/screens/gt4_1.png";
+import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.jpg";
+import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.jpg";
+import imageGt4 from "../public/data/gt4/screens/gt4_1.jpg";
 import imageMud from "../public/data/mud/mud_thumbnail.png";
 import imageSawsane from "../public/data/sawsane/thumbnail.jpg";
 import imageTrezor from "../public/data/trezor/thumbnail.jpg";
@@ -73,51 +73,51 @@ import gif1 from "../public/data/were-next/gifs/gif1.gif";
 import gif2 from "../public/data/were-next/gifs/gif2.gif";
 import gif3 from "../public/data/were-next/gifs/gif3.gif";
 
-import dakarScreen1 from "../public/data/dakar-2025/screens/dkr1.png";
-import dakarScreen2 from "../public/data/dakar-2025/screens/dkr2.png";
-import dakarScreen3 from "../public/data/dakar-2025/screens/dkr3.png";
-import dakarScreen4 from "../public/data/dakar-2025/screens/dkr4.png";
-import dakarScreen5 from "../public/data/dakar-2025/screens/dkr5.png";
-import dakarScreen6 from "../public/data/dakar-2025/screens/dkr6.png";
-import dakarScreen7 from "../public/data/dakar-2025/screens/dkr7.png";
-import dakarScreen8 from "../public/data/dakar-2025/screens/dkr8.png";
-import dakarScreen9 from "../public/data/dakar-2025/screens/dkr9.png";
-import dakarScreen10 from "../public/data/dakar-2025/screens/dkr10.png";
-import dakarScreen11 from "../public/data/dakar-2025/screens/dkr11.png";
-import dakarScreen12 from "../public/data/dakar-2025/screens/dkr12.png";
-import dakarScreen13 from "../public/data/dakar-2025/screens/dkr13.png";
-import dakarScreen14 from "../public/data/dakar-2025/screens/dkr14.png";
-import dakarScreen15 from "../public/data/dakar-2025/screens/dkr15.png";
+import dakarScreen1 from "../public/data/dakar-2025/screens/dkr1.jpg";
+import dakarScreen2 from "../public/data/dakar-2025/screens/dkr2.jpg";
+import dakarScreen3 from "../public/data/dakar-2025/screens/dkr3.jpg";
+import dakarScreen4 from "../public/data/dakar-2025/screens/dkr4.jpg";
+import dakarScreen5 from "../public/data/dakar-2025/screens/dkr5.jpg";
+import dakarScreen6 from "../public/data/dakar-2025/screens/dkr6.jpg";
+import dakarScreen7 from "../public/data/dakar-2025/screens/dkr7.jpg";
+import dakarScreen8 from "../public/data/dakar-2025/screens/dkr8.jpg";
+import dakarScreen9 from "../public/data/dakar-2025/screens/dkr9.jpg";
+import dakarScreen10 from "../public/data/dakar-2025/screens/dkr10.jpg";
+import dakarScreen11 from "../public/data/dakar-2025/screens/dkr11.jpg";
+import dakarScreen12 from "../public/data/dakar-2025/screens/dkr12.jpg";
+import dakarScreen13 from "../public/data/dakar-2025/screens/dkr13.jpg";
+import dakarScreen14 from "../public/data/dakar-2025/screens/dkr14.jpg";
+import dakarScreen15 from "../public/data/dakar-2025/screens/dkr15.jpg";
 
-import gt4Screen1 from "../public/data/gt4/screens/gt4_1.png";
-import gt4Screen2 from "../public/data/gt4/screens/gt4_2.png";
-import gt4Screen3 from "../public/data/gt4/screens/gt4_3.png";
-import gt4Screen4 from "../public/data/gt4/screens/gt4_4.png";
-import gt4Screen5 from "../public/data/gt4/screens/gt4_5.png";
-import gt4Screen6 from "../public/data/gt4/screens/gt4_6.png";
-import gt4Screen7 from "../public/data/gt4/screens/gt4_7.png";
-import gt4Screen8 from "../public/data/gt4/screens/gt4_8.png";
-import gt4Screen9 from "../public/data/gt4/screens/gt4_9.png";
+import gt4Screen1 from "../public/data/gt4/screens/gt4_1.jpg";
+import gt4Screen2 from "../public/data/gt4/screens/gt4_2.jpg";
+import gt4Screen3 from "../public/data/gt4/screens/gt4_3.jpg";
+import gt4Screen4 from "../public/data/gt4/screens/gt4_4.jpg";
+import gt4Screen5 from "../public/data/gt4/screens/gt4_5.jpg";
+import gt4Screen6 from "../public/data/gt4/screens/gt4_6.jpg";
+import gt4Screen7 from "../public/data/gt4/screens/gt4_7.jpg";
+import gt4Screen8 from "../public/data/gt4/screens/gt4_8.jpg";
+import gt4Screen9 from "../public/data/gt4/screens/gt4_9.jpg";
 
 import imageMudScreen9 from "../public/data/mud/mud_thumbnail.png";
-import imageMudScreen1 from "../public/data/mud/screens/mud1.png";
-import imageMudScreen2 from "../public/data/mud/screens/mud2.png";
-import imageMudScreen3 from "../public/data/mud/screens/mud3.png";
-import imageMudScreen4 from "../public/data/mud/screens/mud4.png";
-import imageMudScreen5 from "../public/data/mud/screens/mud5.png";
-import imageMudScreen6 from "../public/data/mud/screens/mud6.png";
-import imageMudScreen7 from "../public/data/mud/screens/mud7.png";
-import imageMudScreen8 from "../public/data/mud/screens/mud8.png";
+import imageMudScreen1 from "../public/data/mud/screens/mud1.jpg";
+import imageMudScreen2 from "../public/data/mud/screens/mud2.jpg";
+import imageMudScreen3 from "../public/data/mud/screens/mud3.jpg";
+import imageMudScreen4 from "../public/data/mud/screens/mud4.jpg";
+import imageMudScreen5 from "../public/data/mud/screens/mud5.jpg";
+import imageMudScreen6 from "../public/data/mud/screens/mud6.jpg";
+import imageMudScreen7 from "../public/data/mud/screens/mud7.jpg";
+import imageMudScreen8 from "../public/data/mud/screens/mud8.jpg";
 
-import imageTacticalScreen1 from "../public/data/buggyra-tactical/screens/tactical1.png";
-import imageTacticalScreen2 from "../public/data/buggyra-tactical/screens/tactical2.png";
-import imageTacticalScreen3 from "../public/data/buggyra-tactical/screens/tactical3.png";
-import imageTacticalScreen4 from "../public/data/buggyra-tactical/screens/tactical4.png";
-import imageTacticalScreen5 from "../public/data/buggyra-tactical/screens/tactical5.png";
-import imageTacticalScreen6 from "../public/data/buggyra-tactical/screens/tactical6.png";
-import imageTacticalScreen7 from "../public/data/buggyra-tactical/screens/tactical7.png";
-import imageTacticalScreen8 from "../public/data/buggyra-tactical/screens/tactical8.png";
-import imageTacticalScreen9 from "../public/data/buggyra-tactical/screens/tactical9.png";
+import imageTacticalScreen1 from "../public/data/buggyra-tactical/screens/tactical1.jpg";
+import imageTacticalScreen2 from "../public/data/buggyra-tactical/screens/tactical2.jpg";
+import imageTacticalScreen3 from "../public/data/buggyra-tactical/screens/tactical3.jpg";
+import imageTacticalScreen4 from "../public/data/buggyra-tactical/screens/tactical4.jpg";
+import imageTacticalScreen5 from "../public/data/buggyra-tactical/screens/tactical5.jpg";
+import imageTacticalScreen6 from "../public/data/buggyra-tactical/screens/tactical6.jpg";
+import imageTacticalScreen7 from "../public/data/buggyra-tactical/screens/tactical7.jpg";
+import imageTacticalScreen8 from "../public/data/buggyra-tactical/screens/tactical8.jpg";
+import imageTacticalScreen9 from "../public/data/buggyra-tactical/screens/tactical9.jpg";
 
 type Category = {
   id: number;
@@ -314,7 +314,7 @@ const projects: Project[] = [
     id: 7,
     title: "Dakar 2025",
     slug: "dakar-2025",
-    thumbnail: "/data/dakar-2025/screens/dkr9.png",
+    thumbnail: "/data/dakar-2025/screens/dkr9.jpg",
     thumbnailNext: imageDakar2025,
     videos: {
       short: "/data/dakar-2025/DKR_10s_WEB.mp4",
@@ -412,7 +412,7 @@ const projects: Project[] = [
     id: 10,
     title: "Buggyra Tactical",
     slug: "buggyra-tactical",
-    thumbnail: "/data/buggyra-tactical/screens/tactical8.png",
+    thumbnail: "/data/buggyra-tactical/screens/tactical8.jpg",
     thumbnailNext: imageTactical,
     videos: {
       short: "/data/buggyra-tactical/Tactical_10s_WEB.mp4",
