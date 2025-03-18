@@ -22,7 +22,7 @@ export default function Home() {
 		<div className="flex flex-col">
 			<Navbar theme="dark" />
 
-			<main className="">
+			<main>
 				<div className="block lg:hidden">
 					<ReelScroll projects={reels} />
 				</div>

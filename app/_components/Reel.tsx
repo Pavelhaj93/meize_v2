@@ -66,18 +66,17 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
     >
       {projects.map(({ id, videos, thumbnail }, index) => (
         <video
-          key={id}
-          ref={(el) => {
-            videoRefs.current[index] = el;
-          }}
+          key={`Reel Video: ${id}`}
+          ref={(el) => {videoRefs.current[index] = el}}
           src={videos?.short}
-          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none [transition-property:filter] duration-700 ${activeIndex === index ? "visible" : "invisible"
-            }`}
+          className={cn('absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500', {
+            'opacity-0': activeIndex !== index,
+          })}
           poster={thumbnail}
-          loop={true}
-          playsInline={true}
+          playsInline
           autoPlay
-          muted={true}
+          muted
+          loop
         />
       ))}
       <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
@@ -86,11 +85,11 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
 
           return (
             <Link
-              key={id}
+              key={`Reel Link: ${id}`}
               href={`/${locale}/projects/${slug}`}
-              className={cn('hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500', {
-                'text-white/50': activeIndex === index,
-                'text-white': activeIndex !== index,
+              className={cn('inline-flex flex-col items-start text-left transition-colors duration-500', {
+                'text-white/50 hover:text-white': activeIndex !== index,
+                'text-white': activeIndex === index,
               })}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}

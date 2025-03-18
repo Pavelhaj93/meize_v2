@@ -1,19 +1,20 @@
 "use client";
 
 import type { Project } from "@/helpers/projects";
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ReelProps {
 	projects: Project[];
 	className?: string;
 }
 
-export default function Reel({ projects, className = "", ...rest }: ReelProps) {
+export default function ReelScroll({ projects, className = "", ...rest }: ReelProps) {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isScrolling, setIsScrolling] = useState(false); // Prevent rapid-fire scrolls
 	const [touchStart, setTouchStart] = useState<number | null>(null);
+	const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
 	useEffect(() => {
 		document.body.classList.add("no-scroll");
@@ -70,6 +71,22 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
 		};
 	}, [activeIndex, isScrolling, touchStart]);
 
+	useEffect(() => {
+		if (!videoRefs.current) return;
+
+		// Pause all videos
+		videoRefs.current.forEach((video, index) => {
+			if (!video) return;
+
+			if (index !== activeIndex) {
+				video.pause();
+				video.currentTime = 0;
+			} else {
+				video.play();
+			}
+		});
+	}, [activeIndex]);
+
 	const lineHeight = 200 * (1 - activeIndex / (projects.length - 1));
 
 	return (
@@ -77,37 +94,25 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
 			className={`relative w-full h-screen overflow-hidden ${className}`}
 			{...rest}
 		>
-			{/* Render all images */}
 			{projects.map((project, index) => (
-				<Image
-					key={project.id}
-					width={1080}
-					height={1920}
-					src={project.thumbnailNext ?? ""}
-					className={`absolute top-0 left-0 w-full h-full overflow-hidden object-cover pointer-events-none transition-opacity duration-500 ${
-						index === activeIndex ? "opacity-100" : "opacity-0"
-					}`}
-					alt={project.title}
+				<video
+					key={`ReelScroll Video: ${project.id}`}
+					ref={(el) => { videoRefs.current[index] = el }}
+					src={project.videos?.short}
+					className={cn('absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500', {
+						'opacity-0': activeIndex !== index
+					})}
+					playsInline
+					muted
+					loop
 				/>
 			))}
 
 			{/* Video titles or navigation */}
-			{activeIndex === 0 ? (
-				<div
-					className={
-						"absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
-					}
-				>
-					<span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
-						{projects[activeIndex].title}
-					</span>
-				</div>
-			) : (
+			{activeIndex !== 0 && (
 				<Link
 					href={`/projects/${projects[activeIndex].slug}`}
-					className={
-						"hover:text-white/50 absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
-					}
+					className="hover:text-white/50 absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
 				>
 					<span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
 						{projects[activeIndex].title}
@@ -116,24 +121,24 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
 			)}
 
 			{/* Vertical Line Indicator */}
-			<div className="absolute right-4 bottom-24 gap-4 flex flex-col items-center text-white">
+			<div className="absolute right-4 bottom-24 w-5 gap-4 flex flex-col items-center text-white text-center">
 				{/* Current active index */}
 				{activeIndex + 1 !== projects.length && (
-					<span className="text-2xl md:text-3xl font-medium">
+					<div className="text-2xl md:text-3xl font-medium">
 						{activeIndex + 1}
-					</span>
+					</div>
 				)}
 
 				{/* Vertical line */}
 				<div
-					className="w-[2px] bg-white transition-all duration-500"
+					className="w-0.5 bg-white transition-all duration-500"
 					style={{ height: `${lineHeight}px` }}
 				/>
 
 				{/* Total number of projects */}
-				<span className="text-2xl md:text-3xl font-medium">
+				<div className="text-2xl md:text-3xl font-medium">
 					{projects.length}
-				</span>
+				</div>
 			</div>
 		</section>
 	);

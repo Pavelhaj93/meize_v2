@@ -437,12 +437,8 @@ const projects: Project[] = [
 ];
 
 export const getAllProjectsForDynamicRoutes = () => {
-  return projects.filter(
-    (project) =>
-      project.slug !== "angus-farm" &&
-      project.slug !== "were-next" &&
-      project.slug !== "sawsane"
-  );
+  const disallowedProjects = ["angus-farm", "were-next", "sawsane"];
+  return projects.filter((project) => !disallowedProjects.includes(project.slug));
 };
 
 export const getAllReels = () => {
@@ -467,17 +463,17 @@ export const getProjectById = (id: number): Project | undefined => {
   return projects.find((project) => project.id === id);
 };
 
-export const getProjectByIds = (ids: number[]): Project[] => {
-  return ids.map((id) => getProjectById(id) as Project);
-};
+// export const getProjectByIds = (ids: number[]): Project[] => {
+//   return ids.map((id) => getProjectById(id) as Project);
+// };
 
 export const getProjectBySlug = (slug: string): Project | undefined => {
   return projects.find((project) => project.slug === slug);
 };
 
-export const getProjectsInReel = () => {
-  return getProjectByIds([1, 3, 4]);
-};
+// export const getProjectsInReel = () => {
+//   return getProjectByIds([1, 3, 4]);
+// };
 
 // export const getAllCategories = () => {
 //   const categories: string[] = [];
