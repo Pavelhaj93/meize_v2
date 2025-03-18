@@ -384,8 +384,8 @@ const projects: Project[] = [
   },
   {
     id: 9,
-    title: "Muzeum Umění a designu Benešov",
-    slug: "muzeum-umeni-a-designu-benesov",
+    title: "MUD",
+    slug: "mud",
     thumbnail: "/data/mud/thumbnail.jpg",
     thumbnailNext: imageMud,
     videos: {

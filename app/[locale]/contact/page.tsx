@@ -1,7 +1,6 @@
 import Container from "@/app/_components/Container";
 import FormContact from "@/app/_components/FormContact";
-import Nav from "@/app/_components/Navbar";
-import PageTitle from "@/app/_components/PageTitle";
+import Navbar from "@/app/_components/Navbar";
 import SocialIcons from "@/app/_components/SocialIcons";
 import { type Contacts, contacts } from "@/helpers/contacts";
 import { useTranslations } from "next-intl";
@@ -16,7 +15,7 @@ export default function Contact() {
 
 	return (
 		<main className="bg-black dark min-h-screen">
-			<Nav theme="dark" />
+			<Navbar theme="dark" />
 
 			<Container first className="md:pt-20 flex flex-col xl:gap-28 gap-5">
 				<section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mx-auto">

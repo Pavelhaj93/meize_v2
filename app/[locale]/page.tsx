@@ -1,7 +1,5 @@
-// Main page.tsx
-
 import { getAllReels } from "@/helpers/projects";
-import Nav from "../_components/Navbar";
+import Navbar from "../_components/Navbar";
 import Reel from "../_components/Reel";
 import ReelScroll from "../_components/ReelScroll";
 
@@ -22,12 +20,13 @@ export default function Home() {
 
 	return (
 		<div className="flex flex-col">
-			<Nav theme="dark" />
+			<Navbar theme="dark" />
+
 			<main className="">
 				<div className="block lg:hidden">
 					<ReelScroll projects={reels} />
 				</div>
-				<div className="lg:block hidden">
+				<div className="hidden lg:block">
 					<Reel projects={reels} images={images} />
 				</div>
 			</main>
