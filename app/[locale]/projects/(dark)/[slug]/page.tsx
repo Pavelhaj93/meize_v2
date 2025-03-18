@@ -32,8 +32,6 @@ export default async function ProjectDetail({
 }) {
   const { slug, locale } = await params;
 
-  generateMetadata({ params });
-
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as "cs" | "en")) {
     notFound();
@@ -53,15 +51,15 @@ export default async function ProjectDetail({
 
   return (
     <article>
-      <Container first>
+      <Container first
+        className="flex flex-col gap-12"
+      >
         <header>
           <PageTitle title={project.title} />
         </header>
-      </Container>
 
-      <Container>
         {project?.videos?.vimeoId && (
-          <div className="relative w-full" style={{ paddingTop: "45.25%" }}>
+          <div className="relative w-full aspect-video">
             <iframe
               src={`https://player.vimeo.com/video/${project.videos.vimeoId}?badge=0&amp;autopause=0&amp;player_id=0&amp;controls=0&amp;app_id=58479`}
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
@@ -73,7 +71,7 @@ export default async function ProjectDetail({
         {project?.videos?.youtube?.map((video) => (
           <div
             key={video.id}
-            className="relative w-full md:mb-20"
+            className="relative w-full md:mb-12"
             style={{ paddingTop: "45.25%" }}
           >
             <iframe
@@ -85,10 +83,10 @@ export default async function ProjectDetail({
           </div>
         ))}
 
-        <div className="gap-12 flex flex-col">
-          <ScreenGrabs images={project?.screens ?? []} />
-          <ProjectButtons prevProject={prevProject} nextProject={nextProject} />
-        </div>
+
+        <ScreenGrabs images={project?.screens ?? []} />
+
+        <ProjectButtons prevProject={prevProject} nextProject={nextProject} />
       </Container>
     </article>
   );

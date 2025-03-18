@@ -14,9 +14,7 @@ export default function Contact() {
 	const t = useTranslations("contact");
 
 	return (
-		<main className="bg-black dark min-h-screen">
-			<Navbar theme="dark" />
-
+		<div className="bg-black dark">
 			<Container first className="md:pt-20 flex flex-col xl:gap-28 gap-5">
 				<section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mx-auto">
 					<header className="flex-1">
@@ -56,6 +54,6 @@ export default function Contact() {
 					</div>
 				</section>
 			</Container>
-		</main>
+		</div>
 	);
 }

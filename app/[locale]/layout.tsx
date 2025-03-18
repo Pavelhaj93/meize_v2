@@ -8,6 +8,7 @@ import { getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
 import Footer from "../_components/Footer";
+import Navbar from "../_components/Navbar";
 
 export interface RootLayoutProps {
 	children: React.ReactNode;
@@ -38,12 +39,15 @@ export default async function RootLocaleLayout({
 
 	return (
 		<html lang={locale}>
-			<body className={`${poppins.className} relative`}>
+			<body className={`${poppins.className} relative flex flex-col min-h-screen bg-black`}>
 				<NextIntlClientProvider messages={messages}>
-					<div className="flex flex-col">
+					<Navbar/>
+
+					<main className="flex-1">
 						{children}
-						{/* <Footer /> TODO: add footer with link to my page */}
-					</div>
+					</main>
+
+					{/* <Footer /> TODO: add footer with link to my page */}
 					<Footer />
 				</NextIntlClientProvider>
 			</body>

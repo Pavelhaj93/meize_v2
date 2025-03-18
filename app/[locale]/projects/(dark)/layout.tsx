@@ -7,8 +7,7 @@ export default function ProjectsLayout({
 }) {
 	return (
 		<div className="bg-black dark">
-			<Navbar theme="dark" />
-			<main>{children}</main>
+			{children}
 		</div>
 	);
 }

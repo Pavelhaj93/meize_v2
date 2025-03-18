@@ -6,19 +6,23 @@ import { useEffect, useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import LogoLink from "./LogoLink";
 import { cn } from "@/lib/utils";
+import { usePathname } from "@/i18n/routing";
 
 interface NavbarProps {
   theme?: "dark";
   className?: string;
 }
 
-const Navbar = ({ theme, className = "" }: NavbarProps) => {
+const Navbar = ({ className = "" }: NavbarProps) => {
   const t = useTranslations();
+  const pathname = usePathname();
 
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [burgerActive, setBurgerActive] = useState(false);
-  const [showNavBackground, setShowNavBackground] = useState(theme === "dark");
+  const [showNavBackground, setShowNavBackground] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [visible, setVisible] = useState(true);
+
 
   const handleBurgerClick = () => setBurgerActive(!burgerActive);
 
@@ -44,6 +48,12 @@ const Navbar = ({ theme, className = "" }: NavbarProps) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  useEffect(() => {
+    const lightPaths = ["/projects"];
+
+    setTheme(lightPaths.includes(pathname) ? "light" : "dark");
+  }, [pathname]);
 
   return (
     <header className={theme === "dark" ? "dark" : ""}>

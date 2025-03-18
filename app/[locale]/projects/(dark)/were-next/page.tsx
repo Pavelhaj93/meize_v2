@@ -16,9 +16,8 @@ const GridComponent = ({ gifs }: { gifs: StaticImageData[] }) => {
       {gifs.map((gif, index) => (
         <div
           key={gif.src}
-          className={`relative ${index === 1 ? "sm:mt-40" : ""} ${
-            index === 2 ? "sm:-mt-40" : ""
-          }`}
+          className={`relative ${index === 1 ? "sm:mt-40" : ""} ${index === 2 ? "sm:-mt-40" : ""
+            }`}
         >
           <Image src={gif} alt="Gif" width={768} height={432} />
         </div>
@@ -28,8 +27,8 @@ const GridComponent = ({ gifs }: { gifs: StaticImageData[] }) => {
 };
 
 export const metadata: Metadata = {
-  title: "Were Next",
-  description: "Were Next project page",
+  title: "We're Next",
+  description: "We're Next project page",
 };
 
 export default async function WereNextPage() {
@@ -44,13 +43,11 @@ export default async function WereNextPage() {
 
   return (
     <article>
-      <Container className="mt-20 xl:mt-40">
+      <Container first className="flex flex-col gap-12">
         <header>
           <PageTitle title={project.title} />
         </header>
-      </Container>
 
-      <Container>
         {project.videos?.vimeoId && (
           <div className="relative w-full aspect-square max-h-[90vh] my-10">
             <iframe
@@ -64,10 +61,9 @@ export default async function WereNextPage() {
 
         <GridComponent gifs={project.gifs ?? []} />
 
-        <div className="pt-20 gap-12 flex flex-col">
-          <ScreenGrabs images={project.screens ?? []} />
-          <ProjectButtons prevProject={prevProject} nextProject={nextProject} />
-        </div>
+        <ScreenGrabs images={project.screens ?? []} />
+
+        <ProjectButtons prevProject={prevProject} nextProject={nextProject} />
       </Container>
     </article>
   );

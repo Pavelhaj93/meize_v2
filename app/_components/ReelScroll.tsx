@@ -112,9 +112,9 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 			{activeIndex !== 0 && (
 				<Link
 					href={`/projects/${projects[activeIndex].slug}`}
-					className="hover:text-white/50 absolute bottom-24 left-4 px-4 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
+					className="hover:text-white/50 absolute bottom-24 left-4 pl-4 pr-12 text-white inline-flex flex-col items-start text-left transition-colors duration-500"
 				>
-					<span className="text-4xl md:text-7xl font-medium leading-[4rem] tracking-tighter">
+					<span className="text-4xl md:text-7xl font-medium tracking-tighter">
 						{projects[activeIndex].title}
 					</span>
 				</Link>

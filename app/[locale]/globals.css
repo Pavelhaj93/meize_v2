@@ -11,11 +11,15 @@ svg {
 	@apply max-w-full;
 }
 
-.hamburger-react > div {
+.hamburger-react>div {
 	@apply !h-0.5;
 }
 
 .no-scroll {
 	overflow: hidden;
 	height: 100vh;
+}
+
+label[for] {
+	@apply cursor-pointer;
 }

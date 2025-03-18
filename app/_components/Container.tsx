@@ -1,5 +1,4 @@
-let themeClasses;
-
+import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 interface ContainerProps {
@@ -18,9 +17,10 @@ export default function Container({
 }: ContainerProps) {
 	return (
 		<div
-			className={`w-full max-w-[1600px] mx-auto md:px-10 ${
-				!mobileFull ? "px-4" : ""
-			} ${first ? "mt-10 md:mt-24 xl:mt-40 pb-10" : ""} ${className}`}
+			className={cn('w-full max-w-[1600px] mx-auto md:px-10', {
+				'px-4': !mobileFull,
+				'pt-32 xl:pt-40 pb-10': first,
+			}, className)}
 			{...rest}
 		>
 			{children}

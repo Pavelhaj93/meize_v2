@@ -19,17 +19,13 @@ export default function Home() {
 	const reels = getAllReels();
 
 	return (
-		<div className="flex flex-col">
-			<Navbar theme="dark" />
-
-			<main>
-				<div className="block lg:hidden">
-					<ReelScroll projects={reels} />
-				</div>
-				<div className="hidden lg:block">
-					<Reel projects={reels} images={images} />
-				</div>
-			</main>
-		</div>
+		<>
+			<div className="block lg:hidden">
+				<ReelScroll projects={reels} />
+			</div>
+			<div className="hidden lg:block">
+				<Reel projects={reels} images={images} />
+			</div>
+		</>
 	);
 }
