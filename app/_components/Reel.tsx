@@ -5,6 +5,7 @@ import { useLocale } from "next-intl";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Container from "./Container";
+import { cn } from "@/lib/utils";
 
 let videoInterval: NodeJS.Timeout;
 
@@ -25,6 +26,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
     setActiveIndex(index);
 
     const video = videoRefs.current[index];
+
     if (video) {
       video.play();
     }
@@ -34,10 +36,13 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
     resetInterval();
 
     const video = videoRefs.current[index];
+
     if (video) {
       video.pause();
       video.currentTime = 0;
     }
+
+    setActiveIndex(0);
   };
 
   const handleIndexChange = useCallback(() => {
@@ -66,9 +71,8 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
             videoRefs.current[index] = el;
           }}
           src={videos?.short}
-          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none [transition-property:filter] duration-700 ${
-            activeIndex === index ? "visible" : "invisible"
-          }`}
+          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none [transition-property:filter] duration-700 ${activeIndex === index ? "visible" : "invisible"
+            }`}
           poster={thumbnail}
           loop={true}
           playsInline={true}
@@ -77,27 +81,17 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
         />
       ))}
       <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
-        {projects.map(({ id, title, slug }, index) =>
-          activeIndex === 0 && index === 0 ? (
-            <div
-              key={id}
-              className={`${
-                activeIndex === index ? "text-white/50" : "text-white"
-              } inline-flex flex-col items-start text-left transition-colors duration-500`}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-            >
-              <span className="text-5xl 2xl:text-6xl font-medium tracking-tighter">
-                {title}
-              </span>
-            </div>
-          ) : (
+        {projects.map(({ id, title, slug }, index) => {
+          if (index === 0) return;
+
+          return (
             <Link
               key={id}
               href={`/${locale}/projects/${slug}`}
-              className={`${
-                activeIndex === index ? "text-white/50" : "text-white"
-              } hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
+              className={cn('hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500', {
+                'text-white/50': activeIndex === index,
+                'text-white': activeIndex !== index,
+              })}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
             >
@@ -105,8 +99,8 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
                 {title}
               </span>
             </Link>
-          )
-        )}
+          );
+        })}
       </Container>
     </section>
   );

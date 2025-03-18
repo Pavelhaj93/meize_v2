@@ -3,11 +3,11 @@ import imageAnnaVonLipa from "../public/data/anna-von-lipa/thumbnail.jpg";
 import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.jpg";
 import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.jpg";
 import imageGt4 from "../public/data/gt4/screens/gt4_1.jpg";
-import imageMud from "../public/data/mud/mud_thumbnail.png";
+import imageMud from "../public/data/mud/thumbnail.jpg";
 import imageSawsane from "../public/data/sawsane/thumbnail.jpg";
 import imageTrezor from "../public/data/trezor/thumbnail.jpg";
 import imageWereNext from "../public/data/were-next/thumbnail.jpg";
-import reelThumbnail from "../public/images/REEL_25_thumbnail.png";
+import reelThumbnail from "../public/images/REEL_25_thumbnail.jpg";
 
 import imageAnnaVonLipaScreen01 from "../public/data/anna-von-lipa/screens/01.jpg";
 import imageAnnaVonLipaScreen02 from "../public/data/anna-von-lipa/screens/02.jpg";
@@ -99,7 +99,7 @@ import gt4Screen7 from "../public/data/gt4/screens/gt4_7.jpg";
 import gt4Screen8 from "../public/data/gt4/screens/gt4_8.jpg";
 import gt4Screen9 from "../public/data/gt4/screens/gt4_9.jpg";
 
-import imageMudScreen9 from "../public/data/mud/mud_thumbnail.png";
+import imageMudScreen9 from "../public/data/mud/thumbnail.jpg";
 import imageMudScreen1 from "../public/data/mud/screens/mud1.jpg";
 import imageMudScreen2 from "../public/data/mud/screens/mud2.jpg";
 import imageMudScreen3 from "../public/data/mud/screens/mud3.jpg";
@@ -151,7 +151,7 @@ const mainReel: Project = {
   videos: {
     short: "/videos/REEL_25_compressed.mp4",
   },
-  thumbnail: "/images/REEL_25_thumbnail.png",
+  thumbnail: "/images/REEL_25_thumbnail.jpg",
   thumbnailNext: reelThumbnail,
 };
 
@@ -349,7 +349,7 @@ const projects: Project[] = [
     id: 8,
     title: "GT4",
     slug: "gt4",
-    thumbnail: "/data/gt4/screens/gt4_1.png",
+    thumbnail: "/data/gt4/screens/gt4_1.jpg",
     thumbnailNext: imageGt4,
     videos: {
       short: "/data/gt4/GT4_10s_WEB.mp4",
@@ -386,7 +386,7 @@ const projects: Project[] = [
     id: 9,
     title: "Muzeum Umění a designu Benešov",
     slug: "muzeum-umeni-a-designu-benesov",
-    thumbnail: "/data/mud/mud_thumbnail.png",
+    thumbnail: "/data/mud/thumbnail.jpg",
     thumbnailNext: imageMud,
     videos: {
       short: "/data/mud/MUD_10s_WEB.mp4",
