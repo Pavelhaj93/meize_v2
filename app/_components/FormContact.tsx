@@ -7,6 +7,7 @@ import Alert from "./Alert";
 import Button from "./Button";
 import Input from "./Input";
 import Textarea from "./Textarea";
+import { cn } from "@/lib/utils";
 
 interface FormField {
 	error: boolean;
@@ -184,9 +185,9 @@ export default function FormContact() {
 	return (
 		<form
 			action=""
-			className={`relative w-full dark:text-white flex flex-col gap-6 ${
-				submitting ? "opacity-50 pointer-events-none" : ""
-			}`}
+			className={cn('relative w-full dark:text-white', {
+				'opacity-50 pointer-events-none': submitting,
+			})}
 			onSubmit={handleSubmit}
 		>
 			<ReCAPTCHA
@@ -195,86 +196,88 @@ export default function FormContact() {
 				sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
 				onChange={onReCAPTCHAChange}
 			/>
-			<div className="relative flex flex-col gap-1">
-				<label htmlFor="name" className={name.error ? "text-red-400" : ""}>
-					{t("common.name")} *
-				</label>
-				<Input
-					type="text"
-					id="name"
-					name="name"
-					placeholder={t("common.name")}
-					value={name.value}
-					onChange={handleNameChange}
-					onBlur={handleInputBlur}
-					ref={inputNameRef}
-					error={name.error}
-				/>
-			</div>
 
-			<div className="relative flex flex-col gap-1">
-				<label htmlFor="email" className={email.error ? "text-red-400" : ""}>
-					{t("common.email")} *
-				</label>
-				<Input
-					type="text"
-					id="email"
-					name="email"
-					placeholder={t("common.email")}
-					value={email.value}
-					onChange={handleEmailChange}
-					onBlur={handleInputBlur}
-					ref={inputEmailRef}
-					error={email.error}
-				/>
-			</div>
+			<div className="flex flex-col gap-6">
+				<div className="relative flex flex-col gap-1">
+					<label htmlFor="name" className={name.error ? "text-red-400" : ""}>
+						{t("common.name")} *
+					</label>
+					<Input
+						type="text"
+						id="name"
+						name="name"
+						// placeholder={t("common.name")}
+						value={name.value}
+						onChange={handleNameChange}
+						onBlur={handleInputBlur}
+						ref={inputNameRef}
+						error={name.error}
+					/>
+				</div>
 
-			<div className="relative flex flex-col gap-1">
-				<label
-					htmlFor="message"
-					className={message.error ? "text-red-400" : ""}
-				>
-					{t("common.message")} *
-				</label>
-				<Textarea
-					id="message"
-					name="message"
-					placeholder={t("common.message")}
-					value={message.value}
-					onChange={handleMessageChange}
-					onBlur={handleInputBlur}
-					ref={inputMessageRef}
-					error={message.error}
-				/>
-			</div>
+				<div className="relative flex flex-col gap-1">
+					<label htmlFor="email" className={email.error ? "text-red-400" : ""}>
+						{t("common.email")} *
+					</label>
+					<Input
+						type="text"
+						id="email"
+						name="email"
+						// placeholder={t("common.email")}
+						value={email.value}
+						onChange={handleEmailChange}
+						onBlur={handleInputBlur}
+						ref={inputEmailRef}
+						error={email.error}
+					/>
+				</div>
 
-			<div className="relative mb-5 text-center lg:text-left">
-				<Button
-					type="submit"
-					size="big"
-					textSize="small"
-					className="max-w-[150px]"
-					padding="big"
-				>
-					{!submitting ? t("common.submit") : t("common.submitting")}
-				</Button>
+				<div className="relative flex flex-col gap-1">
+					<label
+						htmlFor="message"
+						className={message.error ? "text-red-400" : ""}
+					>
+						{t("common.message")} *
+					</label>
+					<Textarea
+						id="message"
+						name="message"
+						// placeholder={t("common.message")}
+						value={message.value}
+						onChange={handleMessageChange}
+						onBlur={handleInputBlur}
+						ref={inputMessageRef}
+						error={message.error}
+					/>
+				</div>
 
-				<Alert
-					className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2"
-					active={error}
-					arrow="left"
-				>
-					{t("alerts.commonError")}
-				</Alert>
+				<div className="relative text-left">
+					<Button
+						type="submit"
+						size="big"
+						textSize="small"
+						padding="big"
+					>
+						{!submitting ? t("common.submit") : t("common.submitting")}
+					</Button>
 
-				<Alert
-					className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2"
-					theme="success"
-					active={success}
-					arrow="left"
-				>
-					{t("alerts.contactSuccess")}
-				</Alert>
+					<Alert
+						className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2"
+						active={error}
+						arrow="left"
+					>
+						{t("alerts.commonError")}
+					</Alert>
+
+					<Alert
+						className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2"
+						theme="success"
+						active={success}
+						arrow="left"
+					>
+						{t("alerts.contactSuccess")}
+					</Alert>
+				</div>
 			</div>
 		</form>
 	);

@@ -14,46 +14,53 @@ export default function Contact() {
 	const t = useTranslations("contact");
 
 	return (
-		<div className="bg-black dark">
-			<Container first className="md:pt-20 flex flex-col xl:gap-28 gap-5">
-				<section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mx-auto">
-					<header className="flex-1">
-						<h2 className="font-medium tracking-tighter text-3xl lg:text-4xl xl:text-5xl dark:text-white">
+		<Container first className="dark flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 md:pb-20">
+			<div className="flex-1">
+				<video autoPlay loop muted className="w-full max-w-[550px] mx-auto">
+					<source src="/videos/meize_cup.mp4" type="video/mp4" />
+				</video>
+			</div>
+			<div className="flex-1 flex flex-col gap-12">
+				<section className="flex flex-col items-start gap-4">
+					<header>
+						<h2 className="font-medium tracking-tighter text-3xl lg:text-4xl dark:text-white">
 							{t("general")}
 						</h2>
 					</header>
-					<div className="flex-1 flex flex-col items-center lg:items-start gap-6 lg:gap-4 lg:pt-6 mt-5">
+					<div className="flex flex-col items-start gap-2">
 						{Object.keys(contacts).map((type) => {
 							const contactType = type as keyof Contacts; // Explicitly cast to keyof Contacts
 							return (
-								<div key={`Contacts: ${contactType}`}>
-									<div className="inline-flex text-2xl dark:text-white mr-2">
+								<div key={`Contacts: ${contactType}`}
+									className="flex gap-2 text-lg"
+								>
+									<p className="dark:text-white/50">
 										{t(contactType)}:
-									</div>
+									</p>
 									<a
 										href={contacts[contactType].href}
-										className="inline-flex text-2xl text-black dark:text-white hover:text-white/50 transition-colors border-b border-transparent"
+										className="text-black dark:text-white hover:underline transition-colors"
 									>
 										{contacts[contactType].title}
 									</a>
 								</div>
 							);
 						})}
-						<SocialIcons />
 					</div>
+					<SocialIcons />
 				</section>
 
-				<section className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-0 max-w-[1000px] mt-10 lg:mt-0 mx-auto mb-10">
-					<header className="flex-1">
-						<h3 className="font-medium tracking-tighter text-3xl lg:text-4xl xl:text-5xl dark:text-white">
+				<section className="flex flex-col items-start gap-4">
+					<header>
+						<h3 className="font-medium tracking-tighter text-3xl lg:text-4xl dark:text-white">
 							{t("message")}
 						</h3>
 					</header>
-					<div className="flex-1 w-full max-w-[500px] lg:max-w-none">
+					<div className="w-full">
 						<FormContact />
 					</div>
 				</section>
-			</Container>
-		</div>
+			</div>
+		</Container>
 	);
 }

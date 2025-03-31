@@ -24,7 +24,7 @@ export default function Button({
 	...rest
 }: ButtonProps) {
 	const buttonClasses = [
-		"inline-flex border rounded-full w-full items-center justify-center transition-colors bg-white text-black hover:bg-black hover:text-white",
+		"inline-flex border-0 rounded-full w-full items-center justify-center bg-white text-black hover:bg-white/60 transition-colors duration-300",
 	];
 
 	switch (size) {
