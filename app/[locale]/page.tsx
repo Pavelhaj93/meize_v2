@@ -2,17 +2,8 @@ import { getAllReels } from "@/helpers/projects";
 import Reel from "../_components/Reel";
 import ReelScroll from "../_components/ReelScroll";
 
-// const images = [
-// 	"/images/hayden.jpg",
-// 	"/images/hayden2.jpg",
-// 	"/images/hayden3.jpg",
-// 	"/images/hayden4.jpg",
-// ];
-
 export default function Home() {
 	const reels = getAllReels();
-
-	console.log({reels});
 
 	return (
 		<>

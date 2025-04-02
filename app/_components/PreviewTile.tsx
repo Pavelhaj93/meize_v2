@@ -37,7 +37,6 @@ export default function PreviewTile({
           src={thumbnail as unknown as StaticImageData}
           className="w-full h-full object-cover"
           alt={title}
-          layout="fill"
         />
       </div>
 

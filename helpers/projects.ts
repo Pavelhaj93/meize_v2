@@ -446,7 +446,7 @@ export const getAllReels = () => {
 };
 
 export const getAllProjects = () => {
-  return projects.reverse();
+  return [...projects].reverse();
 };
 
 // export const getFeaturedProjects = () => {

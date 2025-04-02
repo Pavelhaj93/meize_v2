@@ -38,15 +38,14 @@ const MasonryItem: FC<MasonryItemProps> = ({ item, isTall, isSuperTall }) => {
 				})}
 			>
 				<Image
-					src={item?.thumbnail ?? ""}
+					src={item?.thumbnailNext ?? ""}
 					alt={item.title}
-					layout="fill"
-					className="rounded-lg object-cover"
+					className="rounded-lg object-cover w-full h-full"
 				/>
 				{item?.videos?.short && (
 					<video
 						src={item.videos.short}
-						className={`absolute rounded-lg w-full h-full  object-cover ${hovered ? "opacity-100" : "opacity-0 pointer-events-none"
+						className={`absolute top-0 left-0 rounded-lg w-full h-full  object-cover ${hovered ? "opacity-100" : "opacity-0 pointer-events-none"
 							} transition-opacity duration-300`}
 						ref={videoRef}
 						playsInline
