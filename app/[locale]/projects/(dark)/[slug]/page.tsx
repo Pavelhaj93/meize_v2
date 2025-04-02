@@ -2,34 +2,26 @@ import Container from "@/app/_components/Container";
 import PageTitle from "@/app/_components/PageTitle";
 import ProjectButtons from "@/app/_components/ProjectButtons";
 import ScreenGrabs from "@/app/_components/ScreenGrabs";
+import { generatePageMetadata } from "@/helpers/metadata";
 import { getProjectById, getProjectBySlug } from "@/helpers/projects";
 import { routing } from "@/i18n/routing";
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const { slug } = params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string; }> }) {
+  const { slug, locale } = await params;
+
   const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
   }
 
-  return {
-    title: project.title,
-    description: `${project.title} project page`,
-  };
+  return generatePageMetadata({
+    title: project.title
+  }, locale);
 }
 
-export default async function ProjectDetail({
-  params,
-}: {
-  params: { slug: string; locale: string };
-}) {
+export default async function ProjectDetail({ params }: { params: { slug: string; locale: string } }) {
   const { slug, locale } = await params;
 
   // Ensure that the incoming `locale` is valid

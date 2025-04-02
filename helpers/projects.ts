@@ -442,7 +442,7 @@ export const getAllProjectsForDynamicRoutes = () => {
 };
 
 export const getAllReels = () => {
-  return [mainReel, ...projects.reverse().slice(0, 6)];
+  return [mainReel, ...[...projects].reverse().slice(0, 6)];
 };
 
 export const getAllProjects = () => {

@@ -11,7 +11,7 @@ let videoInterval: NodeJS.Timeout;
 
 interface ReelProps {
   projects: Project[];
-  images: string[];
+  images?: string[];
   className?: string;
 }
 
@@ -67,7 +67,7 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
       {projects.map(({ id, videos, thumbnail }, index) => (
         <video
           key={`Reel Video: ${id}`}
-          ref={(el) => {videoRefs.current[index] = el}}
+          ref={(el) => { videoRefs.current[index] = el }}
           src={videos?.short}
           className={cn('absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500', {
             'opacity-0': activeIndex !== index,

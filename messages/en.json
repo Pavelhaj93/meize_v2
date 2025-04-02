@@ -35,6 +35,9 @@
 		"contact": "Contact"
 	},
 	"about": {
+		"metaData": {
+			"title": "About Us"
+		},
 		"title": "About Us",
 		"headline": "<b>MEIZE.</b> a <b>creative production</b> that embraces <b>challenges</b> and brings your <b>visions</b> to life.",
 		"intro": "We are open to all your ideas. Our portfolio includes a wide range of projects, from commercials to documentary films, fashion shows, and music videos. We approach clients individually and always fulfill their wishes. We look forward to portraying your idea as well.",
@@ -44,9 +47,15 @@
 		"feedback": "Feedbacks"
 	},
 	"projects": {
+		"metaData": {
+			"title": "Projects"
+		},
 		"title": "Projects"
 	},
 	"contact": {
+		"metaData": {
+			"title": "Contact"
+		},
 		"title": "Contact",
 		"headline": "Get In Touch",
 		"general": "Contacts",
@@ -91,6 +100,9 @@
 		"cs": "Čeština"
 	},
 	"wedding": {
+		"metaData": {
+			"title": "Wedding Videos"
+		},
 		"title1": "Wedding Videos by Meize",
 		"description1": "At Meize, we also specialize in wedding videos. Our mission is to capture the most beautiful and important moments of your wedding day as you experience them—authentically, naturally, and with maximum precision.",
 		"description2": "Every wedding is unique, and that’s why we approach each film as a new story. We’re not about clichés and big effects—we want our videos to reflect you, your love, and the atmosphere of the day you’ll remember forever. We stay in the background so you can focus on what matters, while capturing every emotion, every smile, and all the little but meaningful details.",

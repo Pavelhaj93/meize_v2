@@ -1,12 +1,21 @@
 import Container from "@/app/_components/Container";
 import MasonryGallery from "@/app/_components/MasonryGallery";
+import { generatePageMetadata } from "@/helpers/metadata";
 import { getAllProjects } from "@/helpers/projects";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { useMemo } from "react";
 
-export default function ProjectsPage() {
-	const t = useTranslations("projects");
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; }> }) {
+	const { locale } = await params;
 
+	const t = await getTranslations({ locale, namespace: 'projects.metaData' });
+
+	return generatePageMetadata({
+		title: t('title')
+	}, locale);
+}
+
+export default function ProjectsPage() {
 	const projects = useMemo(() => {
 		return getAllProjects();
 	}, []);

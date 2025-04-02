@@ -35,6 +35,9 @@
 		"contact": "Kontakt"
 	},
 	"about": {
+		"metaData": {
+			"title": "O nás"
+		},
 		"title": "O nás",
 		"headline": "<b>MEIZE. kreativní produkce</b>, která přijímá <b>výzvy</b> a realizuje vaše <b>vize</b>.",
 		"intro": "Jsme otevřeni všem vašim nápadům. Naše portfolio zahrnuje širokou škálu projektů; od reklamy přes dokumentární filmy až po módní přehlídky či videoklipy. Ke klientům přistupujeme individuálně a vždy plníme jejich přání. Těšíme se, až budeme ztvárňovat i vaši myšlenku.",
@@ -44,9 +47,15 @@
 		"feedback": "Zpětné vazby"
 	},
 	"projects": {
+		"metaData": {
+			"title": "Projekty"
+		},
 		"title": "Projekty"
 	},
 	"contact": {
+		"metaData": {
+			"title": "Kontakt"
+		},
 		"title": "Kontakt",
 		"headline": "Kontaktujte nás",
 		"general": "Kontakty",
@@ -91,6 +100,9 @@
 		"cs": "Čeština"
 	},
 	"wedding": {
+		"metaData": {
+			"title": "Svatební videa"
+		},
 		"title1": "Svatební videa od Meize",
 		"description1": "V Meize se mimo jiné specializujeme i na svatební videa. Naší misí je zachytit ty nejkrásnější a nejdůležitější okamžiky vašeho svatebního dne tak, jak je prožíváte – autenticky, přirozeně a s maximální precizností.",
 		"description2": "Každá svatba je jedinečná, a proto se na každý film díváme jako na nový příběh. Nejde nám o klišé a velké efekty – chceme, aby naše videa odrážela vás, vaši lásku a atmosféru dne, který si navždy zapamatujete. Zůstáváme v pozadí, abyste se mohli soustředit na to, co je důležité, a přitom zachytíme každou emoci, každý úsměv a všechny ty malinké, ale významné detaily.",

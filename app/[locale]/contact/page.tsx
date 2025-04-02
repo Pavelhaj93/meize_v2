@@ -3,12 +3,19 @@ import FormContact from "@/app/_components/FormContact";
 import Navbar from "@/app/_components/Navbar";
 import SocialIcons from "@/app/_components/SocialIcons";
 import { type Contacts, contacts } from "@/helpers/contacts";
+import { generatePageMetadata } from "@/helpers/metadata";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export const metadata = {
-	title: "Contact",
-	description: "Contact page",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; }> }) {
+    const { locale } = await params;
+
+    const t = await getTranslations({ locale, namespace: 'contact.metaData' });
+
+    return generatePageMetadata({
+        title: t('title')
+    }, locale);
+}
 
 export default function Contact() {
 	const t = useTranslations("contact");
