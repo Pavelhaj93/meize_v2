@@ -1,4 +1,4 @@
-import imageAngusFarm from "../public/data/angus-farm/thumbnail.jpg";
+import imageAngusFarm from "../public/data/angusfarm/thumbnail.jpg";
 import imageAnnaVonLipa from "../public/data/anna-von-lipa/thumbnail.jpg";
 import imageTactical from "../public/data/buggyra-tactical/screens/tactical8.jpg";
 import imageDakar2025 from "../public/data/dakar-2025/screens/dkr9.jpg";
@@ -43,15 +43,15 @@ import imageWereNextScreen07 from "../public/data/were-next/screens/07.jpg";
 import imageWereNextScreen08 from "../public/data/were-next/screens/08.jpg";
 import imageWereNextScreen09 from "../public/data/were-next/screens/09.jpg";
 
-import imageAngusFarmScreen01 from "../public/data/angus-farm/screens/01.jpg";
-import imageAngusFarmScreen02 from "../public/data/angus-farm/screens/02.jpg";
-import imageAngusFarmScreen03 from "../public/data/angus-farm/screens/03.jpg";
-import imageAngusFarmScreen04 from "../public/data/angus-farm/screens/04.jpg";
-import imageAngusFarmScreen05 from "../public/data/angus-farm/screens/05.jpg";
-import imageAngusFarmScreen06 from "../public/data/angus-farm/screens/06.jpg";
-import imageAngusFarmScreen07 from "../public/data/angus-farm/screens/07.jpg";
-import imageAngusFarmScreen08 from "../public/data/angus-farm/screens/08.jpg";
-import imageAngusFarmScreen09 from "../public/data/angus-farm/screens/09.jpg";
+import imageAngusFarmScreen01 from "../public/data/angusfarm/screens/01.jpg";
+import imageAngusFarmScreen02 from "../public/data/angusfarm/screens/02.jpg";
+import imageAngusFarmScreen03 from "../public/data/angusfarm/screens/03.jpg";
+import imageAngusFarmScreen04 from "../public/data/angusfarm/screens/04.jpg";
+import imageAngusFarmScreen05 from "../public/data/angusfarm/screens/05.jpg";
+import imageAngusFarmScreen06 from "../public/data/angusfarm/screens/06.jpg";
+import imageAngusFarmScreen07 from "../public/data/angusfarm/screens/07.jpg";
+import imageAngusFarmScreen08 from "../public/data/angusfarm/screens/08.jpg";
+import imageAngusFarmScreen09 from "../public/data/angusfarm/screens/09.jpg";
 
 import imageSawsaneScreen01 from "../public/data/sawsane/screens/01.jpg";
 import imageSawsaneScreen02 from "../public/data/sawsane/screens/02.jpg";
@@ -63,10 +63,10 @@ import imageSawsaneScreen07 from "../public/data/sawsane/screens/07.jpg";
 import imageSawsaneScreen08 from "../public/data/sawsane/screens/08.jpg";
 import imageSawsaneScreen09 from "../public/data/sawsane/screens/09.jpg";
 
-import gif1AF from "../public/data/angus-farm/gifs/gif1-AF.gif";
-import gif2AF from "../public/data/angus-farm/gifs/gif2-AF.gif";
-import gif3AF from "../public/data/angus-farm/gifs/gif3-AF.gif";
-import gif4AF from "../public/data/angus-farm/gifs/gif4-AF.gif";
+import gif1AF from "../public/data/angusfarm/gifs/gif1-AF.gif";
+import gif2AF from "../public/data/angusfarm/gifs/gif2-AF.gif";
+import gif3AF from "../public/data/angusfarm/gifs/gif3-AF.gif";
+import gif4AF from "../public/data/angusfarm/gifs/gif4-AF.gif";
 
 import type { StaticImageData } from "next/image";
 import gif1 from "../public/data/were-next/gifs/gif1.gif";
@@ -75,15 +75,15 @@ import gif3 from "../public/data/were-next/gifs/gif3.gif";
 
 import dakarScreen1 from "../public/data/dakar-2025/screens/dkr1.jpg";
 import dakarScreen2 from "../public/data/dakar-2025/screens/dkr2.jpg";
-import dakarScreen3 from "../public/data/dakar-2025/screens/dkr3.jpg";
-import dakarScreen4 from "../public/data/dakar-2025/screens/dkr4.jpg";
-import dakarScreen5 from "../public/data/dakar-2025/screens/dkr5.jpg";
-import dakarScreen6 from "../public/data/dakar-2025/screens/dkr6.jpg";
+// import dakarScreen3 from "../public/data/dakar-2025/screens/dkr3.jpg";
+// import dakarScreen4 from "../public/data/dakar-2025/screens/dkr4.jpg";
+// import dakarScreen5 from "../public/data/dakar-2025/screens/dkr5.jpg";
+// import dakarScreen6 from "../public/data/dakar-2025/screens/dkr6.jpg";
 import dakarScreen7 from "../public/data/dakar-2025/screens/dkr7.jpg";
 import dakarScreen8 from "../public/data/dakar-2025/screens/dkr8.jpg";
 import dakarScreen9 from "../public/data/dakar-2025/screens/dkr9.jpg";
-import dakarScreen10 from "../public/data/dakar-2025/screens/dkr10.jpg";
-import dakarScreen11 from "../public/data/dakar-2025/screens/dkr11.jpg";
+// import dakarScreen10 from "../public/data/dakar-2025/screens/dkr10.jpg";
+// import dakarScreen11 from "../public/data/dakar-2025/screens/dkr11.jpg";
 import dakarScreen12 from "../public/data/dakar-2025/screens/dkr12.jpg";
 import dakarScreen13 from "../public/data/dakar-2025/screens/dkr13.jpg";
 import dakarScreen14 from "../public/data/dakar-2025/screens/dkr14.jpg";
@@ -230,13 +230,13 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Angus Farm",
-    slug: "angus-farm",
-    thumbnail: "/data/angus-farm/thumbnail.jpg",
+    title: "Angusfarm",
+    slug: "angusfarm",
+    thumbnail: "/data/angusfarm/thumbnail.jpg",
     thumbnailNext: imageAngusFarm,
     videos: {
-      short: "/data/angus-farm/angus-farm_short.mp4",
-      full: "/data/angus-farm/angus-farm_full.mp4",
+      short: "/data/angusfarm/angusfarm_short.mp4",
+      full: "/data/angusfarm/angusfarm_full.mp4",
       vimeoId1: "891063117",
       vimeoId2: "887333055",
       vimeoId3: "891028950",
@@ -330,15 +330,15 @@ const projects: Project[] = [
     screens: [
       dakarScreen1,
       dakarScreen2,
-      dakarScreen3,
-      dakarScreen4,
-      dakarScreen5,
-      dakarScreen6,
+      // dakarScreen3,
+      // dakarScreen4,
+      // dakarScreen5,
+      // dakarScreen6,
       dakarScreen7,
       dakarScreen8,
       dakarScreen9,
-      dakarScreen10,
-      dakarScreen11,
+      // dakarScreen10,
+      // dakarScreen11,
       dakarScreen12,
       dakarScreen13,
       dakarScreen14,
@@ -417,6 +417,7 @@ const projects: Project[] = [
     videos: {
       short: "/data/buggyra-tactical/Tactical_10s_WEB.mp4",
       full: "/data/buggyra-tactical/Tactical_10s_WEB.mp4",
+      vimeoId: "1080503712",
     },
     categories: [
       { id: 1, name: "production" },
@@ -437,7 +438,7 @@ const projects: Project[] = [
 ];
 
 export const getAllProjectsForDynamicRoutes = () => {
-  const disallowedProjects = ["angus-farm", "were-next", "sawsane"];
+  const disallowedProjects = ["angusfarm", "were-next", "sawsane"];
   return projects.filter((project) => !disallowedProjects.includes(project.slug));
 };
 

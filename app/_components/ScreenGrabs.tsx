@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 // import notWorking from "/projects/anna-von-lipa/screens/01.jpg";
-// import working from "/projects/angus-farm/screens/01.jpg";
+// import working from "/projects/angusfarm/screens/01.jpg";
 
 interface ScreenGrabsProps {
   images: string[] | StaticImageData[];

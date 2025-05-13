@@ -7,12 +7,12 @@ import { getProjectById, getProjectBySlug } from "@/helpers/projects";
 import { notFound } from "next/navigation";
 
 export const metadata = {
-  title: "Angus Farm",
-  description: "Angus Farm project page",
+  title: "Angusfarm",
+  description: "Angusfarm project page",
 };
 
 export default async function AngusFarmPage() {
-  const project = getProjectBySlug("angus-farm");
+  const project = getProjectBySlug("angusfarm");
 
   // Handle not found case
   if (!project) {

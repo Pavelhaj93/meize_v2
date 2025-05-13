@@ -39,7 +39,7 @@ export default function ReelCarousel({
 	} else if (activeIndex === 1) {
 		backgroundImage = 'bg-[url("/projects/trezor/thumbnail.jpg")]';
 	} else if (activeIndex === 2) {
-		backgroundImage = 'bg-[url("/projects/angus-farm/thumbnail.jpg")]';
+		backgroundImage = 'bg-[url("/projects/angusfarm/thumbnail.jpg")]';
 	}
 
 	return (
@@ -49,9 +49,8 @@ export default function ReelCarousel({
 			{reels.map((reel, key) => {
 				return (
 					<div
-						className={`absolute top-0 left-0 w-full h-full overflow-hidden transition-opacity duration-500 ${
-							key === activeIndex ? "opacity-100" : "opacity-0"
-						}`}
+						className={`absolute top-0 left-0 w-full h-full overflow-hidden transition-opacity duration-500 ${key === activeIndex ? "opacity-100" : "opacity-0"
+							}`}
 						key={`Image: ${reel.id}`}
 					>
 						<video
