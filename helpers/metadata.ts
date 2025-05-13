@@ -15,7 +15,7 @@ const APP_DESCRIPTION = {
     'en': ''
 }
 
-export const getDefaultMetadata = (locale = 'cs') => {
+export const getDefaultMetadata = (locale: 'cs' | 'en' = 'cs') => {
     const description = APP_DESCRIPTION[locale] || APP_DESCRIPTION['en'];
 
     return {
@@ -81,7 +81,7 @@ function formatTitle(title = '', locale = 'cs') {
 export function generatePageMetadata(data: PageMetadata, locale = 'cs'): Metadata {
     const { title, description, image } = data;
 
-    const defaultData = getDefaultMetadata(locale);
+    const defaultData = getDefaultMetadata(locale as 'cs' | 'en');
 
     return {
         ...defaultData,
