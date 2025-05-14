@@ -1,25 +1,26 @@
 import Container from "@/app/_components/Container";
 import MasonryGallery from "@/app/_components/MasonryGallery";
-import Navbar from "@/app/_components/Navbar";
+import { generatePageMetadata } from "@/helpers/metadata";
 import { getAllProjects } from "@/helpers/projects";
-import { useTranslations } from "next-intl";
-import { useMemo } from "react";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; }> }) {
+	const { locale } = await params;
+
+	const t = await getTranslations({ locale, namespace: 'projects.metaData' });
+
+	return generatePageMetadata({
+		title: t('title')
+	}, locale);
+}
 
 export default function ProjectsPage() {
-  const t = useTranslations("projects");
+	const projects = getAllProjects();
 
-  const projects = useMemo(() => {
-    return getAllProjects();
-  }, []);
-
-  return (
-    <div className="">
-      <Navbar />
-      <main className="max-md:pt-14">
-        <Container first>
-          <MasonryGallery items={projects} />
-        </Container>
-      </main>
-    </div>
-  );
-}
+	return (
+		<Container first>
+			<div className="max-md:pt-14 pb-20">
+				<MasonryGallery items={projects} />
+			</div>
+		</Container>
+	);

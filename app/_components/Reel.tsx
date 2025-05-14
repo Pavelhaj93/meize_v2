@@ -5,12 +5,11 @@ import { useLocale } from "next-intl";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Container from "./Container";
-
-let videoInterval: NodeJS.Timeout;
+import { cn } from "@/lib/utils";
 
 interface ReelProps {
   projects: Project[];
-  images: string[];
+  images?: string[];
   className?: string;
 }
 
@@ -21,38 +20,46 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   const locale = useLocale();
 
   const handleMouseEnter = (index: number) => {
-    clearInterval(videoInterval);
     setActiveIndex(index);
 
     const video = videoRefs.current[index];
+
     if (video) {
       video.play();
     }
   };
 
   const handleMouseLeave = (index: number) => {
-    resetInterval();
-
     const video = videoRefs.current[index];
+
     if (video) {
       video.pause();
       video.currentTime = 0;
     }
+
+    setActiveIndex(0);
   };
 
-  const handleIndexChange = useCallback(() => {
-    setActiveIndex((activeIndex + 1) % projects.length);
-  }, [activeIndex, projects.length]);
-
-  const resetInterval = useCallback(() => {
-    clearInterval(videoInterval);
-    videoInterval = setInterval(handleIndexChange, 6000);
-  }, [handleIndexChange]);
+  const handleVideoEnded = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % projects.length);
+  }, [projects.length]);
 
   useEffect(() => {
-    resetInterval();
-    return () => clearInterval(videoInterval);
-  }, [resetInterval]);
+    videoRefs.current.forEach((vid, i) => {
+      if (!vid) return;
+
+      if (i === activeIndex) {
+        // Restart and play the active clip
+        // vid.currentTime = 0;
+        const p = vid.play();
+        if (p !== undefined) p.catch(() => { });
+      } else {
+        // Stop any background clips
+        vid.pause();
+        vid.currentTime = 0;
+      }
+    });
+  }, [activeIndex]);
 
   return (
     <section
@@ -61,43 +68,36 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
     >
       {projects.map(({ id, videos, thumbnail }, index) => (
         <video
-          key={id}
-          ref={(el) => {
-            videoRefs.current[index] = el;
-          }}
+          key={`Reel Video: ${id}`}
+          ref={(el) => { videoRefs.current[index] = el }}
           src={videos?.short}
-          className={`absolute top-0 left-0 w-full h-full object-cover pointer-events-none [transition-property:filter] duration-700 ${
-            activeIndex === index ? "visible" : "invisible"
-          }`}
+          className={cn('absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500', {
+            'opacity-0': activeIndex !== index,
+          })}
           poster={thumbnail}
-          loop={true}
-          playsInline={true}
-          autoPlay
-          muted={true}
+          playsInline
+          autoPlay={activeIndex === index}
+          preload={activeIndex === index ? "auto" : "none"}
+          muted
+          onEnded={() => {
+            if (activeIndex === index) {
+              handleVideoEnded();
+            }
+          }}
         />
       ))}
       <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">
-        {projects.map(({ id, title, slug }, index) =>
-          activeIndex === 0 && index === 0 ? (
-            <div
-              key={id}
-              className={`${
-                activeIndex === index ? "text-white/50" : "text-white"
-              } inline-flex flex-col items-start text-left transition-colors duration-500`}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-            >
-              <span className="text-5xl 2xl:text-6xl font-medium tracking-tighter">
-                {title}
-              </span>
-            </div>
-          ) : (
+        {projects.map(({ id, title, slug }, index) => {
+          if (index === 0) return;
+
+          return (
             <Link
-              key={id}
+              key={`Reel Link: ${id}`}
               href={`/${locale}/projects/${slug}`}
-              className={`${
-                activeIndex === index ? "text-white/50" : "text-white"
-              } hover:text-white/50 inline-flex flex-col items-start text-left transition-colors duration-500`}
+              className={cn('inline-flex flex-col items-start text-left transition-colors duration-500', {
+                'text-white/50 hover:text-white': activeIndex !== index,
+                'text-white': activeIndex === index,
+              })}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
             >
@@ -105,8 +105,8 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
                 {title}
               </span>
             </Link>
-          )
-        )}
+          );
+        })}
       </Container>
     </section>
   );

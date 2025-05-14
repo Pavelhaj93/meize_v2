@@ -1,4 +1,3 @@
-import { useLocale } from "next-intl";
 import ButtonNext from "./ButtonNext";
 import ButtonPrev from "./ButtonPrev";
 
@@ -15,8 +14,6 @@ export default function ProjectButtons({
 	prevProject,
 	nextProject,
 }: ProjectButtonsProps) {
-	const locale = useLocale();
-
 	return (
 		<div className="flex justify-between items-center text-0 flex-wrap gap-8 xl:mt-10 mb-20">
 			<div>{prevProject && <ButtonPrev href={`${prevProject.slug}`} />}</div>

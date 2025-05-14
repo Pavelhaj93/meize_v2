@@ -1,5 +1,3 @@
-import Nav from "@/app/_components/Navbar";
-
 export default function ProjectsLayout({
 	children,
 }: {
@@ -7,8 +5,7 @@ export default function ProjectsLayout({
 }) {
 	return (
 		<div className="bg-black dark">
-			<Nav theme="dark" />
-			<main>{children}</main>
+			{children}
 		</div>
 	);
 }

@@ -3,6 +3,7 @@
 import { links } from "@/helpers/nav";
 import { socialIcons } from "@/helpers/socialIcons";
 import { routing } from "@/i18n/routing";
+import { cn } from '@/lib/utils';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "use-intl";
@@ -41,9 +42,10 @@ export default function BurgerMenu({
 
 	return (
 		<nav
-			className={`fixed top-0 left-0 h-full z-10 transition-all duration-300 ${
-				active ? "w-full sm:w-[300px] shadow-white  shadow-xl" : "w-0 "
-			} overflow-hidden`}
+			className={cn('fixed top-0 left-0 h-full z-10 transition-all duration-300 overflow-hidden', className, {
+				"w-full sm:w-[300px] shadow-white  shadow-xl": active,
+				"w-0": !active,
+			})}
 			{...rest}
 		>
 			<section className="flex bg-black flex-col justify-between relative px-8 pt-40 pb-40 lg:pb-20 lg:px-12 h-full">
@@ -53,9 +55,8 @@ export default function BurgerMenu({
 							<Link
 								href={href}
 								key={`BurgerMenu: ${id}`}
-								className={`font-light text-4xl text-white transition-all text-center sm:text-left duration-300 hover:text-gray-400 ${
-									!active ? "opacity-0" : "opacity-100"
-								}`}
+								className={`font-light text-4xl text-white transition-all text-center sm:text-left duration-300 hover:text-gray-400 ${!active ? "opacity-0" : "opacity-100"
+									}`}
 								style={{
 									transitionDelay: active ? `${(key + 2) * 0.05}s` : "0s",
 								}}

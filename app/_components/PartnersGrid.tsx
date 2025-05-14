@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import amos from "../public/logos/amos-academy.png";
-import af from "../public/logos/angus-farm.png";
+import af from "../public/logos/angusfarm.png";
 import avl from "../public/logos/anna-von-lipa.png";
 import fs from "../public/logos/fashion-show.png";
 import jad from "../public/logos/jencik-a-dcery.png";
@@ -13,7 +13,7 @@ import pbs from "../public/logos/prague-breakin-school.png";
 import skj from "../public/logos/slavnost-kralovny-johanky.png";
 import st from "../public/logos/srovnejto.png";
 import str from "../public/logos/st-regis.png";
-import tekstyl from "../public/logos/tekstyl.png";
+// import tekstyl from "../public/logos/tekstyl.png";
 import unibrick from "../public/logos/unibrick.png";
 
 const partners = [
@@ -107,7 +107,7 @@ export default function PartnersGrid({ className = "" }) {
 						className="w-full max-w-[250px] p-5 sm:p-10 h-40 sm:h-52 sm:max-w-1/2 lg:max-w-1/3 xl:max-w-1/5 hover:scale-105 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 will-change-transform flex justify-center items-center"
 					>
 						<div className="relative w-full h-full max-h-32">
-							<Image src={image} layout="fill" objectFit="contain" alt={name} />
+							<Image src={image} alt={name} className="object-contain" />
 						</div>
 					</Link>
 				);

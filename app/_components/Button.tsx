@@ -16,7 +16,6 @@ interface ButtonProps {
 export default function Button({
 	href,
 	children,
-	theme = "ghost",
 	size = "custom",
 	textSize = "small",
 	className = "",
@@ -24,7 +23,7 @@ export default function Button({
 	...rest
 }: ButtonProps) {
 	const buttonClasses = [
-		"inline-flex border rounded-full w-full items-center justify-center transition-colors bg-white text-black hover:bg-black hover:text-white",
+		"inline-flex border-0 rounded-full w-full items-center justify-center bg-white text-black hover:bg-white/60 transition-colors duration-300",
 	];
 
 	switch (size) {
@@ -70,9 +69,8 @@ export default function Button({
 	buttonClasses.push(className);
 
 	if (href) {
-		const { onClick, ...linkRest } = rest;
 		return (
-			<Link href={href} className={buttonClasses.join(" ")} {...linkRest}>
+			<Link href={href} className={buttonClasses.join(" ")} {...rest}>
 				{children}
 			</Link>
 		);

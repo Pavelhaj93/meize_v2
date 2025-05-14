@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.mihailo.cz
+Host: https://www.meize.cz
 
 # Sitemaps
-Sitemap: https://www.mihailo.cz/sitemap.xml
+Sitemap: https://www.meize.cz/sitemap.xml

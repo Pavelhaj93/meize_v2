@@ -74,7 +74,7 @@ export const config = {
 		"/",
 		"/(cs|en)/:path*",
 		// Matcher ignoring `/_next` and `icons` directories and more
-		"/((?!api|_next|icons|public|data|assets|images|videos|favicon.ico|robots.txt|sitemap.xml).*)",
+		"/((?!api|_next|icons|public|data|assets|images|videos|favicon|robots.txt|sitemap.xml|site.webmanifest).*)",
 		// Optional: only run on root (/) URL
 	],
 };

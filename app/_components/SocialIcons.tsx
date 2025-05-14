@@ -7,7 +7,7 @@ const SocialIcons = () => (
 			const Icon = icon.icon;
 			return (
 				<Link href={icon.href} key={icon.id}>
-					<Icon className="dark:text-white dark:hover:text-gray-500 text-black hover:text-black/50 transition-colors size-9" />
+					<Icon className="dark:text-white text-black hover:opacity-60 transition-opacity duration-300 size-6" />
 				</Link>
 			);
 		})}
