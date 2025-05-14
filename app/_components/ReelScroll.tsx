@@ -10,7 +10,11 @@ interface ReelProps {
 	className?: string;
 }
 
-export default function ReelScroll({ projects, className = "", ...rest }: ReelProps) {
+export default function ReelScroll({
+	projects,
+	className = "",
+	...rest
+}: ReelProps) {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isScrolling, setIsScrolling] = useState(false); // Prevent rapid-fire scrolls
 	const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -21,28 +25,29 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 		return () => document.body.classList.remove("no-scroll");
 	}, []);
 
-	const changeIndex = useCallback((direction: number) => {
-		let newIndex = activeIndex + direction;
+	const changeIndex = useCallback(
+		(direction: number) => {
+			let newIndex = activeIndex + direction;
 
-		// Keep the index within bounds
-		if (newIndex < 0) newIndex = 0;
-		if (newIndex >= projects.length) newIndex = projects.length - 1;
+			// Keep the index within bounds
+			if (newIndex < 0) newIndex = 0;
+			if (newIndex >= projects.length) newIndex = projects.length - 1;
 
-		if (newIndex !== activeIndex) {
-			setActiveIndex(newIndex);
-			setIsScrolling(true);
+			if (newIndex !== activeIndex) {
+				setActiveIndex(newIndex);
+				setIsScrolling(true);
 
-			// Allow scrolling again after a short delay
-			setTimeout(() => setIsScrolling(false), 500);
-		}
-	}, [activeIndex, projects.length]);
-
+				// Allow scrolling again after a short delay
+				setTimeout(() => setIsScrolling(false), 500);
+			}
+		},
+		[activeIndex, projects.length],
+	);
 
 	// Handle mobile touch scrolling
 	const handleTouchStart = (event: TouchEvent) => {
 		setTouchStart(event.touches[0].clientY); // Record the starting Y position
 	};
-
 
 	useEffect(() => {
 		// Handle desktop scrolling (mouse wheel)
@@ -98,11 +103,16 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 			{projects.map((project, index) => (
 				<video
 					key={`ReelScroll Video: ${project.id}`}
-					ref={(el) => { videoRefs.current[index] = el }}
+					ref={(el) => {
+						videoRefs.current[index] = el;
+					}}
 					src={project.videos?.short}
-					className={cn('absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500', {
-						'opacity-0': activeIndex !== index
-					})}
+					className={cn(
+						"absolute top-0 left-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500",
+						{
+							"opacity-0": activeIndex !== index,
+						},
+					)}
 					playsInline
 					muted
 					loop

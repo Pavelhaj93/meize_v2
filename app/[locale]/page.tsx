@@ -13,7 +13,7 @@ export default function Home() {
 			<div className="hidden lg:block">
 				<Reel
 					projects={reels}
-				// images={images}
+					// images={images}
 				/>
 			</div>
 		</>
