@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import SvgArrow from "./svg/SvgArrow";
 
@@ -51,9 +51,8 @@ const ButtonArrow = ({
 }: ButtonArrowProps) => {
 	const t = useTranslations("common");
 
-	const buttonClasses = `uppercase font-bold inline-flex text-white items-center gap-4 hover:text-gray-500 hover:gap-2 transition-all duration-300 rounded-none ${
-		direction === "next" ? "hover:translate-x-2" : "hover:-translate-x-2"
-	} ${className}`;
+	const buttonClasses = `uppercase font-bold inline-flex text-white items-center gap-4 hover:text-gray-500 hover:gap-2 transition-all duration-300 rounded-none ${direction === "next" ? "hover:translate-x-2" : "hover:-translate-x-2"
+		} ${className}`;
 
 	if (href) {
 		return (

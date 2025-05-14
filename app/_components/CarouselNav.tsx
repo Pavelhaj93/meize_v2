@@ -1,5 +1,5 @@
 interface CarouselNavProps {
-	items: any[];
+	items: [];
 	onClick: (key: number) => void;
 	active: number;
 	className?: string;
@@ -17,16 +17,15 @@ export default function CarouselNav({
 			className={`flex items-center justify-center gap-6 ${className}`}
 			{...rest}
 		>
-			{items.map((item, key) => {
+			{items.map((_, key) => {
 				return (
 					<button
 						onClick={() => onClick(key)}
 						key={`TestimonialNav: ${key}`}
-						className={`inline-flex w-12 rounded-full aspect-square bg-transparent items-center justify-center leading-none border ${
-							active === key
+						className={`inline-flex w-12 rounded-full aspect-square bg-transparent items-center justify-center leading-none border ${active === key
 								? "border-primary text-primary"
 								: "border-black/50 text-black/50 hover:border-primary hover:text-primary"
-						} transition-colors duration-300`}
+							} transition-colors duration-300`}
 					>
 						{key + 1}
 					</button>

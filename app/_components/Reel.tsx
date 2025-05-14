@@ -7,8 +7,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import { cn } from "@/lib/utils";
 
-let videoInterval: NodeJS.Timeout;
-
 interface ReelProps {
   projects: Project[];
   images?: string[];
@@ -22,7 +20,6 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   const locale = useLocale();
 
   const handleMouseEnter = (index: number) => {
-    clearInterval(videoInterval);
     setActiveIndex(index);
 
     const video = videoRefs.current[index];
@@ -33,8 +30,6 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
   };
 
   const handleMouseLeave = (index: number) => {
-    resetInterval();
-
     const video = videoRefs.current[index];
 
     if (video) {
@@ -45,19 +40,26 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
     setActiveIndex(0);
   };
 
-  const handleIndexChange = useCallback(() => {
-    setActiveIndex((activeIndex + 1) % projects.length);
-  }, [activeIndex, projects.length]);
-
-  const resetInterval = useCallback(() => {
-    clearInterval(videoInterval);
-    videoInterval = setInterval(handleIndexChange, 6000);
-  }, [handleIndexChange]);
+  const handleVideoEnded = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % projects.length);
+  }, [projects.length]);
 
   useEffect(() => {
-    resetInterval();
-    return () => clearInterval(videoInterval);
-  }, [resetInterval]);
+    videoRefs.current.forEach((vid, i) => {
+      if (!vid) return;
+
+      if (i === activeIndex) {
+        // Restart and play the active clip
+        // vid.currentTime = 0;
+        const p = vid.play();
+        if (p !== undefined) p.catch(() => { });
+      } else {
+        // Stop any background clips
+        vid.pause();
+        vid.currentTime = 0;
+      }
+    });
+  }, [activeIndex]);
 
   return (
     <section
@@ -74,9 +76,14 @@ export default function Reel({ projects, className = "", ...rest }: ReelProps) {
           })}
           poster={thumbnail}
           playsInline
-          autoPlay
+          autoPlay={activeIndex === index}
+          preload={activeIndex === index ? "auto" : "none"}
           muted
-          loop
+          onEnded={() => {
+            if (activeIndex === index) {
+              handleVideoEnded();
+            }
+          }}
         />
       ))}
       <Container className="absolute bottom-4 left-0 p-4 flex flex-col items-start">

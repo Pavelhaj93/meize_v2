@@ -13,7 +13,7 @@ import pbs from "../public/logos/prague-breakin-school.png";
 import skj from "../public/logos/slavnost-kralovny-johanky.png";
 import st from "../public/logos/srovnejto.png";
 import str from "../public/logos/st-regis.png";
-import tekstyl from "../public/logos/tekstyl.png";
+// import tekstyl from "../public/logos/tekstyl.png";
 import unibrick from "../public/logos/unibrick.png";
 
 const partners = [

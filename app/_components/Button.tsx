@@ -16,7 +16,6 @@ interface ButtonProps {
 export default function Button({
 	href,
 	children,
-	theme = "ghost",
 	size = "custom",
 	textSize = "small",
 	className = "",
@@ -70,9 +69,8 @@ export default function Button({
 	buttonClasses.push(className);
 
 	if (href) {
-		const { onClick, ...linkRest } = rest;
 		return (
-			<Link href={href} className={buttonClasses.join(" ")} {...linkRest}>
+			<Link href={href} className={buttonClasses.join(" ")} {...rest}>
 				{children}
 			</Link>
 		);

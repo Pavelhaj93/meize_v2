@@ -1,7 +1,6 @@
 "use client";
 
 import Hamburger from "hamburger-react";
-import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import LogoLink from "./LogoLink";
@@ -14,7 +13,6 @@ interface NavbarProps {
 }
 
 const Navbar = ({ className = "" }: NavbarProps) => {
-  const t = useTranslations();
   const pathname = usePathname();
 
   const [theme, setTheme] = useState<"dark" | "light">("dark");

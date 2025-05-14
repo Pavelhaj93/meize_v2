@@ -391,6 +391,7 @@ const projects: Project[] = [
     videos: {
       short: "/data/mud/MUD_10s_WEB.mp4",
       full: "/data/mud/MUD_10s_WEB.mp4",
+      vimeoId: "1041490532"
     },
     categories: [
       { id: 1, name: "production" },

@@ -1,11 +1,7 @@
 "use client";
 
-import { socials } from "@/helpers/contacts";
 import { socialIcons } from "@/helpers/socialIcons";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { InstagramIcon, VimeoIcon } from "../_icons";
 import Container from "./Container";
 import { usePathname } from "@/i18n/routing";
 import { useEffect, useState } from "react";
@@ -14,7 +10,6 @@ import { cn } from "@/lib/utils";
 export default function Footer() {
 	const pathname = usePathname();
 	const [theme, setTheme] = useState<"dark" | "light">("light");
-	const t = useTranslations("common");
 
 	useEffect(() => {
 		const darkPaths = ["/projects"];

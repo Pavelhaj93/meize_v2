@@ -69,7 +69,7 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 			window.removeEventListener("touchstart", handleTouchStart);
 			window.removeEventListener("touchmove", handleTouchMove);
 		};
-	}, [activeIndex, isScrolling, touchStart]);
+	}, [activeIndex, isScrolling, touchStart, handleTouchMove, handleWheel]);
 
 	useEffect(() => {
 		if (!videoRefs.current) return;
