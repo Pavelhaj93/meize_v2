@@ -6,6 +6,7 @@ import { generatePageMetadata } from "@/helpers/metadata";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; }> }) {
 	const { locale } = await params;
 
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function Contact() {
-	const t = useTranslations("contact");
+  const t = useTranslations("contact");
+
 
 	return (
 		<Container first className="dark flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 md:pb-20">
@@ -69,4 +71,3 @@ export default function Contact() {
 			</div>
 		</Container>
 	);
-}
