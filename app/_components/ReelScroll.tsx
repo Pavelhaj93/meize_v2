@@ -3,7 +3,7 @@
 import type { Project } from "@/helpers/projects";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface ReelProps {
 	projects: Project[];
@@ -21,7 +21,7 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 		return () => document.body.classList.remove("no-scroll");
 	}, []);
 
-	const changeIndex = (direction: number) => {
+	const changeIndex = useCallback((direction: number) => {
 		let newIndex = activeIndex + direction;
 
 		// Keep the index within bounds
@@ -35,31 +35,32 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 			// Allow scrolling again after a short delay
 			setTimeout(() => setIsScrolling(false), 500);
 		}
-	};
+	}, [activeIndex, projects.length]);
 
-	// Handle desktop scrolling (mouse wheel)
-	const handleWheel = (event: WheelEvent) => {
-		if (isScrolling) return;
-
-		const direction = event.deltaY > 0 ? 1 : -1; // Detect scroll direction
-		changeIndex(direction);
-	};
 
 	// Handle mobile touch scrolling
 	const handleTouchStart = (event: TouchEvent) => {
 		setTouchStart(event.touches[0].clientY); // Record the starting Y position
 	};
 
-	const handleTouchMove = (event: TouchEvent) => {
-		if (touchStart === null || isScrolling) return;
-
-		const currentY = event.touches[0].clientY;
-		const direction = touchStart - currentY > 0 ? 1 : -1; // Detect swipe direction
-		changeIndex(direction);
-		setTouchStart(null); // Reset touch start
-	};
 
 	useEffect(() => {
+		// Handle desktop scrolling (mouse wheel)
+		const handleWheel = (event: WheelEvent) => {
+			if (isScrolling) return;
+
+			const direction = event.deltaY > 0 ? 1 : -1; // Detect scroll direction
+			changeIndex(direction);
+		};
+
+		const handleTouchMove = (event: TouchEvent) => {
+			if (touchStart === null || isScrolling) return;
+
+			const currentY = event.touches[0].clientY;
+			const direction = touchStart - currentY > 0 ? 1 : -1; // Detect swipe direction
+			changeIndex(direction);
+			setTouchStart(null); // Reset touch start
+		};
 		window.addEventListener("wheel", handleWheel); // For desktops
 		window.addEventListener("touchstart", handleTouchStart); // For mobiles
 		window.addEventListener("touchmove", handleTouchMove); // For mobiles
@@ -69,7 +70,7 @@ export default function ReelScroll({ projects, className = "", ...rest }: ReelPr
 			window.removeEventListener("touchstart", handleTouchStart);
 			window.removeEventListener("touchmove", handleTouchMove);
 		};
-	}, [activeIndex, isScrolling, touchStart, handleTouchMove, handleWheel]);
+	}, [activeIndex, isScrolling, touchStart, changeIndex]);
 
 	useEffect(() => {
 		if (!videoRefs.current) return;
