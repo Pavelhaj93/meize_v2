@@ -13,7 +13,11 @@ export default forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
 ) {
 	return (
 		<textarea
-			className={cn('input resize-y min-h-[150px]', { 'input--error': error }, className)}
+			className={cn(
+				"input resize-y min-h-[150px]",
+				{ "input--error": error },
+				className,
+			)}
 			{...rest}
 			ref={ref}
 		/>

@@ -45,8 +45,9 @@ const MasonryItem: FC<MasonryItemProps> = ({ item, isTall, isSuperTall }) => {
 				{item?.videos?.short && (
 					<video
 						src={item.videos.short}
-						className={`absolute top-0 left-0 rounded-lg w-full h-full  object-cover ${hovered ? "opacity-100" : "opacity-0 pointer-events-none"
-							} transition-opacity duration-300`}
+						className={`absolute top-0 left-0 rounded-lg w-full h-full  object-cover ${
+							hovered ? "opacity-100" : "opacity-0 pointer-events-none"
+						} transition-opacity duration-300`}
 						ref={videoRef}
 						playsInline
 						muted
@@ -55,8 +56,9 @@ const MasonryItem: FC<MasonryItemProps> = ({ item, isTall, isSuperTall }) => {
 				)}
 				{!item?.videos?.short && (
 					<div
-						className={`absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-400/60 uppercase font-bold tracking-tight text-2xl text-center transition-opacity duration-300 ${hovered ? "" : "opacity-0"
-							}`}
+						className={`absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-400/60 uppercase font-bold tracking-tight text-2xl text-center transition-opacity duration-300 ${
+							hovered ? "" : "opacity-0"
+						}`}
 					>
 						Coming soon
 					</div>

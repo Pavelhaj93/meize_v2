@@ -6,23 +6,31 @@ import { generatePageMetadata } from "@/helpers/metadata";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; }> }) {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
 	const { locale } = await params;
 
-	const t = await getTranslations({ locale, namespace: 'contact.metaData' });
+	const t = await getTranslations({ locale, namespace: "contact.metaData" });
 
-	return generatePageMetadata({
-		title: t('title')
-	}, locale);
+	return generatePageMetadata(
+		{
+			title: t("title"),
+		},
+		locale,
+	);
 }
 
 export default function Contact() {
-  const t = useTranslations("contact");
-
+	const t = useTranslations("contact");
 
 	return (
-		<Container first className="dark flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 md:pb-20">
+		<Container
+			first
+			className="dark flex flex-col-reverse lg:flex-row gap-12 lg:gap-0 md:pb-20"
+		>
 			<div className="flex-1">
 				<video autoPlay loop muted className="w-full max-w-[550px] mx-auto">
 					<source src="/videos/meize_cup.mp4" type="video/mp4" />
@@ -39,12 +47,11 @@ export default function Contact() {
 						{Object.keys(contacts).map((type) => {
 							const contactType = type as keyof Contacts; // Explicitly cast to keyof Contacts
 							return (
-								<div key={`Contacts: ${contactType}`}
+								<div
+									key={`Contacts: ${contactType}`}
 									className="flex gap-2 text-lg"
 								>
-									<p className="dark:text-white/50">
-										{t(contactType)}:
-									</p>
+									<p className="dark:text-white/50">{t(contactType)}:</p>
 									<a
 										href={contacts[contactType].href}
 										className="text-black dark:text-white hover:underline transition-colors"
@@ -71,3 +78,4 @@ export default function Contact() {
 			</div>
 		</Container>
 	);
+}

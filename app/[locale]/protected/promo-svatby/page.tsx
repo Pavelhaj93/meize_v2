@@ -4,14 +4,19 @@ import { generatePageMetadata } from "@/helpers/metadata";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; }> }) {
+export async function generateMetadata({
+	params,
+}: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
 
-	const t = await getTranslations({ locale, namespace: 'wedding.metaData' });
+	const t = await getTranslations({ locale, namespace: "wedding.metaData" });
 
-	return generatePageMetadata({
-		title: t('title')
-	}, locale);
+	return generatePageMetadata(
+		{
+			title: t("title"),
+		},
+		locale,
+	);
 }
 
 export default function WeddingVideos() {

@@ -12,7 +12,7 @@ export default forwardRef(function Input(
 ) {
 	return (
 		<input
-			className={cn('input', { 'input--error': error }, className)}
+			className={cn("input", { "input--error": error }, className)}
 			{...rest}
 			ref={ref}
 		/>

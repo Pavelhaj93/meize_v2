@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -7,7 +8,6 @@ import Alert from "./Alert";
 import Button from "./Button";
 import Input from "./Input";
 import Textarea from "./Textarea";
-import { cn } from "@/lib/utils";
 
 interface FormField {
 	error: boolean;
@@ -185,8 +185,8 @@ export default function FormContact() {
 	return (
 		<form
 			action=""
-			className={cn('relative w-full dark:text-white', {
-				'opacity-50 pointer-events-none': submitting,
+			className={cn("relative w-full dark:text-white", {
+				"opacity-50 pointer-events-none": submitting,
 			})}
 			onSubmit={handleSubmit}
 		>
@@ -252,12 +252,7 @@ export default function FormContact() {
 				</div>
 
 				<div className="relative text-left">
-					<Button
-						type="submit"
-						size="big"
-						textSize="small"
-						padding="big"
-					>
+					<Button type="submit" size="big" textSize="small" padding="big">
 						{!submitting ? t("common.submit") : t("common.submitting")}
 					</Button>
 

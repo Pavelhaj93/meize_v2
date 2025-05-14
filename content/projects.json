@@ -5,9 +5,7 @@
 		"slug": "anna-von-lipa",
 		"thumbnail": "/images/hayden3.jpg",
 		"video": "",
-		"categories": [
-			"creative"
-		],
+		"categories": ["creative"],
 		"reelVideo": "a.mp4"
 	},
 	{
@@ -16,10 +14,7 @@
 		"slug": "sawsane",
 		"thumbnail": "/images/hayden4.jpg",
 		"video": "",
-		"categories": [
-			"creative",
-			"commercial"
-		]
+		"categories": ["creative", "commercial"]
 	},
 	{
 		"id": 3,
@@ -27,10 +22,7 @@
 		"slug": "trezor",
 		"thumbnail": "/images/hayden2.jpg",
 		"video": "",
-		"categories": [
-			"production",
-			"postproduction"
-		]
+		"categories": ["production", "postproduction"]
 	},
 	{
 		"id": 4,
@@ -38,10 +30,7 @@
 		"slug": "angusfarm",
 		"thumbnail": "/images/hayden4.jpg",
 		"video": "",
-		"categories": [
-			"creative",
-			"commercial"
-		],
+		"categories": ["creative", "commercial"],
 		"reelVideo": "c.mp4"
 	},
 	{
@@ -50,9 +39,7 @@
 		"slug": "klaus-timber",
 		"thumbnail": "/images/hayden3.jpg",
 		"video": "",
-		"categories": [
-			"commercial"
-		]
+		"categories": ["commercial"]
 	},
 	{
 		"id": 6,
@@ -60,9 +47,6 @@
 		"slug": "were-next",
 		"thumbnail": "/images/hayden2.jpg",
 		"video": "",
-		"categories": [
-			"production",
-			"postproduction"
-		]
+		"categories": ["production", "postproduction"]
 	}
 ]
