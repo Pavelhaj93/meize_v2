@@ -7,6 +7,7 @@ import {
 	getDefaultMetadata,
 } from "@/helpers/metadata";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
@@ -89,6 +90,7 @@ export default async function RootLocaleLayout({
 
 					<Footer />
 				</NextIntlClientProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
